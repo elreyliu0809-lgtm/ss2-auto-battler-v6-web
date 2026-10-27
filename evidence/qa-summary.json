@@ -1,0 +1,157 @@
+{
+  "authorQa": true,
+  "independentlyReviewed": false,
+  "humanAccepted": false,
+  "localQaPassed": true,
+  "checks": [
+    {
+      "name": "first complete hashed resource download",
+      "pass": true
+    },
+    {
+      "name": "30 real actors",
+      "pass": true
+    },
+    {
+      "name": "no missing images",
+      "pass": true
+    },
+    {
+      "name": "close tab then reopen: zero object bytes",
+      "pass": true
+    },
+    {
+      "name": "objects actually served through SW",
+      "pass": true
+    },
+    {
+      "name": "offline real battle and record",
+      "pass": true
+    },
+    {
+      "name": "offline zero server bytes",
+      "pass": true
+    },
+    {
+      "name": "quarantine, dedupe, validation and seeded matching",
+      "pass": true
+    },
+    {
+      "name": "mirror actually selected into battle, plus/minus one and fallback",
+      "pass": true
+    },
+    {
+      "name": "legacy 18 pack selectable",
+      "pass": true
+    },
+    {
+      "name": "save import format preserved and binds destination release",
+      "pass": true
+    },
+    {
+      "name": "UI full run reaches terminal",
+      "pass": true
+    },
+    {
+      "name": "actual battle confirmation at 9 wins captured",
+      "pass": true
+    },
+    {
+      "name": "viewport 390 no document overflow",
+      "pass": true
+    },
+    {
+      "name": "viewport 375 no document overflow",
+      "pass": true
+    },
+    {
+      "name": "code-only update reuses all large assets",
+      "pass": true
+    },
+    {
+      "name": "open page stays on r1 while update prepared",
+      "pass": true
+    },
+    {
+      "name": "mid-run update blocked",
+      "pass": true
+    },
+    {
+      "name": "safe restart loads r2 and preserves save",
+      "pass": true
+    },
+    {
+      "name": "one resource change reuses actor data and textures",
+      "pass": true
+    },
+    {
+      "name": "interrupted upgrade retains active r2 and complete pending r3",
+      "pass": true
+    },
+    {
+      "name": "rollback loads r1 without clearing player or other project data",
+      "pass": true
+    }
+  ],
+  "network": {
+    "first": {
+      "requests": 102,
+      "bodyBytes": 53130943,
+      "objectRequests": 91,
+      "objectBodyBytes": 53044560,
+      "largeObjectBodyBytes": 52850626,
+      "failures": []
+    },
+    "reopen": {
+      "requests": 1,
+      "bodyBytes": 26661,
+      "objectRequests": 0,
+      "objectBodyBytes": 0,
+      "largeObjectBodyBytes": 0,
+      "failures": []
+    },
+    "offline": {
+      "requests": 0,
+      "bodyBytes": 0,
+      "objectRequests": 0,
+      "objectBodyBytes": 0,
+      "largeObjectBodyBytes": 0,
+      "failures": []
+    },
+    "codeUpgrade": {
+      "requests": 3,
+      "bodyBytes": 63228,
+      "objectRequests": 1,
+      "objectBodyBytes": 32482,
+      "largeObjectBodyBytes": 0,
+      "failures": []
+    },
+    "resourceUpgrade": {
+      "requests": 4,
+      "bodyBytes": 63492,
+      "objectRequests": 2,
+      "objectBodyBytes": 32746,
+      "largeObjectBodyBytes": 0,
+      "failures": []
+    },
+    "interrupted": {
+      "requests": 2,
+      "bodyBytes": 22806,
+      "objectRequests": 1,
+      "objectBodyBytes": 0,
+      "largeObjectBodyBytes": 0,
+      "failures": [
+        {
+          "phase": "interrupted",
+          "path": "objects/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.js",
+          "status": 503,
+          "bytes": 0
+        }
+      ]
+    }
+  },
+  "defaultRulesRegressionRuns": 80,
+  "offlineMethod": "Browser offline plus owned HTTP listener fully stopped (connection unavailable), not a physical device disconnect",
+  "fixtureDataPublished": false,
+  "centralCollectionBackend": false
+}

@@ -1,0 +1,12 @@
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./core.js'),root,require('./packs.js'));else root.SS2Storage=factory(root.SS2Core,root,root.SS2Packs);})(typeof globalThis!=='undefined'?globalThis:this,function(Core,root,P){'use strict';
+const KEY='ss2.v6-web:'+new URL('./',location.href).pathname+'save',BACKUP=KEY+'.backup';
+function checksum(text){let h=2166136261;for(let i=0;i<text.length;i++)h=Math.imul(h^text.charCodeAt(i),16777619);return (h>>>0).toString(16).padStart(8,'0');}
+function exportSave(state){Core.validateState(state);const payload=JSON.stringify(state);return JSON.stringify({format:'SS2-LOCAL-SAVE',version:1,checksum:checksum(payload),payload});}
+function importSave(text){if(typeof text!=='string'||text.length>12000000)throw Error('存档文件格式或大小错误');let envelope;try{envelope=JSON.parse(text);}catch{throw Error('存档不是有效JSON');}if(!envelope||envelope.format!=='SS2-LOCAL-SAVE'||envelope.version!==1)throw Error('不支持的存档文件版本');if(typeof envelope.payload!=='string'||envelope.checksum!==checksum(envelope.payload))throw Error('存档完整性校验失败');let state;try{state=JSON.parse(envelope.payload);}catch{throw Error('存档内容损坏');}if(state&&state.version==='local-base-18-v1'&&!Object.prototype.hasOwnProperty.call(state,'packId')&&!Object.prototype.hasOwnProperty.call(state,'packVersion'))state={...state,packId:P.LEGACY_PACK_ID,packVersion:P.getPlayablePack(P.LEGACY_PACK_ID).version};Core.validateState(state);return state;}
+function resolve(storage){return storage||root.localStorage;}
+function save(state,storage){const text=exportSave(state);try{const target=resolve(storage);if(!target)throw Error('浏览器未提供本机存储');const old=target.getItem(KEY);if(old){let valid=false;try{importSave(old);valid=true;}catch{}if(valid)target.setItem(BACKUP,old);}target.setItem(KEY,text);return {ok:true,warning:null};}catch(e){return {ok:false,warning:'本机存档未写入：'+e.message+'。请导出存档保留本局。'};}}
+function load(storage){let target,primary,backup;try{target=resolve(storage);if(!target)throw Error('浏览器未提供本机存储');primary=target.getItem(KEY);backup=target.getItem(BACKUP);}catch(e){return {state:null,warning:'本机存储不可用：'+e.message+'。请使用导入/导出存档。',recovered:false};}if(primary){try{return {state:importSave(primary),warning:null,recovered:false};}catch{}}
+ if(backup){try{return {state:importSave(backup),warning:'主存档缺失或损坏，已恢复上一份合法备份。',recovered:true};}catch{}}
+ return {state:null,warning:primary||backup?'主存档及备份无法载入。请导入合法存档或开始新局。':null,recovered:false};}
+return Object.freeze({save,load,exportSave,importSave,KEY,BACKUP});
+});

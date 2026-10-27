@@ -1,0 +1,8 @@
+import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';import crypto from 'node:crypto';
+const input=process.argv[2],output=process.argv[3];if(!input||!output)throw Error('Usage: node tools/validate-lineups.mjs input.json isolated-output.json');
+if(fs.statSync(input).size>2000000)throw Error('Input exceeds 2MB');if(fs.existsSync(output))throw Error('Output must be a new candidate file');
+const root=path.resolve(import.meta.dirname,'..'),site=path.join(root,'docs'),m=JSON.parse(fs.readFileSync(path.join(site,'release.json'))),storage=new Map(),context=vm.createContext({console,URL,location:{pathname:'/ss2-auto-battler-v6-web/',href:'https://elreyliu0809-lgtm.github.io/ss2-auto-battler-v6-web/'},SS2_WEB_RULES:m.rules,localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)}});
+for(const p of ['content','packs','opponents','core','lineups']){const f=m.files.find(x=>x.label==='src/'+p+'.js');const bytes=fs.readFileSync(path.join(site,f.path));if(crypto.createHash('sha256').update(bytes).digest('hex')!==f.sha256)throw Error('Published code integrity failure');vm.runInContext(bytes.toString(),context,{filename:p+'.js'});}
+const text=fs.readFileSync(input,'utf8'),count=context.SS2Lineups.stageImport(text),records=context.SS2Lineups.getState().quarantine;
+const result={format:'SS2-LINEUPS-QUARANTINE',schema:1,sourceSha256:crypto.createHash('sha256').update(text).digest('hex'),rules:m.rules,count,records,status:'VALIDATED_CANDIDATE_ONLY',publicPoolAdopted:false,playerAuthenticityVerified:false};
+fs.mkdirSync(path.dirname(path.resolve(output)),{recursive:true});fs.writeFileSync(output,JSON.stringify(result,null,2),{flag:'wx'});console.log(JSON.stringify({status:result.status,count,output}));
