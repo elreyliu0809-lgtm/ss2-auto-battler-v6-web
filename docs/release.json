@@ -1,19 +1,19 @@
 {
   "schema": 1,
-  "id": "v6-web-v8-r2-m1",
-  "title": "V8 动画修复版",
+  "id": "v6-web-v8-r2-items-r2",
+  "title": "V8 道具图标版",
   "mode": "scene-v1",
   "rules": "v8-06720db5aec4b9a50ce7edf8",
   "content": "V8_MIXED_PACKS_EXACT_VERSION_PER_PACK",
-  "sourceZipSha256": "3b4160e2b73f0db08e59190e100b4e2557b2e7ee4beba0b2853cc81ae4db8882",
-  "css": "objects/ee73a0c69ef1aecc46c54a306a0852e565bd83a269f6e355ca1df0344ddcf789.css",
+  "sourceZipSha256": "5765121cebd900a1d7b7f9eaaf3fd7575e9f1d5a7fac5f4cb811ad430b2348cf",
+  "css": "objects/00b7ea4983685a9df5d74a3b6d02c627e37e3ed81c830065ebf75aa9a44d0a14.css",
   "scripts": [
     "objects/20c99794c67b2b081437e0499a2e9922c59a856c4e3ea835486262b6eb6be375.js",
     "objects/38cb8e858f1d136b476c1abf163dbbfd35de397807f4204f9f145fc68f7ddb5c.js",
     "objects/7ab51b50b6a153ac96bc377235dd327bbfc743ce2b7c1416306748a6718fa0db.js",
-    "objects/1461d983d99b8ce140b3dbad951820fad261a1251abe981bcb9ccfd35c7ccc0a.js",
+    "objects/415ae0b4b0db2c86f304e09e18700fe3ae0439800179dbf2668dea1d744aea5e.js",
     "objects/890009388c07906d978a7be212bf9d53c288194f63f8ede1fee12f0faa4f7d36.js",
-    "objects/c6404e7fec6cc5dd51afc863a0c56fb2d304e4088f77fc92dc6eac25ce317a34.js",
+    "objects/0200a58b30fe4aa66ebae6ea25fa6aeba438b5e4cc1d9d18e2d8932a57f01850.js",
     "objects/6e8749482e74b92882a07945731e2e86830f4620ed57c1421acdd330d76e5e89.js",
     "objects/46274643086742a0e6dba5bc8a10eee36679eb7f714b3cc7653dc2e5ee4b6090.js",
     "objects/93a80e2dbb71b1a61e3545a332c7332e70e24b5a6bb6651f362b2db5a2057200.js",
@@ -22,9 +22,9 @@
     "objects/cf212b811fc145275c4cafd35ecac9cc12aac2b13d625ff0f18d83c847793135.js",
     "objects/03b9254b90775f9c7a0228071e9efc62c1cde8b884c7349a7b854adc1423d80e.js",
     "objects/8157dac608e0dd7a0deee9f0dd33e33c8a47873afdd074dae59d000aa351247f.js",
-    "objects/a2529162f1b3361b1a81cad02eba3afd8914545eb102c4ecd210492dc77a0c6c.js",
+    "objects/8d0b78281d2341935aaf2659aa068e44aa552cfe2836e70f83b47e99d97b0b36.js",
     "objects/331a2b5f7e15cc866c768d25d82d6e900527606756e33a6ae52a7f2f88a36778.js",
-    "objects/9ed47ae2a2b3bf2a94aa97a98aa8eee53d00efc95339ac5be25803fdfbb56d07.js"
+    "objects/07751b664c90765e574962e604f19f36c3fae8b30c20c1b1bce3142ac82fa76a.js"
   ],
   "files": [
     {
@@ -3460,9 +3460,9 @@
       "label": "src/sap-source-data.js"
     },
     {
-      "path": "objects/1461d983d99b8ce140b3dbad951820fad261a1251abe981bcb9ccfd35c7ccc0a.js",
-      "size": 6914,
-      "sha256": "1461d983d99b8ce140b3dbad951820fad261a1251abe981bcb9ccfd35c7ccc0a",
+      "path": "objects/415ae0b4b0db2c86f304e09e18700fe3ae0439800179dbf2668dea1d744aea5e.js",
+      "size": 9127,
+      "sha256": "415ae0b4b0db2c86f304e09e18700fe3ae0439800179dbf2668dea1d744aea5e",
       "label": "src/content.js"
     },
     {
@@ -3472,9 +3472,9 @@
       "label": "src/packs.js"
     },
     {
-      "path": "objects/c6404e7fec6cc5dd51afc863a0c56fb2d304e4088f77fc92dc6eac25ce317a34.js",
-      "size": 5967,
-      "sha256": "c6404e7fec6cc5dd51afc863a0c56fb2d304e4088f77fc92dc6eac25ce317a34",
+      "path": "objects/0200a58b30fe4aa66ebae6ea25fa6aeba438b5e4cc1d9d18e2d8932a57f01850.js",
+      "size": 6221,
+      "sha256": "0200a58b30fe4aa66ebae6ea25fa6aeba438b5e4cc1d9d18e2d8932a57f01850",
       "label": "src/presentation.js"
     },
     {
@@ -3526,9 +3526,9 @@
       "label": "src/quality-candidates.js"
     },
     {
-      "path": "objects/a2529162f1b3361b1a81cad02eba3afd8914545eb102c4ecd210492dc77a0c6c.js",
-      "size": 3194,
-      "sha256": "a2529162f1b3361b1a81cad02eba3afd8914545eb102c4ecd210492dc77a0c6c",
+      "path": "objects/8d0b78281d2341935aaf2659aa068e44aa552cfe2836e70f83b47e99d97b0b36.js",
+      "size": 3730,
+      "sha256": "8d0b78281d2341935aaf2659aa068e44aa552cfe2836e70f83b47e99d97b0b36",
       "label": "src/scene-assets.js"
     },
     {
@@ -3538,15 +3538,15 @@
       "label": "src/lineups-v8.js"
     },
     {
-      "path": "objects/9ed47ae2a2b3bf2a94aa97a98aa8eee53d00efc95339ac5be25803fdfbb56d07.js",
-      "size": 40606,
-      "sha256": "9ed47ae2a2b3bf2a94aa97a98aa8eee53d00efc95339ac5be25803fdfbb56d07",
+      "path": "objects/07751b664c90765e574962e604f19f36c3fae8b30c20c1b1bce3142ac82fa76a.js",
+      "size": 40728,
+      "sha256": "07751b664c90765e574962e604f19f36c3fae8b30c20c1b1bce3142ac82fa76a",
       "label": "src/app.js"
     },
     {
-      "path": "objects/ee73a0c69ef1aecc46c54a306a0852e565bd83a269f6e355ca1df0344ddcf789.css",
-      "size": 24605,
-      "sha256": "ee73a0c69ef1aecc46c54a306a0852e565bd83a269f6e355ca1df0344ddcf789",
+      "path": "objects/00b7ea4983685a9df5d74a3b6d02c627e37e3ed81c830065ebf75aa9a44d0a14.css",
+      "size": 24906,
+      "sha256": "00b7ea4983685a9df5d74a3b6d02c627e37e3ed81c830065ebf75aa9a44d0a14",
       "label": "styles.css"
     }
   ],
@@ -3573,9 +3573,9 @@
     "objects/20c99794c67b2b081437e0499a2e9922c59a856c4e3ea835486262b6eb6be375.js",
     "objects/38cb8e858f1d136b476c1abf163dbbfd35de397807f4204f9f145fc68f7ddb5c.js",
     "objects/7ab51b50b6a153ac96bc377235dd327bbfc743ce2b7c1416306748a6718fa0db.js",
-    "objects/1461d983d99b8ce140b3dbad951820fad261a1251abe981bcb9ccfd35c7ccc0a.js",
+    "objects/415ae0b4b0db2c86f304e09e18700fe3ae0439800179dbf2668dea1d744aea5e.js",
     "objects/890009388c07906d978a7be212bf9d53c288194f63f8ede1fee12f0faa4f7d36.js",
-    "objects/c6404e7fec6cc5dd51afc863a0c56fb2d304e4088f77fc92dc6eac25ce317a34.js",
+    "objects/0200a58b30fe4aa66ebae6ea25fa6aeba438b5e4cc1d9d18e2d8932a57f01850.js",
     "objects/6e8749482e74b92882a07945731e2e86830f4620ed57c1421acdd330d76e5e89.js",
     "objects/46274643086742a0e6dba5bc8a10eee36679eb7f714b3cc7653dc2e5ee4b6090.js",
     "objects/93a80e2dbb71b1a61e3545a332c7332e70e24b5a6bb6651f362b2db5a2057200.js",
@@ -3584,10 +3584,10 @@
     "objects/cf212b811fc145275c4cafd35ecac9cc12aac2b13d625ff0f18d83c847793135.js",
     "objects/03b9254b90775f9c7a0228071e9efc62c1cde8b884c7349a7b854adc1423d80e.js",
     "objects/8157dac608e0dd7a0deee9f0dd33e33c8a47873afdd074dae59d000aa351247f.js",
-    "objects/a2529162f1b3361b1a81cad02eba3afd8914545eb102c4ecd210492dc77a0c6c.js",
+    "objects/8d0b78281d2341935aaf2659aa068e44aa552cfe2836e70f83b47e99d97b0b36.js",
     "objects/331a2b5f7e15cc866c768d25d82d6e900527606756e33a6ae52a7f2f88a36778.js",
-    "objects/9ed47ae2a2b3bf2a94aa97a98aa8eee53d00efc95339ac5be25803fdfbb56d07.js",
-    "objects/ee73a0c69ef1aecc46c54a306a0852e565bd83a269f6e355ca1df0344ddcf789.css"
+    "objects/07751b664c90765e574962e604f19f36c3fae8b30c20c1b1bce3142ac82fa76a.js",
+    "objects/00b7ea4983685a9df5d74a3b6d02c627e37e3ed81c830065ebf75aa9a44d0a14.css"
   ],
   "actors": {
     "200033": {
@@ -5833,6 +5833,26 @@
       "id": "v6-web-r2",
       "path": "releases/v6-web-r2.json",
       "sha256": "8851f9a2722aca21c6b926c9a1a452a78899f55242ffcea00042ea0c4fd7eecb"
+    },
+    {
+      "id": "v6-web-v8-r2-m1",
+      "path": "releases/v6-web-v8-r2-m1.json",
+      "sha256": "c859125cdbd5df6040e2338253c65017f923288d39165fb946ffeaea8d56c893"
     }
-  ]
+  ],
+  "ruleIdentityProof": {
+    "kind": "PRESENTATION_ONLY_SAME_RULES",
+    "sourceContentSha256": "487492a99e690151d74a16b3c9de89c3bba6ab60dec0dfc87d6101f55aa7be4e",
+    "baselineRules": "v8-06720db5aec4b9a50ce7edf8",
+    "verifiedPresentationFields": [
+      "description",
+      "baseDescription",
+      "name",
+      "originalDisplayName",
+      "icon",
+      "mappingFamily",
+      "mappingSourceId",
+      "mappingSource"
+    ]
+  }
 }

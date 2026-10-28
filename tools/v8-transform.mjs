@@ -16,6 +16,7 @@ const portraitObserver=new IntersectionObserver(entries=>{for(const e of entries
  replace('const candidate=Store.importSave(await f.text());',"const importedText=await f.text();if(await window.SS2_RESUME_SAVE(importedText))return;const candidate=Store.importSave(importedText);candidate.webRelease=window.SS2_WEB_RELEASE;candidate.webRules=window.SS2_WEB_RULES;candidate.webRunId??=crypto.randomUUID();");
  replace('if(!retainCurrent())return;const assets=await loadPackAssets(next.packId,next);',"if(!retainCurrent())return;if(await window.SS2_RESUME_SAVE(x.text))return;const assets=await loadPackAssets(next.packId,next);");
  replace('function loop(now){',"function loop(now){if(document.hidden||assetsBusy){lastFrame=now;requestAnimationFrame(loop);return;}");
+ code=code.replaceAll('esc(d.icon)', 'esc(window.SS2_ASSET_URL[d.icon]||d.icon)').replaceAll('Core.previewOpponent(state)', 'SS2Scene.preview(state)');
  for(const selector of ["$('#unit-actions').onclick=e=>{","$('#team').ondrop=e=>{"]){const a=code.indexOf(selector),b=code.indexOf('\r\n',a);if(a<0)throw Error('V8 touch hook drift');const old=code.slice(a,b);code=code.slice(0,a)+old.replace('=e=>{','=async e=>{').replaceAll('act({','await act({')+code.slice(b);}
  replace("$('#export').onclick=", "$('#lineups').onclick=()=>SS2Lineups.show();\n$('#export').onclick=");
  replace('activateAssets(await loadPackAssets(state.packId,state));',"renderer=new SS2Renderer(SS2_ACTORS);if(loaded.state)activateAssets(await loadPackAssets(state.packId,state));");
