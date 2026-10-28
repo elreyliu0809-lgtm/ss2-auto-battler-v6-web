@@ -1,0 +1,2 @@
+/* Historical rule executor sees its original pack defaults, even after new recommendation changes. */
+(function(r,f){if(typeof module==='object'&&module.exports)module.exports=f(require('./packs.js'));else r.SS2ProductPacksR1=f(r.SS2Packs);})(typeof globalThis!=='undefined'?globalThis:this,function(P){'use strict';const ids=P.listPacks().filter(p=>p.version==='product-thematic48-r1').map(p=>p.id);return Object.freeze({...P,RECOMMENDED_PACK_ID:ids[0],MAIN_PACK_IDS:Object.freeze(ids)});});
