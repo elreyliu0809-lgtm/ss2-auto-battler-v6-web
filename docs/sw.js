@@ -1,3 +1,4 @@
+const SS2_PRESENTATION_REVISION="v6-web-pc-portraits-r1";
 'use strict';
 const BASE=new URL('./',self.location.href),NS='ss2-v6-web:'+BASE.pathname+':',OBJECTS=NS+'objects',META=NS+'meta',SHELL=NS+'shell-v2',url=p=>new URL(p,BASE).href,key=url('__release_state__');
 const hex=b=>[...new Uint8Array(b)].map(n=>n.toString(16).padStart(2,'0')).join('');

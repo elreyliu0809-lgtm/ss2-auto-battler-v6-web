@@ -1,0 +1,65 @@
+{
+  "status": "LOCAL_FINAL_BYTES_VERIFIED_READY_FOR_AUTHORIZED_PUBLICATION",
+  "id": "v6-web-pc-portraits-r1",
+  "rules": "v8-product-r2-0abcaf8b541a2afe9c88ceff",
+  "sourceZipSHA256": "a88cec0c4b560c3399b000c0118ebd771af6c741df67a34546c7c40155a225e8",
+  "inputReadySHA256": "c076229be349ba8a123c444266175aa1313df1d8379b775a87fbcf47ca5b8461",
+  "releaseManifestSHA256": "ee4cee5791eddd56c56f07bee2944af58388c764fa05c05d3354220f0dd43d79",
+  "checks": {
+    "smoke": {
+      "passed": true,
+      "checks": 6,
+      "sha256": "653140db9a083bc7406dd44bcb5711c3bacd38cb0d7e02f7b26354636a256a54"
+    },
+    "interaction-qa": {
+      "passed": true,
+      "checks": 27,
+      "sha256": "d8fe1ea788fd5a0838c08ea57b801218aaef0057f4a8156c5fdb0bb2f8554d5e"
+    },
+    "target-qa": {
+      "passed": true,
+      "checks": 13,
+      "sha256": "db3c4404ed2fbfdcd99309d98ffd4478bf51fb9b360a5860193b04e611cb35ca"
+    },
+    "upgrade-qa": {
+      "passed": true,
+      "checks": 11,
+      "sha256": "b45fd973e7e5eda52050dbc0102401f50cdb2e6e5529aacec21a08d6733ad9c6"
+    },
+    "cold-legacy": {
+      "passed": true,
+      "checks": 4,
+      "sha256": "e409d847e1a5716ef9cbc64a4455bfe235d1bbb6a04f0d5c69d885267bcc0f3f"
+    },
+    "static-core-check": {
+      "passed": true,
+      "checks": 1183,
+      "sha256": "dca6aaf5d71d2121e83518ff6c076ddc6956f1b118fe5d8a7dd94ae1beab99af"
+    },
+    "pc-qa": {
+      "passed": true,
+      "checks": 20,
+      "sha256": "b5e6f57f3e70cec4f460f0a463cc660195657bcdfd5473216ebb1aaf9ea266a3"
+    },
+    "history-qa": {
+      "passed": true,
+      "checks": 27,
+      "sha256": "29ff09681aff69e261f43ddd4063c956d93f53fc77c7eab5a6bf3646e44eff1a"
+    }
+  },
+  "requiredProjectedFiles": 830,
+  "objects": 820,
+  "byteTotal": 319003225,
+  "bootBytes": 2682605,
+  "finalShellHashes": {
+    "index.html": "bf8da326f54fe25490b1c40cf283709dbc6eb9443c6798957644870f185f4aeb",
+    "bootstrap.js": "e5cbcbdacb6b408950b14c0b2dbbe7872665ecdc7d8a114f72084f8cd50f8541",
+    "sw.js": "d0a2a1f4a11104d7c6088163ea4fdf2458e27801ae270b5626096f7c47d98355"
+  },
+  "limits": [
+    "Actual local desktop Chromium and touch emulation; physical iPhone Safari NOT_RUN",
+    "No comprehension/balance/native-original-queue equivalence acceptance",
+    "Lineup records local-only; no new backend"
+  ],
+  "observedAt": "2026-10-28T10:35:47.437Z"
+}

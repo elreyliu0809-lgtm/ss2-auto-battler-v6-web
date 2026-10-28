@@ -1,12 +1,12 @@
 {
   "schema": 2,
-  "id": "v6-web-product-r2-1",
+  "id": "v6-web-pc-portraits-r1",
   "title": "少年演武 · 主题演武",
   "mode": "scene-v1",
   "rules": "v8-product-r2-0abcaf8b541a2afe9c88ceff",
   "content": "MULTIVERSION_NATIVE_SOURCE_AND_THEMATIC_R2",
-  "sourceZipSha256": "4e0b512de4a1da3ef54a18b1c078768d1642b1ab34eef74c6b30080d182d7d94",
-  "css": "objects/b286b73a6b7370f6670ba919bb10e4293037f8e0ff9d79d855ce2e30bd4a95b3.css",
+  "sourceZipSha256": "a88cec0c4b560c3399b000c0118ebd771af6c741df67a34546c7c40155a225e8",
+  "css": "objects/2e4e732735bf94e59de494217773712b59354fb1c62f4799b2692a3d557bf213.css",
   "scripts": [
     "objects/8e9bd5f7e3318681c43dbff0b50a902ecd485095173666bc146ba974d4b15b96.js",
     "objects/20c99794c67b2b081437e0499a2e9922c59a856c4e3ea835486262b6eb6be375.js",
@@ -40,7 +40,7 @@
     "objects/cbfc62b102c8a9b449e2dc0549f230043df34f79cbf60e4d82a1e09c462dd173.js",
     "objects/595839bb51d9e897a0db797ea6b49555d43568d545fb03fcd3764f8de7c0d6ae.js",
     "objects/3c3824583fc91767892cc66f43977830220b55ec0675968f1a63ccdef2c282df.js",
-    "objects/831ce864adad82c8c02954190e0bfd13b8d3a9e6ce5218eb1f21b8b3f1877363.js"
+    "objects/0b30c89e2412a74da93202c35a4161bc6cb2a93505e15ec404daf2f3b17f50ae.js"
   ],
   "files": [
     {
@@ -4952,15 +4952,15 @@
       "label": "web/lineups-v8.js"
     },
     {
-      "path": "objects/831ce864adad82c8c02954190e0bfd13b8d3a9e6ce5218eb1f21b8b3f1877363.js",
-      "size": 70873,
-      "sha256": "831ce864adad82c8c02954190e0bfd13b8d3a9e6ce5218eb1f21b8b3f1877363",
+      "path": "objects/0b30c89e2412a74da93202c35a4161bc6cb2a93505e15ec404daf2f3b17f50ae.js",
+      "size": 70857,
+      "sha256": "0b30c89e2412a74da93202c35a4161bc6cb2a93505e15ec404daf2f3b17f50ae",
       "label": "src/app.js"
     },
     {
-      "path": "objects/b286b73a6b7370f6670ba919bb10e4293037f8e0ff9d79d855ce2e30bd4a95b3.css",
-      "size": 37137,
-      "sha256": "b286b73a6b7370f6670ba919bb10e4293037f8e0ff9d79d855ce2e30bd4a95b3",
+      "path": "objects/2e4e732735bf94e59de494217773712b59354fb1c62f4799b2692a3d557bf213.css",
+      "size": 37689,
+      "sha256": "2e4e732735bf94e59de494217773712b59354fb1c62f4799b2692a3d557bf213",
       "label": "styles.css"
     }
   ],
@@ -5018,8 +5018,8 @@
     "objects/cbfc62b102c8a9b449e2dc0549f230043df34f79cbf60e4d82a1e09c462dd173.js",
     "objects/595839bb51d9e897a0db797ea6b49555d43568d545fb03fcd3764f8de7c0d6ae.js",
     "objects/3c3824583fc91767892cc66f43977830220b55ec0675968f1a63ccdef2c282df.js",
-    "objects/831ce864adad82c8c02954190e0bfd13b8d3a9e6ce5218eb1f21b8b3f1877363.js",
-    "objects/b286b73a6b7370f6670ba919bb10e4293037f8e0ff9d79d855ce2e30bd4a95b3.css"
+    "objects/0b30c89e2412a74da93202c35a4161bc6cb2a93505e15ec404daf2f3b17f50ae.js",
+    "objects/2e4e732735bf94e59de494217773712b59354fb1c62f4799b2692a3d557bf213.css"
   ],
   "actors": {
     "200033": {
@@ -7565,6 +7565,11 @@
     "upload": "unsupported-rules-local-only"
   },
   "legacyReleases": [
+    {
+      "id": "v6-web-product-r2-1",
+      "path": "releases/v6-web-product-r2-1.json",
+      "sha256": "648bb5f46a0ea574fd65b7dbad527de13e2ef50f24f411ecd8aa1f4d2fcb0a3d"
+    },
     {
       "id": "v6-web-r1",
       "path": "releases/v6-web-r1.json",
