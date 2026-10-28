@@ -1,0 +1,60 @@
+{
+  "status": "LOCAL_FINAL_BYTES_VERIFIED_READY_FOR_AUTHORIZED_PUBLICATION",
+  "id": "v6-web-direct-r1",
+  "rules": "v8-product-r2-0abcaf8b541a2afe9c88ceff",
+  "sourceZipSHA256": "08da8ac426ca91cb3977acb0756ec0e6decaafa74ec1780f53e1f4e677889fa5",
+  "inputReadySHA256": "8c178c9fb939908dba93803e514573d5d83e3b57544d5ca21e740dbb582eb412",
+  "releaseManifestSHA256": "bc7c8253e001da6491158d97b29d96808b6f4da675c84e20a8f20349f80ebd53",
+  "checks": {
+    "direct-qa": {
+      "passed": true,
+      "checks": 201,
+      "sha256": "4e349f2757e70567d8f0cf64dcecbee6e0fc0cff9e32eee8a6e71ba2bc2efd1f"
+    },
+    "target-qa": {
+      "passed": true,
+      "checks": 25,
+      "sha256": "2f11b5a6daf1f53dc693a87a640c7979ab90f319090458f6282a4a5af224fca2"
+    },
+    "upgrade-qa": {
+      "passed": true,
+      "checks": 11,
+      "sha256": "bf30cbed6e1b38e799dca70f7fa6efca45298a9aaeed7a168017f692cc3f9026"
+    },
+    "cold-legacy": {
+      "passed": true,
+      "checks": 4,
+      "sha256": "85d97fab4ea912458f640aa5cd4f5d7d9070c29ec370702e4efeeebcf39e8335"
+    },
+    "static-core-check": {
+      "passed": true,
+      "checks": 1184,
+      "sha256": "2153bce8639a8f22f4ae82c3bd73d735393c70202a8ab0f10edb0143d540a0e3"
+    },
+    "legacy-group-qa": {
+      "passed": true,
+      "checks": 8,
+      "sha256": "c4713aa5b61ead7443e52aace24ded186268aefca47c3156f64503f4138910a0"
+    },
+    "offline-theme-qa": {
+      "passed": true,
+      "checks": 5,
+      "sha256": "636413f583161a32671a680aba49b15c40aa7db1e26813c877909547c0107779"
+    }
+  },
+  "requiredProjectedFiles": 832,
+  "objects": 821,
+  "byteTotal": 319011073,
+  "bootBytes": 2690453,
+  "finalShellHashes": {
+    "index.html": "75de51feb1276106acf9e289cd0517b4edbe7706cfeb612b92e4859acd7e848c",
+    "bootstrap.js": "b6fdc6cf5319a11a607aabe9b398b7a2999beb99512f7d36eecb54c09ac4b9d0",
+    "sw.js": "ce0287f0f9dc3d21e3e6063929387be30f4185970cc369147c5d083c5b59f686"
+  },
+  "limits": [
+    "Actual local desktop Chromium and touch emulation; physical iPhone Safari NOT_RUN",
+    "No comprehension/balance/native-original-queue equivalence acceptance",
+    "Lineup records local-only; no new backend"
+  ],
+  "observedAt": "2026-10-28T12:56:22.212Z"
+}
