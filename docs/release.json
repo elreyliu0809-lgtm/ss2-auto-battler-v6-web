@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "v6-web-r1",
+  "id": "v6-web-r2",
   "rules": "v6-17ea0dd16023d47880c0a733",
   "content": "local-base-18-v1",
   "sourceZipSha256": "c7d2174906f8cd676640834f812311794749261d940b1faef603a750873a114a",
@@ -44,8 +44,9 @@
     "objects/344cabf307f64da1ba652a9b7f140a8903bf9d81117d7d76fab82bb29fddf058.js",
     "objects/f9247683393d36cc37241f11f9fd6f8e3e8eb007aac96b40319d19d2ff5b0993.js",
     "objects/8157dac608e0dd7a0deee9f0dd33e33c8a47873afdd074dae59d000aa351247f.js",
-    "objects/cf8a7806600044916c2276c3bd79583a26bc3b55e2bc19458f372f8212a8af69.js",
-    "objects/7569ded92618d862c1f6f5e74616b98f1fe1b14ed4158a1a9889b25dbfb4b09c.js"
+    "objects/f3327885540770c7a0870f9bc50ca98856ec0e38dd758e7507ec2336fd2a57f9.js",
+    "objects/4e56d4833c037f1a03cff88b5e02dc2808645db973b1a165a30627869fb559ec.js",
+    "objects/23329fe94d139568fe610447cb15cf3649213679fcae21c130ed6197dca01914.js"
   ],
   "files": [
     {
@@ -577,15 +578,21 @@
       "label": "src/quality-candidates.js"
     },
     {
-      "path": "objects/cf8a7806600044916c2276c3bd79583a26bc3b55e2bc19458f372f8212a8af69.js",
-      "size": 10179,
-      "sha256": "cf8a7806600044916c2276c3bd79583a26bc3b55e2bc19458f372f8212a8af69",
+      "path": "objects/f3327885540770c7a0870f9bc50ca98856ec0e38dd758e7507ec2336fd2a57f9.js",
+      "size": 10270,
+      "sha256": "f3327885540770c7a0870f9bc50ca98856ec0e38dd758e7507ec2336fd2a57f9",
       "label": "src/lineups.js"
     },
     {
-      "path": "objects/7569ded92618d862c1f6f5e74616b98f1fe1b14ed4158a1a9889b25dbfb4b09c.js",
-      "size": 32465,
-      "sha256": "7569ded92618d862c1f6f5e74616b98f1fe1b14ed4158a1a9889b25dbfb4b09c",
+      "path": "objects/4e56d4833c037f1a03cff88b5e02dc2808645db973b1a165a30627869fb559ec.js",
+      "size": 9099,
+      "sha256": "4e56d4833c037f1a03cff88b5e02dc2808645db973b1a165a30627869fb559ec",
+      "label": "src/remote-lineups.js"
+    },
+    {
+      "path": "objects/23329fe94d139568fe610447cb15cf3649213679fcae21c130ed6197dca01914.js",
+      "size": 32482,
+      "sha256": "23329fe94d139568fe610447cb15cf3649213679fcae21c130ed6197dca01914",
       "label": "src/app.js"
     },
     {
@@ -594,5 +601,10 @@
       "sha256": "49516c4f9f0b4d46e2970dfa44a09d37f871a6458849cf703d645aeef31cc51e",
       "label": "styles.css"
     }
-  ]
+  ],
+  "backend": {
+    "url": "https://ss2-v6-lineups.elreyliu0809.workers.dev",
+    "upload": "explicit-player-opt-in",
+    "pool": "validated-published-batch"
+  }
 }

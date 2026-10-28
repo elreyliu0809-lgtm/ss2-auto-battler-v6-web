@@ -5,7 +5,7 @@ const key=url('__release_state__');
 const hex=b=>[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
 async function read(){const r=await (await caches.open(META)).match(key);return r?r.json():{active:null,previous:null,pending:null,releases:{}};}
 async function write(s){await(await caches.open(META)).put(key,new Response(JSON.stringify(s),{headers:{'Content-Type':'application/json'}}));}
-self.addEventListener('install',e=>e.waitUntil((async()=>{const c=await caches.open(SHELL);for(const p of ['','index.html','bootstrap.js']){const r=await fetch(url(p),{cache:'reload'});if(!r.ok)throw Error('启动页下载失败');await c.put(url(p),r);}})()));
+self.addEventListener('install',e=>e.waitUntil((async()=>{const prepared=[];for(const p of ['','index.html','bootstrap.js']){const r=await fetch(url(p),{cache:'reload'});if(!r.ok)throw Error('启动页下载失败');prepared.push([url(p),r]);}const c=await caches.open(SHELL);for(const [p,r]of prepared)await c.put(p,r);})()));
 self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(u.origin!==BASE.origin||!u.href.startsWith(BASE.href)||e.request.method!=='GET')return;
  if(u.pathname.includes('/objects/'))e.respondWith((async()=>{const c=await caches.open(OBJECTS),r=await c.match(e.request);return r||fetch(e.request);})());

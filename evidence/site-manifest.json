@@ -1,5 +1,5 @@
 {
-  "release": "v6-web-r1",
+  "release": "v6-web-r2",
   "files": [
     {
       "path": ".nojekyll",
@@ -13,8 +13,8 @@
     },
     {
       "path": "index.html",
-      "size": 3601,
-      "sha256": "52edc312189b0eea0d49f097c5166c4d37cf440582bd1485264e8e2edb95b92f"
+      "size": 3649,
+      "sha256": "67fbe75278af37776ce02bef20e65f525c7ff4669105909d3e6ee84e74b679b5"
     },
     {
       "path": "objects/047b712d979a3562addf29794ad73d28636e2cf1761b03e432453084d1af7f26.png",
@@ -70,6 +70,11 @@
       "path": "objects/1a4b33116620ed91623ff2353f2e76524fc1b83ffb45620a4d84756bdbc89ace.svg",
       "size": 257,
       "sha256": "1a4b33116620ed91623ff2353f2e76524fc1b83ffb45620a4d84756bdbc89ace"
+    },
+    {
+      "path": "objects/23329fe94d139568fe610447cb15cf3649213679fcae21c130ed6197dca01914.js",
+      "size": 32482,
+      "sha256": "23329fe94d139568fe610447cb15cf3649213679fcae21c130ed6197dca01914"
     },
     {
       "path": "objects/23c1b708bcff7f170a3b0977e7c6449233551bfc9535122e3730e994d7ed1b0d.js",
@@ -150,6 +155,11 @@
       "path": "objects/49516c4f9f0b4d46e2970dfa44a09d37f871a6458849cf703d645aeef31cc51e.css",
       "size": 21814,
       "sha256": "49516c4f9f0b4d46e2970dfa44a09d37f871a6458849cf703d645aeef31cc51e"
+    },
+    {
+      "path": "objects/4e56d4833c037f1a03cff88b5e02dc2808645db973b1a165a30627869fb559ec.js",
+      "size": 9099,
+      "sha256": "4e56d4833c037f1a03cff88b5e02dc2808645db973b1a165a30627869fb559ec"
     },
     {
       "path": "objects/52f7a44b49e87875965249c710a4a25306e2c1e5519212cf7c4ca515d4089747.js",
@@ -447,6 +457,11 @@
       "sha256": "f30391e3b976610fb7e340df49d95b24dd60f853725418c9953182ef8d80ac8b"
     },
     {
+      "path": "objects/f3327885540770c7a0870f9bc50ca98856ec0e38dd758e7507ec2336fd2a57f9.js",
+      "size": 10270,
+      "sha256": "f3327885540770c7a0870f9bc50ca98856ec0e38dd758e7507ec2336fd2a57f9"
+    },
+    {
       "path": "objects/f5949338733ed02b37a3c9734868e116c12481f0045ac62b3dfcca982c719a84.png",
       "size": 246238,
       "sha256": "f5949338733ed02b37a3c9734868e116c12481f0045ac62b3dfcca982c719a84"
@@ -478,15 +493,15 @@
     },
     {
       "path": "release.json",
-      "size": 26661,
-      "sha256": "6dae4e24c5c0c880cceb1a95c36bdfdd79c1a5d1e6d54e85debf88c78ad93a07"
+      "size": 27155,
+      "sha256": "8851f9a2722aca21c6b926c9a1a452a78899f55242ffcea00042ea0c4fd7eecb"
     },
     {
       "path": "sw.js",
-      "size": 4085,
-      "sha256": "14a25b5cbaefa6025cccfbc2afa5c39624daa2b7cf4029622c70165eb9d55e35"
+      "size": 4151,
+      "sha256": "5da6363eb144558605a44d6bb9d36d746086c589b49331cf7241a279b3923461"
     }
   ],
-  "aggregateSha256": "855d659fc8bdb5c584aba0fca7e365f59b34c5221549833a4b0e53e386f5f531",
+  "aggregateSha256": "c86cf4f386ce5f54184f798c7af45a5a0465767ce83666d0140e84cc2d4cd4ec",
   "credentialPatternHits": 0
 }
