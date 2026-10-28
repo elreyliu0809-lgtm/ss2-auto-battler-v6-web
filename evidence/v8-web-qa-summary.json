@@ -1,0 +1,124 @@
+{
+  "status": "LOCAL_CANDIDATE_VERIFIED_NOT_YET_PUBLISHED",
+  "release": "v6-web-v8-r2-m1",
+  "rules": "v8-06720db5aec4b9a50ce7edf8",
+  "sourceZipSha256": "3b4160e2b73f0db08e59190e100b4e2557b2e7ee4beba0b2853cc81ae4db8882",
+  "manifestSha256": "c859125cdbd5df6040e2338253c65017f923288d39165fb946ffeaea8d56c893",
+  "sourceRendererSha256": "5363b43a3c747592e6a367f71f9de7f82ced46060f4fca3b6bd0f33c15ec5567",
+  "sourceTimelineSha256": "cf212b811fc145275c4cafd35ecac9cc12aac2b13d625ff0f18d83c847793135",
+  "models": 262,
+  "objects": 587,
+  "bodyBytes": 313142620,
+  "packs": {
+    "sap-turtle-0": {
+      "version": "sap-turtle-26131463-v1",
+      "content": "sap-turtle-26131463-v1",
+      "units": 60,
+      "ruleSet": "sap-original"
+    },
+    "sap-turtle-1": {
+      "version": "sap-turtle-26131463-v1",
+      "content": "sap-turtle-26131463-v1",
+      "units": 60,
+      "ruleSet": "sap-original"
+    },
+    "sap-turtle-2": {
+      "version": "sap-turtle-26131463-v1",
+      "content": "sap-turtle-26131463-v1",
+      "units": 60,
+      "ruleSet": "sap-original"
+    },
+    "sap-turtle-3": {
+      "version": "sap-turtle-26131463-v1",
+      "content": "sap-turtle-26131463-v1",
+      "units": 60,
+      "ruleSet": "sap-original"
+    },
+    "cangjin-30": {
+      "version": "local-cangjin-30-v1",
+      "content": "local-base-18-v1",
+      "units": 30,
+      "ruleSet": "legacy-adaptation"
+    },
+    "local-base-18": {
+      "version": "local-base-18-v1",
+      "content": "local-base-18-v1",
+      "units": 18,
+      "ruleSet": "legacy-adaptation"
+    },
+    "pack.q9": {
+      "version": "local-redgold-22-v1",
+      "content": "local-base-18-v1",
+      "units": 22,
+      "ruleSet": "legacy-adaptation"
+    },
+    "army-48": {
+      "version": "local-v8-army-48-v1",
+      "content": "local-base-18-v1",
+      "units": 48,
+      "ruleSet": "v8"
+    },
+    "strategy-48": {
+      "version": "local-v8-strategy-48-v1",
+      "content": "local-base-18-v1",
+      "units": 48,
+      "ruleSet": "v8"
+    },
+    "redsky-48": {
+      "version": "local-v8-redsky-48-v1",
+      "content": "local-base-18-v1",
+      "units": 48,
+      "ruleSet": "v8"
+    },
+    "theme-48": {
+      "version": "local-v8-theme-48-v1",
+      "content": "local-base-18-v1",
+      "units": 48,
+      "ruleSet": "v8"
+    },
+    "rainbow-yao-48": {
+      "version": "local-v8-rainbow-yao-48-v1",
+      "content": "local-base-18-v1",
+      "units": 48,
+      "ruleSet": "v8"
+    }
+  },
+  "authorQA": {
+    "smoke": 9,
+    "ui": 19,
+    "pixelFrames": 36,
+    "pixelModels": 9,
+    "regressionRuns": 96,
+    "regressionStates": 5342,
+    "upgrade": 12,
+    "first": {
+      "requests": 44,
+      "bodyBytes": 1571819,
+      "rawBytes": 3522947,
+      "failures": 0,
+      "milliseconds": 12111
+    },
+    "firstBattle": {
+      "requests": 4,
+      "bodyBytes": 1173514,
+      "rawBytes": 2520582,
+      "failures": 0,
+      "milliseconds": 6399,
+      "definition": "button click through committed battle state; excludes subsequent pause-control scrolling"
+    }
+  },
+  "limits": {
+    "nativeClientPixelEquivalence": false,
+    "realIPhonePerformanceAcceptance": false,
+    "global2MBOr15SecondGuarantee": false,
+    "currentV8BackendUpload": false,
+    "oldV6BackendPreserved": true,
+    "independentWholeWebReview": false
+  },
+  "freeScope": {
+    "newInstalls": 0,
+    "newPaidServices": 0,
+    "domainOrDNSChanges": 0
+  },
+  "observedUtc": "2026-10-28T01:36:23.919Z"
+}

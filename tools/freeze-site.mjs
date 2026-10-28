@@ -1,8 +1,8 @@
 import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
 const root=path.resolve(import.meta.dirname,'..'),pub=path.join(root,'public'),site=path.join(root,'docs'),manifest=JSON.parse(fs.readFileSync(path.join(pub,'release.json')));
-const wanted=[...manifest.files.map(f=>f.path),'index.html','bootstrap.js','sw.js','release.json','.nojekyll'];fs.mkdirSync(path.join(site,'objects'),{recursive:true});
+const wanted=[...manifest.files.map(f=>f.path),...(manifest.legacyReleases||[]).map(f=>f.path),'index.html','bootstrap.js','sw.js','release.json','.nojekyll'];fs.mkdirSync(path.join(site,'objects'),{recursive:true});
 // This script adds the exact named release set; it never deletes retained release objects.
-for(const rel of wanted){if(rel.includes('..')||path.isAbsolute(rel))throw Error('Unsafe release path');fs.copyFileSync(path.join(pub,rel),path.join(site,rel));}
+for(const rel of wanted){if(rel.includes('..')||path.isAbsolute(rel))throw Error('Unsafe release path');fs.mkdirSync(path.dirname(path.join(site,rel)),{recursive:true});fs.copyFileSync(path.join(pub,rel),path.join(site,rel));}
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');for(const f of manifest.files){const b=fs.readFileSync(path.join(site,f.path));if(b.length!==f.size||sha(b)!==f.sha256)throw Error('Freeze mismatch '+f.path);}
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
 const files=walk(site).map(p=>{const b=fs.readFileSync(p);return{path:path.relative(site,p).replaceAll('\\','/'),size:b.length,sha256:sha(b)};}).sort((a,b)=>a.path.localeCompare(b.path));

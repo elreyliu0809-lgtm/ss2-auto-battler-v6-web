@@ -1,0 +1,1326 @@
+{
+  "scope": "Static unique dependency budgets,80 seeds per appearance pack. gzip object bodies only, not runtime, total wire bytes or real phone speed. Larger seed/pack payloads remain possible.",
+  "packs": [
+    {
+      "pack": "sap-turtle-0",
+      "samples": 80,
+      "min": 434327,
+      "median": 617523,
+      "p95": 768331,
+      "max": 877063,
+      "values": [
+        {
+          "seed": 1,
+          "estimatedGzipObjectBytes": 533737
+        },
+        {
+          "seed": 2,
+          "estimatedGzipObjectBytes": 766340
+        },
+        {
+          "seed": 3,
+          "estimatedGzipObjectBytes": 665553
+        },
+        {
+          "seed": 4,
+          "estimatedGzipObjectBytes": 609949
+        },
+        {
+          "seed": 5,
+          "estimatedGzipObjectBytes": 754298
+        },
+        {
+          "seed": 6,
+          "estimatedGzipObjectBytes": 531274
+        },
+        {
+          "seed": 7,
+          "estimatedGzipObjectBytes": 471540
+        },
+        {
+          "seed": 8,
+          "estimatedGzipObjectBytes": 643596
+        },
+        {
+          "seed": 9,
+          "estimatedGzipObjectBytes": 587322
+        },
+        {
+          "seed": 10,
+          "estimatedGzipObjectBytes": 516268
+        },
+        {
+          "seed": 11,
+          "estimatedGzipObjectBytes": 453996
+        },
+        {
+          "seed": 12,
+          "estimatedGzipObjectBytes": 622800
+        },
+        {
+          "seed": 13,
+          "estimatedGzipObjectBytes": 543316
+        },
+        {
+          "seed": 14,
+          "estimatedGzipObjectBytes": 434327
+        },
+        {
+          "seed": 15,
+          "estimatedGzipObjectBytes": 518429
+        },
+        {
+          "seed": 16,
+          "estimatedGzipObjectBytes": 785537
+        },
+        {
+          "seed": 17,
+          "estimatedGzipObjectBytes": 634052
+        },
+        {
+          "seed": 18,
+          "estimatedGzipObjectBytes": 523329
+        },
+        {
+          "seed": 19,
+          "estimatedGzipObjectBytes": 523612
+        },
+        {
+          "seed": 20,
+          "estimatedGzipObjectBytes": 679775
+        },
+        {
+          "seed": 21,
+          "estimatedGzipObjectBytes": 518429
+        },
+        {
+          "seed": 22,
+          "estimatedGzipObjectBytes": 535635
+        },
+        {
+          "seed": 23,
+          "estimatedGzipObjectBytes": 466559
+        },
+        {
+          "seed": 24,
+          "estimatedGzipObjectBytes": 609949
+        },
+        {
+          "seed": 25,
+          "estimatedGzipObjectBytes": 469518
+        },
+        {
+          "seed": 26,
+          "estimatedGzipObjectBytes": 607979
+        },
+        {
+          "seed": 27,
+          "estimatedGzipObjectBytes": 449353
+        },
+        {
+          "seed": 28,
+          "estimatedGzipObjectBytes": 588275
+        },
+        {
+          "seed": 29,
+          "estimatedGzipObjectBytes": 730196
+        },
+        {
+          "seed": 30,
+          "estimatedGzipObjectBytes": 444888
+        },
+        {
+          "seed": 31,
+          "estimatedGzipObjectBytes": 678294
+        },
+        {
+          "seed": 32,
+          "estimatedGzipObjectBytes": 766340
+        },
+        {
+          "seed": 33,
+          "estimatedGzipObjectBytes": 667733
+        },
+        {
+          "seed": 34,
+          "estimatedGzipObjectBytes": 644613
+        },
+        {
+          "seed": 35,
+          "estimatedGzipObjectBytes": 690183
+        },
+        {
+          "seed": 36,
+          "estimatedGzipObjectBytes": 538153
+        },
+        {
+          "seed": 37,
+          "estimatedGzipObjectBytes": 536255
+        },
+        {
+          "seed": 38,
+          "estimatedGzipObjectBytes": 700744
+        },
+        {
+          "seed": 39,
+          "estimatedGzipObjectBytes": 687720
+        },
+        {
+          "seed": 40,
+          "estimatedGzipObjectBytes": 544298
+        },
+        {
+          "seed": 41,
+          "estimatedGzipObjectBytes": 529272
+        },
+        {
+          "seed": 42,
+          "estimatedGzipObjectBytes": 507105
+        },
+        {
+          "seed": 43,
+          "estimatedGzipObjectBytes": 602868
+        },
+        {
+          "seed": 44,
+          "estimatedGzipObjectBytes": 667063
+        },
+        {
+          "seed": 45,
+          "estimatedGzipObjectBytes": 685277
+        },
+        {
+          "seed": 46,
+          "estimatedGzipObjectBytes": 514088
+        },
+        {
+          "seed": 47,
+          "estimatedGzipObjectBytes": 511570
+        },
+        {
+          "seed": 48,
+          "estimatedGzipObjectBytes": 615872
+        },
+        {
+          "seed": 49,
+          "estimatedGzipObjectBytes": 674814
+        },
+        {
+          "seed": 50,
+          "estimatedGzipObjectBytes": 646094
+        },
+        {
+          "seed": 51,
+          "estimatedGzipObjectBytes": 631872
+        },
+        {
+          "seed": 52,
+          "estimatedGzipObjectBytes": 600633
+        },
+        {
+          "seed": 53,
+          "estimatedGzipObjectBytes": 484544
+        },
+        {
+          "seed": 54,
+          "estimatedGzipObjectBytes": 607431
+        },
+        {
+          "seed": 55,
+          "estimatedGzipObjectBytes": 663551
+        },
+        {
+          "seed": 56,
+          "estimatedGzipObjectBytes": 768331
+        },
+        {
+          "seed": 57,
+          "estimatedGzipObjectBytes": 877063
+        },
+        {
+          "seed": 58,
+          "estimatedGzipObjectBytes": 645566
+        },
+        {
+          "seed": 59,
+          "estimatedGzipObjectBytes": 607431
+        },
+        {
+          "seed": 60,
+          "estimatedGzipObjectBytes": 732659
+        },
+        {
+          "seed": 61,
+          "estimatedGzipObjectBytes": 685718
+        },
+        {
+          "seed": 62,
+          "estimatedGzipObjectBytes": 725783
+        },
+        {
+          "seed": 63,
+          "estimatedGzipObjectBytes": 555622
+        },
+        {
+          "seed": 64,
+          "estimatedGzipObjectBytes": 504642
+        },
+        {
+          "seed": 65,
+          "estimatedGzipObjectBytes": 643596
+        },
+        {
+          "seed": 66,
+          "estimatedGzipObjectBytes": 740604
+        },
+        {
+          "seed": 67,
+          "estimatedGzipObjectBytes": 496599
+        },
+        {
+          "seed": 68,
+          "estimatedGzipObjectBytes": 732659
+        },
+        {
+          "seed": 69,
+          "estimatedGzipObjectBytes": 617523
+        },
+        {
+          "seed": 70,
+          "estimatedGzipObjectBytes": 763877
+        },
+        {
+          "seed": 71,
+          "estimatedGzipObjectBytes": 788000
+        },
+        {
+          "seed": 72,
+          "estimatedGzipObjectBytes": 658400
+        },
+        {
+          "seed": 73,
+          "estimatedGzipObjectBytes": 680812
+        },
+        {
+          "seed": 74,
+          "estimatedGzipObjectBytes": 790518
+        },
+        {
+          "seed": 75,
+          "estimatedGzipObjectBytes": 630898
+        },
+        {
+          "seed": 76,
+          "estimatedGzipObjectBytes": 661088
+        },
+        {
+          "seed": 77,
+          "estimatedGzipObjectBytes": 509107
+        },
+        {
+          "seed": 78,
+          "estimatedGzipObjectBytes": 466038
+        },
+        {
+          "seed": 79,
+          "estimatedGzipObjectBytes": 685277
+        },
+        {
+          "seed": 80,
+          "estimatedGzipObjectBytes": 543264
+        }
+      ]
+    },
+    {
+      "pack": "sap-turtle-1",
+      "samples": 80,
+      "min": 874504,
+      "median": 1651790,
+      "p95": 2263132,
+      "max": 2474980,
+      "values": [
+        {
+          "seed": 1,
+          "estimatedGzipObjectBytes": 1867457
+        },
+        {
+          "seed": 2,
+          "estimatedGzipObjectBytes": 1706508
+        },
+        {
+          "seed": 3,
+          "estimatedGzipObjectBytes": 1856074
+        },
+        {
+          "seed": 4,
+          "estimatedGzipObjectBytes": 1562725
+        },
+        {
+          "seed": 5,
+          "estimatedGzipObjectBytes": 1728985
+        },
+        {
+          "seed": 6,
+          "estimatedGzipObjectBytes": 1864994
+        },
+        {
+          "seed": 7,
+          "estimatedGzipObjectBytes": 1131322
+        },
+        {
+          "seed": 8,
+          "estimatedGzipObjectBytes": 1123568
+        },
+        {
+          "seed": 9,
+          "estimatedGzipObjectBytes": 940316
+        },
+        {
+          "seed": 10,
+          "estimatedGzipObjectBytes": 2208724
+        },
+        {
+          "seed": 11,
+          "estimatedGzipObjectBytes": 1637193
+        },
+        {
+          "seed": 12,
+          "estimatedGzipObjectBytes": 1919712
+        },
+        {
+          "seed": 13,
+          "estimatedGzipObjectBytes": 1842517
+        },
+        {
+          "seed": 14,
+          "estimatedGzipObjectBytes": 1903449
+        },
+        {
+          "seed": 15,
+          "estimatedGzipObjectBytes": 1282390
+        },
+        {
+          "seed": 16,
+          "estimatedGzipObjectBytes": 1539257
+        },
+        {
+          "seed": 17,
+          "estimatedGzipObjectBytes": 1816896
+        },
+        {
+          "seed": 18,
+          "estimatedGzipObjectBytes": 1929429
+        },
+        {
+          "seed": 19,
+          "estimatedGzipObjectBytes": 1440385
+        },
+        {
+          "seed": 20,
+          "estimatedGzipObjectBytes": 2325104
+        },
+        {
+          "seed": 21,
+          "estimatedGzipObjectBytes": 1282390
+        },
+        {
+          "seed": 22,
+          "estimatedGzipObjectBytes": 1013671
+        },
+        {
+          "seed": 23,
+          "estimatedGzipObjectBytes": 874504
+        },
+        {
+          "seed": 24,
+          "estimatedGzipObjectBytes": 1562725
+        },
+        {
+          "seed": 25,
+          "estimatedGzipObjectBytes": 1748640
+        },
+        {
+          "seed": 26,
+          "estimatedGzipObjectBytes": 2030405
+        },
+        {
+          "seed": 27,
+          "estimatedGzipObjectBytes": 1143223
+        },
+        {
+          "seed": 28,
+          "estimatedGzipObjectBytes": 1628273
+        },
+        {
+          "seed": 29,
+          "estimatedGzipObjectBytes": 1173360
+        },
+        {
+          "seed": 30,
+          "estimatedGzipObjectBytes": 1341582
+        },
+        {
+          "seed": 31,
+          "estimatedGzipObjectBytes": 1785714
+        },
+        {
+          "seed": 32,
+          "estimatedGzipObjectBytes": 1706508
+        },
+        {
+          "seed": 33,
+          "estimatedGzipObjectBytes": 2347581
+        },
+        {
+          "seed": 34,
+          "estimatedGzipObjectBytes": 1255029
+        },
+        {
+          "seed": 35,
+          "estimatedGzipObjectBytes": 2263132
+        },
+        {
+          "seed": 36,
+          "estimatedGzipObjectBytes": 1268026
+        },
+        {
+          "seed": 37,
+          "estimatedGzipObjectBytes": 2121812
+        },
+        {
+          "seed": 38,
+          "estimatedGzipObjectBytes": 1701265
+        },
+        {
+          "seed": 39,
+          "estimatedGzipObjectBytes": 2260669
+        },
+        {
+          "seed": 40,
+          "estimatedGzipObjectBytes": 1305590
+        },
+        {
+          "seed": 41,
+          "estimatedGzipObjectBytes": 2065816
+        },
+        {
+          "seed": 42,
+          "estimatedGzipObjectBytes": 1661221
+        },
+        {
+          "seed": 43,
+          "estimatedGzipObjectBytes": 2258516
+        },
+        {
+          "seed": 44,
+          "estimatedGzipObjectBytes": 1170580
+        },
+        {
+          "seed": 45,
+          "estimatedGzipObjectBytes": 1841710
+        },
+        {
+          "seed": 46,
+          "estimatedGzipObjectBytes": 1717217
+        },
+        {
+          "seed": 47,
+          "estimatedGzipObjectBytes": 1462862
+        },
+        {
+          "seed": 48,
+          "estimatedGzipObjectBytes": 2115608
+        },
+        {
+          "seed": 49,
+          "estimatedGzipObjectBytes": 1651790
+        },
+        {
+          "seed": 50,
+          "estimatedGzipObjectBytes": 1794419
+        },
+        {
+          "seed": 51,
+          "estimatedGzipObjectBytes": 1325389
+        },
+        {
+          "seed": 52,
+          "estimatedGzipObjectBytes": 1515117
+        },
+        {
+          "seed": 53,
+          "estimatedGzipObjectBytes": 988414
+        },
+        {
+          "seed": 54,
+          "estimatedGzipObjectBytes": 1308370
+        },
+        {
+          "seed": 55,
+          "estimatedGzipObjectBytes": 2056896
+        },
+        {
+          "seed": 56,
+          "estimatedGzipObjectBytes": 1807976
+        },
+        {
+          "seed": 57,
+          "estimatedGzipObjectBytes": 1593975
+        },
+        {
+          "seed": 58,
+          "estimatedGzipObjectBytes": 1942986
+        },
+        {
+          "seed": 59,
+          "estimatedGzipObjectBytes": 1308370
+        },
+        {
+          "seed": 60,
+          "estimatedGzipObjectBytes": 1175823
+        },
+        {
+          "seed": 61,
+          "estimatedGzipObjectBytes": 2461491
+        },
+        {
+          "seed": 62,
+          "estimatedGzipObjectBytes": 1222081
+        },
+        {
+          "seed": 63,
+          "estimatedGzipObjectBytes": 926759
+        },
+        {
+          "seed": 64,
+          "estimatedGzipObjectBytes": 1658758
+        },
+        {
+          "seed": 65,
+          "estimatedGzipObjectBytes": 1123568
+        },
+        {
+          "seed": 66,
+          "estimatedGzipObjectBytes": 1111388
+        },
+        {
+          "seed": 67,
+          "estimatedGzipObjectBytes": 2474980
+        },
+        {
+          "seed": 68,
+          "estimatedGzipObjectBytes": 1175823
+        },
+        {
+          "seed": 69,
+          "estimatedGzipObjectBytes": 1337077
+        },
+        {
+          "seed": 70,
+          "estimatedGzipObjectBytes": 1704045
+        },
+        {
+          "seed": 71,
+          "estimatedGzipObjectBytes": 1541720
+        },
+        {
+          "seed": 72,
+          "estimatedGzipObjectBytes": 878661
+        },
+        {
+          "seed": 73,
+          "estimatedGzipObjectBytes": 2040069
+        },
+        {
+          "seed": 74,
+          "estimatedGzipObjectBytes": 1796075
+        },
+        {
+          "seed": 75,
+          "estimatedGzipObjectBytes": 1355382
+        },
+        {
+          "seed": 76,
+          "estimatedGzipObjectBytes": 2054433
+        },
+        {
+          "seed": 77,
+          "estimatedGzipObjectBytes": 1460399
+        },
+        {
+          "seed": 78,
+          "estimatedGzipObjectBytes": 1614716
+        },
+        {
+          "seed": 79,
+          "estimatedGzipObjectBytes": 1841710
+        },
+        {
+          "seed": 80,
+          "estimatedGzipObjectBytes": 1039915
+        }
+      ]
+    },
+    {
+      "pack": "sap-turtle-2",
+      "samples": 80,
+      "min": 810099,
+      "median": 2004124,
+      "p95": 3585346,
+      "max": 3714751,
+      "values": [
+        {
+          "seed": 1,
+          "estimatedGzipObjectBytes": 3587809
+        },
+        {
+          "seed": 2,
+          "estimatedGzipObjectBytes": 1966648
+        },
+        {
+          "seed": 3,
+          "estimatedGzipObjectBytes": 1899933
+        },
+        {
+          "seed": 4,
+          "estimatedGzipObjectBytes": 1924895
+        },
+        {
+          "seed": 5,
+          "estimatedGzipObjectBytes": 2095420
+        },
+        {
+          "seed": 6,
+          "estimatedGzipObjectBytes": 3585346
+        },
+        {
+          "seed": 7,
+          "estimatedGzipObjectBytes": 1315253
+        },
+        {
+          "seed": 8,
+          "estimatedGzipObjectBytes": 1956469
+        },
+        {
+          "seed": 9,
+          "estimatedGzipObjectBytes": 1473769
+        },
+        {
+          "seed": 10,
+          "estimatedGzipObjectBytes": 3489573
+        },
+        {
+          "seed": 11,
+          "estimatedGzipObjectBytes": 3045828
+        },
+        {
+          "seed": 12,
+          "estimatedGzipObjectBytes": 3637927
+        },
+        {
+          "seed": 13,
+          "estimatedGzipObjectBytes": 3456574
+        },
+        {
+          "seed": 14,
+          "estimatedGzipObjectBytes": 2974848
+        },
+        {
+          "seed": 15,
+          "estimatedGzipObjectBytes": 1541405
+        },
+        {
+          "seed": 16,
+          "estimatedGzipObjectBytes": 1949443
+        },
+        {
+          "seed": 17,
+          "estimatedGzipObjectBytes": 3566339
+        },
+        {
+          "seed": 18,
+          "estimatedGzipObjectBytes": 3530963
+        },
+        {
+          "seed": 19,
+          "estimatedGzipObjectBytes": 1906959
+        },
+        {
+          "seed": 20,
+          "estimatedGzipObjectBytes": 3397628
+        },
+        {
+          "seed": 21,
+          "estimatedGzipObjectBytes": 1541405
+        },
+        {
+          "seed": 22,
+          "estimatedGzipObjectBytes": 1609922
+        },
+        {
+          "seed": 23,
+          "estimatedGzipObjectBytes": 1485415
+        },
+        {
+          "seed": 24,
+          "estimatedGzipObjectBytes": 1924895
+        },
+        {
+          "seed": 25,
+          "estimatedGzipObjectBytes": 3050726
+        },
+        {
+          "seed": 26,
+          "estimatedGzipObjectBytes": 2910030
+        },
+        {
+          "seed": 27,
+          "estimatedGzipObjectBytes": 1416898
+        },
+        {
+          "seed": 28,
+          "estimatedGzipObjectBytes": 1360415
+        },
+        {
+          "seed": 29,
+          "estimatedGzipObjectBytes": 2004124
+        },
+        {
+          "seed": 30,
+          "estimatedGzipObjectBytes": 1496185
+        },
+        {
+          "seed": 31,
+          "estimatedGzipObjectBytes": 2047737
+        },
+        {
+          "seed": 32,
+          "estimatedGzipObjectBytes": 1966648
+        },
+        {
+          "seed": 33,
+          "estimatedGzipObjectBytes": 3526400
+        },
+        {
+          "seed": 34,
+          "estimatedGzipObjectBytes": 2087676
+        },
+        {
+          "seed": 35,
+          "estimatedGzipObjectBytes": 3454474
+        },
+        {
+          "seed": 36,
+          "estimatedGzipObjectBytes": 1437297
+        },
+        {
+          "seed": 37,
+          "estimatedGzipObjectBytes": 3415184
+        },
+        {
+          "seed": 38,
+          "estimatedGzipObjectBytes": 1975811
+        },
+        {
+          "seed": 39,
+          "estimatedGzipObjectBytes": 3452011
+        },
+        {
+          "seed": 40,
+          "estimatedGzipObjectBytes": 2109146
+        },
+        {
+          "seed": 41,
+          "estimatedGzipObjectBytes": 3667096
+        },
+        {
+          "seed": 42,
+          "estimatedGzipObjectBytes": 2115018
+        },
+        {
+          "seed": 43,
+          "estimatedGzipObjectBytes": 3537228
+        },
+        {
+          "seed": 44,
+          "estimatedGzipObjectBytes": 2015750
+        },
+        {
+          "seed": 45,
+          "estimatedGzipObjectBytes": 1795825
+        },
+        {
+          "seed": 46,
+          "estimatedGzipObjectBytes": 1863106
+        },
+        {
+          "seed": 47,
+          "estimatedGzipObjectBytes": 2035731
+        },
+        {
+          "seed": 48,
+          "estimatedGzipObjectBytes": 3714751
+        },
+        {
+          "seed": 49,
+          "estimatedGzipObjectBytes": 1914067
+        },
+        {
+          "seed": 50,
+          "estimatedGzipObjectBytes": 3437567
+        },
+        {
+          "seed": 51,
+          "estimatedGzipObjectBytes": 1939872
+        },
+        {
+          "seed": 52,
+          "estimatedGzipObjectBytes": 2085849
+        },
+        {
+          "seed": 53,
+          "estimatedGzipObjectBytes": 1492776
+        },
+        {
+          "seed": 54,
+          "estimatedGzipObjectBytes": 2097520
+        },
+        {
+          "seed": 55,
+          "estimatedGzipObjectBytes": 1981683
+        },
+        {
+          "seed": 56,
+          "estimatedGzipObjectBytes": 1880926
+        },
+        {
+          "seed": 57,
+          "estimatedGzipObjectBytes": 2002024
+        },
+        {
+          "seed": 58,
+          "estimatedGzipObjectBytes": 1974322
+        },
+        {
+          "seed": 59,
+          "estimatedGzipObjectBytes": 2097520
+        },
+        {
+          "seed": 60,
+          "estimatedGzipObjectBytes": 2006587
+        },
+        {
+          "seed": 61,
+          "estimatedGzipObjectBytes": 3533761
+        },
+        {
+          "seed": 62,
+          "estimatedGzipObjectBytes": 1333073
+        },
+        {
+          "seed": 63,
+          "estimatedGzipObjectBytes": 1535533
+        },
+        {
+          "seed": 64,
+          "estimatedGzipObjectBytes": 2112555
+        },
+        {
+          "seed": 65,
+          "estimatedGzipObjectBytes": 1956469
+        },
+        {
+          "seed": 66,
+          "estimatedGzipObjectBytes": 2060970
+        },
+        {
+          "seed": 67,
+          "estimatedGzipObjectBytes": 3418593
+        },
+        {
+          "seed": 68,
+          "estimatedGzipObjectBytes": 2006587
+        },
+        {
+          "seed": 69,
+          "estimatedGzipObjectBytes": 1300160
+        },
+        {
+          "seed": 70,
+          "estimatedGzipObjectBytes": 1964185
+        },
+        {
+          "seed": 71,
+          "estimatedGzipObjectBytes": 1951906
+        },
+        {
+          "seed": 72,
+          "estimatedGzipObjectBytes": 1516526
+        },
+        {
+          "seed": 73,
+          "estimatedGzipObjectBytes": 1875112
+        },
+        {
+          "seed": 74,
+          "estimatedGzipObjectBytes": 1779281
+        },
+        {
+          "seed": 75,
+          "estimatedGzipObjectBytes": 2156801
+        },
+        {
+          "seed": 76,
+          "estimatedGzipObjectBytes": 1979220
+        },
+        {
+          "seed": 77,
+          "estimatedGzipObjectBytes": 2033268
+        },
+        {
+          "seed": 78,
+          "estimatedGzipObjectBytes": 2917056
+        },
+        {
+          "seed": 79,
+          "estimatedGzipObjectBytes": 1795825
+        },
+        {
+          "seed": 80,
+          "estimatedGzipObjectBytes": 810099
+        }
+      ]
+    },
+    {
+      "pack": "sap-turtle-3",
+      "samples": 80,
+      "min": 725330,
+      "median": 1505758,
+      "p95": 2087405,
+      "max": 2123717,
+      "values": [
+        {
+          "seed": 1,
+          "estimatedGzipObjectBytes": 2089868
+        },
+        {
+          "seed": 2,
+          "estimatedGzipObjectBytes": 1508221
+        },
+        {
+          "seed": 3,
+          "estimatedGzipObjectBytes": 1507814
+        },
+        {
+          "seed": 4,
+          "estimatedGzipObjectBytes": 1483301
+        },
+        {
+          "seed": 5,
+          "estimatedGzipObjectBytes": 1790276
+        },
+        {
+          "seed": 6,
+          "estimatedGzipObjectBytes": 2087405
+        },
+        {
+          "seed": 7,
+          "estimatedGzipObjectBytes": 1067290
+        },
+        {
+          "seed": 8,
+          "estimatedGzipObjectBytes": 1673758
+        },
+        {
+          "seed": 9,
+          "estimatedGzipObjectBytes": 908489
+        },
+        {
+          "seed": 10,
+          "estimatedGzipObjectBytes": 2103723
+        },
+        {
+          "seed": 11,
+          "estimatedGzipObjectBytes": 1727914
+        },
+        {
+          "seed": 12,
+          "estimatedGzipObjectBytes": 1849659
+        },
+        {
+          "seed": 13,
+          "estimatedGzipObjectBytes": 1805350
+        },
+        {
+          "seed": 14,
+          "estimatedGzipObjectBytes": 1494635
+        },
+        {
+          "seed": 15,
+          "estimatedGzipObjectBytes": 1158731
+        },
+        {
+          "seed": 16,
+          "estimatedGzipObjectBytes": 1700270
+        },
+        {
+          "seed": 17,
+          "estimatedGzipObjectBytes": 2049045
+        },
+        {
+          "seed": 18,
+          "estimatedGzipObjectBytes": 2094742
+        },
+        {
+          "seed": 19,
+          "estimatedGzipObjectBytes": 1481302
+        },
+        {
+          "seed": 20,
+          "estimatedGzipObjectBytes": 1841662
+        },
+        {
+          "seed": 21,
+          "estimatedGzipObjectBytes": 1158731
+        },
+        {
+          "seed": 22,
+          "estimatedGzipObjectBytes": 1389547
+        },
+        {
+          "seed": 23,
+          "estimatedGzipObjectBytes": 1340364
+        },
+        {
+          "seed": 24,
+          "estimatedGzipObjectBytes": 1483301
+        },
+        {
+          "seed": 25,
+          "estimatedGzipObjectBytes": 1331936
+        },
+        {
+          "seed": 26,
+          "estimatedGzipObjectBytes": 1472371
+        },
+        {
+          "seed": 27,
+          "estimatedGzipObjectBytes": 1109548
+        },
+        {
+          "seed": 28,
+          "estimatedGzipObjectBytes": 1148323
+        },
+        {
+          "seed": 29,
+          "estimatedGzipObjectBytes": 1431086
+        },
+        {
+          "seed": 30,
+          "estimatedGzipObjectBytes": 1002962
+        },
+        {
+          "seed": 31,
+          "estimatedGzipObjectBytes": 1632044
+        },
+        {
+          "seed": 32,
+          "estimatedGzipObjectBytes": 1508221
+        },
+        {
+          "seed": 33,
+          "estimatedGzipObjectBytes": 2123717
+        },
+        {
+          "seed": 34,
+          "estimatedGzipObjectBytes": 1557372
+        },
+        {
+          "seed": 35,
+          "estimatedGzipObjectBytes": 1836788
+        },
+        {
+          "seed": 36,
+          "estimatedGzipObjectBytes": 1114010
+        },
+        {
+          "seed": 37,
+          "estimatedGzipObjectBytes": 1814331
+        },
+        {
+          "seed": 38,
+          "estimatedGzipObjectBytes": 1345115
+        },
+        {
+          "seed": 39,
+          "estimatedGzipObjectBytes": 1834325
+        },
+        {
+          "seed": 40,
+          "estimatedGzipObjectBytes": 1598195
+        },
+        {
+          "seed": 41,
+          "estimatedGzipObjectBytes": 1983282
+        },
+        {
+          "seed": 42,
+          "estimatedGzipObjectBytes": 1656771
+        },
+        {
+          "seed": 43,
+          "estimatedGzipObjectBytes": 1861051
+        },
+        {
+          "seed": 44,
+          "estimatedGzipObjectBytes": 1270443
+        },
+        {
+          "seed": 45,
+          "estimatedGzipObjectBytes": 1463093
+        },
+        {
+          "seed": 46,
+          "estimatedGzipObjectBytes": 1487820
+        },
+        {
+          "seed": 47,
+          "estimatedGzipObjectBytes": 1763357
+        },
+        {
+          "seed": 48,
+          "estimatedGzipObjectBytes": 1740610
+        },
+        {
+          "seed": 49,
+          "estimatedGzipObjectBytes": 1745967
+        },
+        {
+          "seed": 50,
+          "estimatedGzipObjectBytes": 1766990
+        },
+        {
+          "seed": 51,
+          "estimatedGzipObjectBytes": 1433142
+        },
+        {
+          "seed": 52,
+          "estimatedGzipObjectBytes": 1523148
+        },
+        {
+          "seed": 53,
+          "estimatedGzipObjectBytes": 946849
+        },
+        {
+          "seed": 54,
+          "estimatedGzipObjectBytes": 1758838
+        },
+        {
+          "seed": 55,
+          "estimatedGzipObjectBytes": 1403691
+        },
+        {
+          "seed": 56,
+          "estimatedGzipObjectBytes": 1469454
+        },
+        {
+          "seed": 57,
+          "estimatedGzipObjectBytes": 1462524
+        },
+        {
+          "seed": 58,
+          "estimatedGzipObjectBytes": 1797206
+        },
+        {
+          "seed": 59,
+          "estimatedGzipObjectBytes": 1758838
+        },
+        {
+          "seed": 60,
+          "estimatedGzipObjectBytes": 1433549
+        },
+        {
+          "seed": 61,
+          "estimatedGzipObjectBytes": 1730202
+        },
+        {
+          "seed": 62,
+          "estimatedGzipObjectBytes": 1048924
+        },
+        {
+          "seed": 63,
+          "estimatedGzipObjectBytes": 1100155
+        },
+        {
+          "seed": 64,
+          "estimatedGzipObjectBytes": 1654308
+        },
+        {
+          "seed": 65,
+          "estimatedGzipObjectBytes": 1673758
+        },
+        {
+          "seed": 66,
+          "estimatedGzipObjectBytes": 1426212
+        },
+        {
+          "seed": 67,
+          "estimatedGzipObjectBytes": 1870444
+        },
+        {
+          "seed": 68,
+          "estimatedGzipObjectBytes": 1433549
+        },
+        {
+          "seed": 69,
+          "estimatedGzipObjectBytes": 1097084
+        },
+        {
+          "seed": 70,
+          "estimatedGzipObjectBytes": 1505758
+        },
+        {
+          "seed": 71,
+          "estimatedGzipObjectBytes": 1702733
+        },
+        {
+          "seed": 72,
+          "estimatedGzipObjectBytes": 1061795
+        },
+        {
+          "seed": 73,
+          "estimatedGzipObjectBytes": 1356507
+        },
+        {
+          "seed": 74,
+          "estimatedGzipObjectBytes": 1427196
+        },
+        {
+          "seed": 75,
+          "estimatedGzipObjectBytes": 1355523
+        },
+        {
+          "seed": 76,
+          "estimatedGzipObjectBytes": 1401228
+        },
+        {
+          "seed": 77,
+          "estimatedGzipObjectBytes": 1760894
+        },
+        {
+          "seed": 78,
+          "estimatedGzipObjectBytes": 1445859
+        },
+        {
+          "seed": 79,
+          "estimatedGzipObjectBytes": 1463093
+        },
+        {
+          "seed": 80,
+          "estimatedGzipObjectBytes": 725330
+        }
+      ]
+    }
+  ],
+  "observedUtc": "2026-10-28T01:29:23.579Z"
+}
