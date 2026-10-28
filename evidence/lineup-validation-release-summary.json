@@ -1,0 +1,88 @@
+{
+  "status": "LOCAL_REPAIR_READY_FOR_EXISTING_AUTHORIZED_PUBLICATION",
+  "id": "v6-web-rules-uiux-r1-1",
+  "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
+  "sourceZipSHA256": "a4974684f005d49d53fe9a65386983f6bdba3459973fabcb13ff790ba9e7f7e3",
+  "inputReadySHA256": "24838c74fb3d595dae5b55243a4993c50fecebae07d65b6a7be844e5659adb15",
+  "releaseManifestSHA256": "cb1dce3beb7f72badc2e2c18b50516b5590bbc95908ca386c16045c735896441",
+  "checks": {
+    "play-qa": {
+      "passed": true,
+      "checks": 42,
+      "sha256": "b8e5ea7dd2d0f371aa67795b31ca69173150154df1ffeaa045cf7595d1936ba0"
+    },
+    "upgrade-qa": {
+      "passed": true,
+      "checks": 11,
+      "sha256": "5e535ba08e83ec98e479ce47fd4ec65c52c1118fffbc1b109a78b77f52152d67"
+    }
+  },
+  "candidateChecks": 100,
+  "objects": 833,
+  "byteTotal": 319295246,
+  "bootBytes": 2974626,
+  "unchangedObjects": 832,
+  "changedObjects": [
+    {
+      "path": "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
+      "size": 5110,
+      "sha256": "6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2",
+      "label": "web/lineups-v8.js"
+    }
+  ],
+  "sourceManifestFiles": 915,
+  "parentEvidence": {
+    "release": "v6-web-rules-uiux-r1",
+    "localChecks": {
+      "direct-qa": {
+        "passed": true,
+        "checks": 286,
+        "sha256": "f5a0b187d651fb1b1806814fe9daeff8d51ba29b9ae51533b6999c8d16222b7e"
+      },
+      "target-qa": {
+        "passed": true,
+        "checks": 25,
+        "sha256": "2f11b5a6daf1f53dc693a87a640c7979ab90f319090458f6282a4a5af224fca2"
+      },
+      "feedback-qa": {
+        "passed": true,
+        "checks": 51,
+        "sha256": "9f6e27e00e8503827dbf34bb6e9602e0b0aab1e59ecd8b928f810ce9efee24a1"
+      },
+      "play-qa": {
+        "passed": true,
+        "checks": 35,
+        "sha256": "d60fc4b944977cd6dc19e66e4162aa689ce627f74a78a7d676cf42a3b8137be2"
+      },
+      "upgrade-qa": {
+        "passed": true,
+        "checks": 11,
+        "sha256": "3896d6e1a2a5627e7a70bfe42d8e5bd653b03af165097bc7f3fd6d232c049774"
+      },
+      "cold-legacy": {
+        "passed": true,
+        "checks": 4,
+        "sha256": "8d36e7dc9a1bb10aa5d0d6ab42e04f37300808c363e2456e80cb1f91d4d0fe91"
+      },
+      "static-core-check": {
+        "passed": true,
+        "checks": 1196,
+        "sha256": "c36cfd81e34a79b213c355391c3c135625fc4c2ba52f07cd98a491d04836a343"
+      },
+      "legacy-group-qa": {
+        "passed": true,
+        "checks": 8,
+        "sha256": "c4713aa5b61ead7443e52aace24ded186268aefca47c3156f64503f4138910a0"
+      },
+      "offline-theme-qa": {
+        "passed": true,
+        "checks": 5,
+        "sha256": "2620144bce1e43485723b088f0b389c2eca90828bcffa7c5ff06f8856dd89670"
+      }
+    },
+    "publicBytes": 53,
+    "publicFeedbackChecks": 51,
+    "limitation": "Parent publicplay lineup assertion FAILED, preserved. Parent controls/mechanics validated; new helper repairs loss-state validation only. No inherited claim of parent complete recording."
+  },
+  "observedAt": "2026-10-28T16:08:21.446Z"
+}

@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "id": "v6-web-rules-uiux-r1",
+  "id": "v6-web-rules-uiux-r1-1",
   "title": "少年演武 · 主题演武",
   "mode": "scene-v1",
   "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
@@ -41,7 +41,7 @@
     "objects/5d9fbf12c7b0871d55381e99ca06a181457cf91c1f73fbdfe585603de29168c3.js",
     "objects/595839bb51d9e897a0db797ea6b49555d43568d545fb03fcd3764f8de7c0d6ae.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
-    "objects/85ed0d61b2c98b233f10c20f91dcbf6004955b24361951895fa4d7cd4eec7c1b.js",
+    "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
     "objects/42e197f4eae4ab976941a7be1d8f46449c3db601393356bcecb12be6175d2f56.js"
   ],
   "files": [
@@ -5020,9 +5020,9 @@
       "label": "src/battle-feedback.js"
     },
     {
-      "path": "objects/85ed0d61b2c98b233f10c20f91dcbf6004955b24361951895fa4d7cd4eec7c1b.js",
-      "size": 5053,
-      "sha256": "85ed0d61b2c98b233f10c20f91dcbf6004955b24361951895fa4d7cd4eec7c1b",
+      "path": "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
+      "size": 5110,
+      "sha256": "6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2",
       "label": "web/lineups-v8.js"
     },
     {
@@ -5109,7 +5109,7 @@
     "objects/5d9fbf12c7b0871d55381e99ca06a181457cf91c1f73fbdfe585603de29168c3.js",
     "objects/595839bb51d9e897a0db797ea6b49555d43568d545fb03fcd3764f8de7c0d6ae.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
-    "objects/85ed0d61b2c98b233f10c20f91dcbf6004955b24361951895fa4d7cd4eec7c1b.js",
+    "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
     "objects/42e197f4eae4ab976941a7be1d8f46449c3db601393356bcecb12be6175d2f56.js",
     "objects/c4b2190aee7ec5b5a2b9bcae053549adca077969eedd4c86e4577dcce8267c88.js",
     "objects/8c1ac5af0396fd3ed345a9cba6696af71636ea4eb222574d2cd949b061096ff9.css"
@@ -7702,6 +7702,11 @@
       "id": "v6-web-v8-r2-m1",
       "path": "releases/v6-web-v8-r2-m1.json",
       "sha256": "c859125cdbd5df6040e2338253c65017f923288d39165fb946ffeaea8d56c893"
+    },
+    {
+      "id": "v6-web-rules-uiux-r1",
+      "path": "releases/v6-web-rules-uiux-r1.json",
+      "sha256": "d6166a142ba8a432e38c7c1679742402f7adfcbe13e932f13dc5f4b405a21ef9"
     }
   ],
   "sourceRendererSha256": "d7359c3298d90dbefc8383e857703a36d73f781b5319d390ec0fbec5fb440f80",
