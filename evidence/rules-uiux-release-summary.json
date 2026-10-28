@@ -1,0 +1,166 @@
+{
+  "status": "LOCAL_FINAL_BYTES_VERIFIED_READY_FOR_AUTHORIZED_PUBLICATION",
+  "id": "v6-web-rules-uiux-r1",
+  "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
+  "sourceZipSHA256": "a4974684f005d49d53fe9a65386983f6bdba3459973fabcb13ff790ba9e7f7e3",
+  "inputReadySHA256": "24838c74fb3d595dae5b55243a4993c50fecebae07d65b6a7be844e5659adb15",
+  "releaseManifestSHA256": "d6166a142ba8a432e38c7c1679742402f7adfcbe13e932f13dc5f4b405a21ef9",
+  "checks": {
+    "direct-qa": {
+      "passed": true,
+      "checks": 286,
+      "sha256": "f5a0b187d651fb1b1806814fe9daeff8d51ba29b9ae51533b6999c8d16222b7e"
+    },
+    "target-qa": {
+      "passed": true,
+      "checks": 25,
+      "sha256": "2f11b5a6daf1f53dc693a87a640c7979ab90f319090458f6282a4a5af224fca2"
+    },
+    "feedback-qa": {
+      "passed": true,
+      "checks": 51,
+      "sha256": "9f6e27e00e8503827dbf34bb6e9602e0b0aab1e59ecd8b928f810ce9efee24a1"
+    },
+    "play-qa": {
+      "passed": true,
+      "checks": 35,
+      "sha256": "d60fc4b944977cd6dc19e66e4162aa689ce627f74a78a7d676cf42a3b8137be2"
+    },
+    "upgrade-qa": {
+      "passed": true,
+      "checks": 11,
+      "sha256": "3896d6e1a2a5627e7a70bfe42d8e5bd653b03af165097bc7f3fd6d232c049774"
+    },
+    "cold-legacy": {
+      "passed": true,
+      "checks": 4,
+      "sha256": "8d36e7dc9a1bb10aa5d0d6ab42e04f37300808c363e2456e80cb1f91d4d0fe91"
+    },
+    "static-core-check": {
+      "passed": true,
+      "checks": 1196,
+      "sha256": "c36cfd81e34a79b213c355391c3c135625fc4c2ba52f07cd98a491d04836a343"
+    },
+    "legacy-group-qa": {
+      "passed": true,
+      "checks": 8,
+      "sha256": "c4713aa5b61ead7443e52aace24ded186268aefca47c3156f64503f4138910a0"
+    },
+    "offline-theme-qa": {
+      "passed": true,
+      "checks": 5,
+      "sha256": "2620144bce1e43485723b088f0b389c2eca90828bcffa7c5ff06f8856dd89670"
+    }
+  },
+  "requiredProjectedFiles": 845,
+  "objects": 833,
+  "byteTotal": 319295189,
+  "bootBytes": 2974569,
+  "feedbackIcons": [
+    {
+      "path": "objects/ae853b1369b8b316944213fe63c0bd2e9791ee8f6239194759c84c46e4a1cd39.svg",
+      "size": 206,
+      "sha256": "ae853b1369b8b316944213fe63c0bd2e9791ee8f6239194759c84c46e4a1cd39",
+      "label": "assets/ui-feedback/ability.svg"
+    },
+    {
+      "path": "objects/5697e079936f746747bb3cf850a95fc8f158593c96e064e70fdf67ad3c3600e3.svg",
+      "size": 209,
+      "sha256": "5697e079936f746747bb3cf850a95fc8f158593c96e064e70fdf67ad3c3600e3",
+      "label": "assets/ui-feedback/attack.svg"
+    },
+    {
+      "path": "objects/ca615c43acf64f68b31a84e35b4c132cbcbd5c1ac9919d28adc9eb6c967ced5d.svg",
+      "size": 201,
+      "sha256": "ca615c43acf64f68b31a84e35b4c132cbcbd5c1ac9919d28adc9eb6c967ced5d",
+      "label": "assets/ui-feedback/buff.svg"
+    },
+    {
+      "path": "objects/c341977d2a41cd44f8f59bc76fee4792ee31fda1c4f992f79724fca7a2956e0c.svg",
+      "size": 195,
+      "sha256": "c341977d2a41cd44f8f59bc76fee4792ee31fda1c4f992f79724fca7a2956e0c",
+      "label": "assets/ui-feedback/copy.svg"
+    },
+    {
+      "path": "objects/e42dbaa59f8d168da93a9f26bc777bdeb0709b44aa058ee362eabd9a4c06efa5.svg",
+      "size": 198,
+      "sha256": "e42dbaa59f8d168da93a9f26bc777bdeb0709b44aa058ee362eabd9a4c06efa5",
+      "label": "assets/ui-feedback/damage.svg"
+    },
+    {
+      "path": "objects/f6a970607928e021ae2a4fbc1fd32cada8d73f6ae664a19b38db345c02f54cbb.svg",
+      "size": 200,
+      "sha256": "f6a970607928e021ae2a4fbc1fd32cada8d73f6ae664a19b38db345c02f54cbb",
+      "label": "assets/ui-feedback/debuff.svg"
+    },
+    {
+      "path": "objects/1746ac8753ffd009165ce68100505c9a486a59bf6c699f2cf94b5ff9af871651.svg",
+      "size": 200,
+      "sha256": "1746ac8753ffd009165ce68100505c9a486a59bf6c699f2cf94b5ff9af871651",
+      "label": "assets/ui-feedback/faint.svg"
+    },
+    {
+      "path": "objects/93c974adfe91187dad01590ef9a859d64249232d5d0684f21ca62da514e7c7b9.svg",
+      "size": 201,
+      "sha256": "93c974adfe91187dad01590ef9a859d64249232d5d0684f21ca62da514e7c7b9",
+      "label": "assets/ui-feedback/heal.svg"
+    },
+    {
+      "path": "objects/52f0fad341612cc5bf1956eb340706efd26c5e9b7a73d07245d2a57c36a0eb60.svg",
+      "size": 211,
+      "sha256": "52f0fad341612cc5bf1956eb340706efd26c5e9b7a73d07245d2a57c36a0eb60",
+      "label": "assets/ui-feedback/summon.svg"
+    },
+    {
+      "path": "objects/969da237679438fef90fac7c7d61b4addde5d634d8bc5b9d874aa520ff5c936b.svg",
+      "size": 241,
+      "sha256": "969da237679438fef90fac7c7d61b4addde5d634d8bc5b9d874aa520ff5c936b",
+      "label": "assets/ui-feedback/transform.svg"
+    }
+  ],
+  "protectedReadback": [
+    {
+      "path": "src/sap-core.js",
+      "sha256": "6e8749482e74b92882a07945731e2e86830f4620ed57c1421acdd330d76e5e89",
+      "webObject": "objects/6e8749482e74b92882a07945731e2e86830f4620ed57c1421acdd330d76e5e89.js"
+    },
+    {
+      "path": "src/sap-core-v2.js",
+      "sha256": "a40d8e2cf210ed360d7cef4b3c0f87677fcdecd7aab7f2e8002e82acade1b669",
+      "webObject": "objects/a40d8e2cf210ed360d7cef4b3c0f87677fcdecd7aab7f2e8002e82acade1b669.js"
+    },
+    {
+      "path": "src/product-core-r1.js",
+      "sha256": "7652f756f1630043746f10b508e4ceb042aba419b487ab2150c1da14c7ed6f9e",
+      "webObject": "objects/7652f756f1630043746f10b508e4ceb042aba419b487ab2150c1da14c7ed6f9e.js"
+    },
+    {
+      "path": "src/product-core.js",
+      "sha256": "5f42e30bd883e8cb66b66bfeb0b95f5da0bcddc8fabbc769639fd7992a82655e",
+      "webObject": "objects/5f42e30bd883e8cb66b66bfeb0b95f5da0bcddc8fabbc769639fd7992a82655e.js"
+    },
+    {
+      "path": "src/product-effects.js",
+      "sha256": "ff4338122bb1da7bf07e1a0c15a3daea1a1493b4a1ccaa44062877b09b6fd98f",
+      "webObject": "objects/ff4338122bb1da7bf07e1a0c15a3daea1a1493b4a1ccaa44062877b09b6fd98f.js"
+    },
+    {
+      "path": "src/product-opponents.js",
+      "sha256": "16a7f942b639fc0d3ab2ef0f8759604d79101d716a4d51043d812aebb74044bc",
+      "webObject": "objects/16a7f942b639fc0d3ab2ef0f8759604d79101d716a4d51043d812aebb74044bc.js"
+    }
+  ],
+  "finalShellHashes": {
+    "index.html": "4953ae2bc0d3afbcff78c58e4fda44c39e8c4d9b246d6af5a2daa2b9b888bf8e",
+    "bootstrap.js": "541ce45e1c04faba12539f7b67da41c83d7d773a47deb703019e5f6fd434e1bd",
+    "sw.js": "b78699c381c0875c47e5a6402838ace0f16ea17822cdc8bb2b0e4d4c2facfe80"
+  },
+  "compatibility": "New reference defaults v3; untagged v1/v2 saves use exact retained executors. Tagged old releases preserve immutable original shells and scripts; no v3 UI app overlay over different rules. d497460 shell is now historical. Actual FULL833 objects, oldV6 cold restore, earlyV8 read-only groups and update failure/retry/offline/rollback verified.",
+  "limits": [
+    "Real desktop Chromium/touch emulation only, physical iPhone Safari NOT_RUN",
+    "No human understanding/balance/native-original queue or PRNG equivalence acceptance",
+    "Local-only current lineups, no new backend/account/token/install/fees",
+    "1196 static checks include833 object hashes and deterministic fixtures, not1196human gameplay scenarios"
+  ],
+  "observedAt": "2026-10-28T15:51:17.918Z"
+}
