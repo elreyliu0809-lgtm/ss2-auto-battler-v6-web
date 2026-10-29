@@ -1,0 +1,69 @@
+{
+  "status": "LOCAL_PC_SCENE_R3_READY",
+  "release": "v6-web-pc-scene-r3",
+  "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
+  "sourceZipSHA256": "89ab06857fbf4450cfa9aa02e48990fafa94ec511a55cd4175d59d697b0c4525",
+  "inputReadySHA256": "a2331d06f97732caf12d91d765c55ff74c779d660bde9ee95c9ceabc0091ff11",
+  "releaseManifestSHA256": "d1011cc1ce707e248d25cabe20ff0d37c88144a7a278c8bebd1de2385e8cefbd",
+  "checks": {
+    "native-qa": {
+      "passed": true,
+      "checks": 25,
+      "sha256": "d46f75728b4e1f71aacbbd9ede7f6ed5649e43f480daf8b939f6a80a1f3b5e6a"
+    },
+    "history-qa": {
+      "passed": true,
+      "checks": 25,
+      "sha256": "340e3c5de7c3a20cf7f46f27c8cf778d99ccdca87b039bc2092fe7530eba85b4"
+    },
+    "targets-qa": {
+      "passed": true,
+      "checks": 13,
+      "sha256": "df3eb28a00a2d9d53776a95a51719f8d66693f0c45d2b8eb621ae7b1ee5c7f67"
+    },
+    "failure-qa": {
+      "passed": true,
+      "checks": 5,
+      "sha256": "db2de688da687194c3691757deb72150746b3452339fc07f0d2d4bd8900a91a0"
+    },
+    "upgrade-qa": {
+      "passed": true,
+      "checks": 11,
+      "sha256": "a3dae79349bdcc436b1c3c6638d02212b0e3c5efa7bd58476830d372f42f044a"
+    },
+    "compat-qa": {
+      "passed": true,
+      "checks": 16,
+      "sha256": "6bb6598e872221430803c49c748ec4461fb21de903ffeb751267323d518ddfc7"
+    },
+    "static-closure": {
+      "passed": true,
+      "checks": 872,
+      "sha256": "8f210893ce4c883dfe36406bf34c9bf65574d9f2300a2d72b26f9cca477f8699"
+    },
+    "scene-cold-qa": {
+      "passed": true,
+      "checks": 41,
+      "sha256": "948523d099d6bcc9b17959f89595b8c5979c28689cd16bcd690c6a9dc01be518"
+    },
+    "scene-failure-qa": {
+      "passed": true,
+      "checks": 41,
+      "sha256": "b093f698f408724323b0c205528c672c12e82d29abd7e573706e4a9203584592"
+    },
+    "scene-cancel-qa": {
+      "passed": true,
+      "checks": 26,
+      "sha256": "59b00f2d926e4dbfb8a9e81408d77ecedd6d023ca29273ed8df704921fe35c86"
+    }
+  },
+  "objects": 844,
+  "totalBytes": 319580316,
+  "bootBytes": 3259696,
+  "limits": [
+    "Source507/91/254 reused as producer evidence; no fresh independent source review",
+    "Native screenshot initial hidden-shell race retained; final visible-ready gate passed",
+    "Public checks not yet run; physical Safari/human acceptance NOT_RUN"
+  ],
+  "at": "2026-10-29T05:34:45.970Z"
+}

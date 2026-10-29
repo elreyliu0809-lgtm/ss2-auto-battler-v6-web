@@ -1,11 +1,11 @@
 {
   "schema": 2,
-  "id": "v6-web-pc-consumption-r2",
+  "id": "v6-web-pc-scene-r3",
   "title": "少年演武 · 主题演武",
   "mode": "scene-v1",
   "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
   "content": "MULTIVERSION_NATIVE_SOURCE_AND_THEMATIC_R2",
-  "sourceZipSha256": "5f987b50e86b9d89f94e2e344af26f79bf06826822733376f0723099ba5b750a",
+  "sourceZipSha256": "89ab06857fbf4450cfa9aa02e48990fafa94ec511a55cd4175d59d697b0c4525",
   "css": "objects/4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866.css",
   "scripts": [
     "objects/8e9bd5f7e3318681c43dbff0b50a902ecd485095173666bc146ba974d4b15b96.js",
@@ -32,7 +32,8 @@
     "objects/de46811d0490f04853ca3f1b6218b008fa954c5fcb15d7f4440b1276ffd37ca7.js",
     "objects/985d628b1f87d6c59f52a07ec514d1df4e78925f8fb724647dd4bc4ada291d01.js",
     "objects/cf212b811fc145275c4cafd35ecac9cc12aac2b13d625ff0f18d83c847793135.js",
-    "objects/ba72ec80bc092fdffc99e565b49b36da6c8cf215b15449f925cad22496516858.js",
+    "objects/538c12b62c0ad2bce03cae6b27cfc9037446eea8c5d8046e2e6706ff870b25a9.js",
+    "objects/a0a3716b79bbe9f48419cc71303bb54e6b64ad5e3ba922f60df34516e5dc037c.js",
     "objects/8157dac608e0dd7a0deee9f0dd33e33c8a47873afdd074dae59d000aa351247f.js",
     "objects/e9d234a8a2ccbf60da50ac22009ca719b1db03612536c8eab250349978db92ee.js",
     "objects/c0a9922f41ce08ba395d6c497ed873f48fd426534f1817bbaca137652d31eaba.js",
@@ -43,7 +44,7 @@
     "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
     "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
-    "objects/e4926bbf12fe2f44a49874033bc6897e49e5047f7aa133d812a662eff3c63e1c.js"
+    "objects/a8d2b8569e930fe6fb8dc42ee7a3582bb22d4b21c8e5b83840d03f7efc91001a.js"
   ],
   "files": [
     {
@@ -4985,9 +4986,15 @@
       "label": "src/timeline-actor.js"
     },
     {
-      "path": "objects/ba72ec80bc092fdffc99e565b49b36da6c8cf215b15449f925cad22496516858.js",
-      "size": 17857,
-      "sha256": "ba72ec80bc092fdffc99e565b49b36da6c8cf215b15449f925cad22496516858",
+      "path": "objects/538c12b62c0ad2bce03cae6b27cfc9037446eea8c5d8046e2e6706ff870b25a9.js",
+      "size": 2692,
+      "sha256": "538c12b62c0ad2bce03cae6b27cfc9037446eea8c5d8046e2e6706ff870b25a9",
+      "label": "src/scene-resources.js"
+    },
+    {
+      "path": "objects/a0a3716b79bbe9f48419cc71303bb54e6b64ad5e3ba922f60df34516e5dc037c.js",
+      "size": 17685,
+      "sha256": "a0a3716b79bbe9f48419cc71303bb54e6b64ad5e3ba922f60df34516e5dc037c",
       "label": "src/actor.js"
     },
     {
@@ -5051,9 +5058,9 @@
       "label": "web/lineups-v8.js"
     },
     {
-      "path": "objects/e4926bbf12fe2f44a49874033bc6897e49e5047f7aa133d812a662eff3c63e1c.js",
-      "size": 77949,
-      "sha256": "e4926bbf12fe2f44a49874033bc6897e49e5047f7aa133d812a662eff3c63e1c",
+      "path": "objects/a8d2b8569e930fe6fb8dc42ee7a3582bb22d4b21c8e5b83840d03f7efc91001a.js",
+      "size": 78477,
+      "sha256": "a8d2b8569e930fe6fb8dc42ee7a3582bb22d4b21c8e5b83840d03f7efc91001a",
       "label": "src/app.js"
     },
     {
@@ -5069,27 +5076,27 @@
       "label": "styles.css"
     },
     {
-      "path": "objects/1b2db4801f64ddf6f48c06b560614dcf9d394ea544ec0afa6ef7b268599fd466.js",
-      "sha256": "1b2db4801f64ddf6f48c06b560614dcf9d394ea544ec0afa6ef7b268599fd466",
-      "size": 41186,
+      "path": "objects/52c29e6a62e289029aba32411dbf67a62c084b92d0f6012ac2cd77ec06cf95e5.js",
+      "sha256": "52c29e6a62e289029aba32411dbf67a62c084b92d0f6012ac2cd77ec06cf95e5",
+      "size": 41580,
       "label": "web/legacy-pc-app:v6-web-v8-r2-items-r2"
     },
     {
-      "path": "objects/e30f08f1e2bc04bbfcf4154e19ae295d8b3da90d330497d0274f81d784434a38.js",
-      "sha256": "e30f08f1e2bc04bbfcf4154e19ae295d8b3da90d330497d0274f81d784434a38",
-      "size": 71487,
+      "path": "objects/e26afcb03af3cd13c15f58acbe6af0f6d77b1230cdde634213fcbc36580a957f.js",
+      "sha256": "e26afcb03af3cd13c15f58acbe6af0f6d77b1230cdde634213fcbc36580a957f",
+      "size": 71414,
       "label": "web/legacy-pc-app:v6-web-product-r2-1"
     },
     {
-      "path": "objects/450a48f66830c06826f4d9f60158f142f2e513ae56bb750daea512b010003f6f.js",
-      "sha256": "450a48f66830c06826f4d9f60158f142f2e513ae56bb750daea512b010003f6f",
-      "size": 71471,
+      "path": "objects/e01e2c80396b3f6e4d624d1053b6faa9928a81084f0d699d7a0d7f0f372a538b.js",
+      "sha256": "e01e2c80396b3f6e4d624d1053b6faa9928a81084f0d699d7a0d7f0f372a538b",
+      "size": 71398,
       "label": "web/legacy-pc-app:v6-web-pc-portraits-r1"
     },
     {
-      "path": "objects/6b0bd1e03893d128f25138dbe911c1ef01d1231d1d7b1a4ab292efbcd09c4979.js",
-      "sha256": "6b0bd1e03893d128f25138dbe911c1ef01d1231d1d7b1a4ab292efbcd09c4979",
-      "size": 74639,
+      "path": "objects/6cf6a299708dccd487b46bd5ac024031bd7d9908e4a36e4a042061527fb9041b.js",
+      "sha256": "6cf6a299708dccd487b46bd5ac024031bd7d9908e4a36e4a042061527fb9041b",
+      "size": 74566,
       "label": "web/legacy-pc-app:v6-web-direct-r1"
     },
     {
@@ -5097,6 +5104,12 @@
       "sha256": "d9f5e41cd4c580deba81c64d18c676122dada10d0cbd89233fa0896ca21ca1d8",
       "size": 5895,
       "label": "web/legacy-pc-consumption.js"
+    },
+    {
+      "path": "objects/f0198dc2e508682d4577fbd034555437805b3006d5fde17191ecd9efbc28d716.js",
+      "sha256": "f0198dc2e508682d4577fbd034555437805b3006d5fde17191ecd9efbc28d716",
+      "size": 5325,
+      "label": "web/legacy-scene.js"
     }
   ],
   "bootFiles": [
@@ -5158,7 +5171,8 @@
     "objects/de46811d0490f04853ca3f1b6218b008fa954c5fcb15d7f4440b1276ffd37ca7.js",
     "objects/985d628b1f87d6c59f52a07ec514d1df4e78925f8fb724647dd4bc4ada291d01.js",
     "objects/cf212b811fc145275c4cafd35ecac9cc12aac2b13d625ff0f18d83c847793135.js",
-    "objects/ba72ec80bc092fdffc99e565b49b36da6c8cf215b15449f925cad22496516858.js",
+    "objects/538c12b62c0ad2bce03cae6b27cfc9037446eea8c5d8046e2e6706ff870b25a9.js",
+    "objects/a0a3716b79bbe9f48419cc71303bb54e6b64ad5e3ba922f60df34516e5dc037c.js",
     "objects/8157dac608e0dd7a0deee9f0dd33e33c8a47873afdd074dae59d000aa351247f.js",
     "objects/e9d234a8a2ccbf60da50ac22009ca719b1db03612536c8eab250349978db92ee.js",
     "objects/c0a9922f41ce08ba395d6c497ed873f48fd426534f1817bbaca137652d31eaba.js",
@@ -5169,14 +5183,15 @@
     "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
     "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
-    "objects/e4926bbf12fe2f44a49874033bc6897e49e5047f7aa133d812a662eff3c63e1c.js",
+    "objects/a8d2b8569e930fe6fb8dc42ee7a3582bb22d4b21c8e5b83840d03f7efc91001a.js",
     "objects/c4b2190aee7ec5b5a2b9bcae053549adca077969eedd4c86e4577dcce8267c88.js",
     "objects/4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866.css",
-    "objects/1b2db4801f64ddf6f48c06b560614dcf9d394ea544ec0afa6ef7b268599fd466.js",
-    "objects/e30f08f1e2bc04bbfcf4154e19ae295d8b3da90d330497d0274f81d784434a38.js",
-    "objects/450a48f66830c06826f4d9f60158f142f2e513ae56bb750daea512b010003f6f.js",
-    "objects/6b0bd1e03893d128f25138dbe911c1ef01d1231d1d7b1a4ab292efbcd09c4979.js",
-    "objects/d9f5e41cd4c580deba81c64d18c676122dada10d0cbd89233fa0896ca21ca1d8.js"
+    "objects/52c29e6a62e289029aba32411dbf67a62c084b92d0f6012ac2cd77ec06cf95e5.js",
+    "objects/e26afcb03af3cd13c15f58acbe6af0f6d77b1230cdde634213fcbc36580a957f.js",
+    "objects/e01e2c80396b3f6e4d624d1053b6faa9928a81084f0d699d7a0d7f0f372a538b.js",
+    "objects/6cf6a299708dccd487b46bd5ac024031bd7d9908e4a36e4a042061527fb9041b.js",
+    "objects/d9f5e41cd4c580deba81c64d18c676122dada10d0cbd89233fa0896ca21ca1d8.js",
+    "objects/f0198dc2e508682d4577fbd034555437805b3006d5fde17191ecd9efbc28d716.js"
   ],
   "actors": {
     "200033": {
@@ -7746,6 +7761,11 @@
       "sha256": "dc8b416fbe7c50fee255ff05a2c0495ae291f88d1b18f492d1fc6487cdf0b695"
     },
     {
+      "id": "v6-web-pc-consumption-r2",
+      "path": "releases/v6-web-pc-consumption-r2.json",
+      "sha256": "56244f88782ebf464c9ee6881628afd30334d54ac1baf04592ce3521ef1228d6"
+    },
+    {
       "id": "v6-web-pc-portraits-r1",
       "path": "releases/v6-web-pc-portraits-r1.json",
       "sha256": "ee4cee5791eddd56c56f07bee2944af58388c764fa05c05d3354220f0dd43d79"
@@ -7786,6 +7806,6 @@
       "sha256": "c859125cdbd5df6040e2338253c65017f923288d39165fb946ffeaea8d56c893"
     }
   ],
-  "sourceRendererSha256": "d7359c3298d90dbefc8383e857703a36d73f781b5319d390ec0fbec5fb440f80",
+  "sourceRendererSha256": "a0a3716b79bbe9f48419cc71303bb54e6b64ad5e3ba922f60df34516e5dc037c",
   "sourceTimelineSha256": "cf212b811fc145275c4cafd35ecac9cc12aac2b13d625ff0f18d83c847793135"
 }

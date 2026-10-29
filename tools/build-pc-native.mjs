@@ -1,6 +1,6 @@
 import fs from'node:fs';import path from'node:path';import crypto from'node:crypto';import vm from'node:vm';import{createRequire}from'node:module';import{execFileSync}from'node:child_process';
-const inputSpec=JSON.parse(fs.readFileSync('F:/AI_TEMP/scratch/20261029-ss2-pc-web-consumption/current-input.json','utf8'));
-const repo=path.resolve(import.meta.dirname,'..'),input=inputSpec.root,out='F:/AI_TEMP/exports/SS2-AUTO-BATTLER/PC-WEB-CONSUMPTION-20261029/publisher',pub=repo+'/public',id='v6-web-pc-consumption-r2';
+const inputSpec=JSON.parse(fs.readFileSync(process.argv[2]||'F:/AI_TEMP/scratch/20261029-ss2-pc-web-consumption/current-input.json','utf8'));
+const repo=path.resolve(import.meta.dirname,'..'),input=inputSpec.root,out=inputSpec.publisherOut||'F:/AI_TEMP/exports/SS2-AUTO-BATTLER/PC-WEB-CONSUMPTION-20261029/publisher',pub=repo+'/public',id=inputSpec.release||'v6-web-pc-consumption-r2';
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),src=p=>fs.readFileSync(input+'/'+p,'utf8'),files=[],mapping={},actors={},equivalence=[],sourceTransforms=[];
 fs.mkdirSync(out,{recursive:true});fs.mkdirSync(pub+'/objects',{recursive:true});
 const manifest=JSON.parse(src('manifest.json'));for(const f of manifest.files){const b=fs.readFileSync(input+'/'+f.path);if(b.length!==f.size||sha(b)!==f.sha256)throw Error('Frozen input drift '+f.path);}
@@ -18,6 +18,7 @@ function appTransform(code){
  code=code.replaceAll('Mobile.persist(next,Store)','Mobile.persist(webState(next),Store)').replaceAll('Mobile.persist(state,Store)','Mobile.persist(webState(state),Store)');
  once('state=loaded.state||Core.createRun(20261028,P.RECOMMENDED_PACK_ID||mainPacks()[0]?.id||P.DEFAULT_PACK_ID);','state=loaded.state||Core.createRun(20261028,P.RECOMMENDED_PACK_ID||mainPacks()[0]?.id||P.DEFAULT_PACK_ID);if(loaded.state&&!state.webRelease)Mobile.persist(webState(state),Store);');
  once("render();if(state.phase==='battle'){resumePending=true;", "render();window.SS2_WEB_UI_READY?.();if(state.phase==='battle'){resumePending=true;");
+ if(code.includes('document.body.dataset.sceneAssets=loading?'))once("const loading=status.state==='loading',failed=status.state==='failed';", "const loading=status.state==='loading',failed=status.state==='failed';if(loading||failed)window.SS2_WEB_UI_READY?.();");
  once("setWarning('游戏载入失败：'", "window.SS2_WEB_UI_READY?.();setWarning('游戏载入失败：'");
  once('async function adoptRun(next){if(battleGate.busy)return false;',"async function adoptRun(next){if(battleGate.busy)return false;if(await window.SS2_RESUME_SAVE(Store.exportSave(next)))return false;");
  once("if(command.type==='FINISH_BATTLE'){ghosts=[];", "if(command.type==='FINISH_BATTLE'){SS2Lineups.finish(state);ghosts=[];");
@@ -32,7 +33,8 @@ const mini=Object.fromEntries(Object.entries(actors).map(([k,a])=>[k,{lazyDataPa
 const scripts=[];
 for(const p of scriptSources){let code=p==='assets/actors.js'?'window.SS2_ACTORS='+JSON.stringify(mini)+';':src(p);const original=code;
  if(p==='src/storage.js'){if(!code.includes("KEY='ss2.local.v1.save'"))throw Error('Storage hook drift');code=code.replace("KEY='ss2.local.v1.save'","KEY='ss2.v6-web:'+new URL('./',location.href).pathname+'save'");}
- if(p==='src/actor.js'){const old="im.src=this.imageBase+p;";if(!code.includes(old))throw Error('Renderer load hook drift');code=code.replace(old,'im.src=p;');}
+ if(p==='src/actor.js'){const old="im.src=this.imageBase+p;";if(code.includes(old))code=code.replace(old,'im.src=p;');else if(!code.includes('return global.SS2SceneResources.loadRenderer(this,options);'))throw Error('Renderer load delegation drift');}
+ if(p==='src/scene-resources.js'){const a='urlFor=p=>renderer.imageBase+p';if(code.split(a).length!==2)throw Error('Scene URL hook drift');code=code.replace(a,'urlFor=p=>p');}
  if(p==='src/app.js')code=appTransform(code);
  if(p==='src/battle-feedback.js'){const anchor="icon:'assets/ui-feedback/'+kind+'.svg'";if(!code.includes(anchor))throw Error('Feedback URL anchor drift');code=code.replace(anchor,"icon:(globalThis.SS2_ASSET_URL?.['assets/ui-feedback/'+kind+'.svg']||'assets/ui-feedback/'+kind+'.svg')");}
  code=assets(code);sourceTransforms.push({path:p,sourceSHA256:sha(src(p)),webSHA256:sha(code),kind:p==='src/app.js'?'Resource paths, startup visibility, web save metadata and historical resume/lineup hooks; native portrait/UI logic preserved':p==='src/storage.js'?'Web namespace only':p==='src/actor.js'?'Texture URL only':'Asset URLs or unchanged'});
@@ -58,12 +60,12 @@ const legacyReleases=[];fs.mkdirSync(pub+'/releases',{recursive:true});for(const
 const bootFiles=files.filter(f=>!f.label.startsWith('actor:')&&!f.label.startsWith('assets/actors/')&&!f.label.startsWith('assets/portraits/')&&!f.label.startsWith('assets/items-v8/')&&!f.label.includes('redgold-pack-emblem')).map(f=>f.path);
 const release={schema:2,id,title:'少年演武 · 主题演武',mode:'scene-v1',rules,content:'MULTIVERSION_NATIVE_SOURCE_AND_THEMATIC_R2',sourceZipSha256:inputSpec.sha256,css,scripts,files,bootFiles,actors,assetUrls:mapping,compatibility,backend:{upload:'unsupported-rules-local-only'},legacyReleases,sourceRendererSha256:sha(src('src/actor.js')),sourceTimelineSha256:sha(src('src/timeline-actor.js'))};
 if(files.length>1200||files.reduce((n,f)=>n+f.size,0)>600000000)throw Error('Loader budget exceeded');
-const shells={[id]:sourceIndex};for(const[commit]of [['147ba57'],['34c3f64'],['2f6ba10'],['a631d41'],['5e43f0c'],['933396f'],['d497460'],['3eea024'],['c905de7'],['44f8ed2']]){const m=JSON.parse(execFileSync('git',['-C',repo,'show',commit+':docs/release.json'],{encoding:'utf8'}));shells[m.id]=execFileSync('git',['-C',repo,'show',commit+':docs/index.html'],{encoding:'utf8'});}
+const shells={[id]:sourceIndex};for(const[commit]of [['147ba57'],['34c3f64'],['2f6ba10'],['a631d41'],['5e43f0c'],['933396f'],['d497460'],['3eea024'],['c905de7'],['44f8ed2'],['18b39e8']]){const m=JSON.parse(execFileSync('git',['-C',repo,'show',commit+':docs/release.json'],{encoding:'utf8'}));shells[m.id]=execFileSync('git',['-C',repo,'show',commit+':docs/index.html'],{encoding:'utf8'});}
 const appPath=files.find(f=>f.label==='src/app.js').path,presentationPins={};
 for(const ref of legacyReleases){const old=JSON.parse(fs.readFileSync(pub+'/'+ref.path));if(old.rules!==rules)continue;
  const oldRows=old.scripts.map(p=>({path:p,label:old.files.find(f=>f.path===p)?.label})),newRows=scripts.map(p=>({path:p,label:files.find(f=>f.path===p)?.label}));
- const added=newRows.filter(r=>!oldRows.some(o=>o.label===r.label));if(added.length>1||(added.length===1&&added[0].label!=='src/battle-presentation.js'))throw Error('Unexpected presentation dependency addition '+old.id);
- for(const row of oldRows){const n=newRows.find(n=>n.label===row.label);if(!n)throw Error('Missing historical script '+row.label);if(row.label==='src/app.js')continue;if(row.label==='web/lineups-v8.js'&&row.path!==n.path){if(!row.path.includes('85ed0d61b2c98b233f10c20f91dcbf6004955b24361951895fa4d7cd4eec7c1b')||!n.path.includes('6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2'))throw Error('Unapproved historical helper difference');continue;}if(row.path!==n.path)throw Error('Protected non-presentation script differs '+row.label);}
+ const added=newRows.filter(r=>!oldRows.some(o=>o.label===r.label));if(added.some(r=>!['src/battle-presentation.js','src/scene-resources.js'].includes(r.label)))throw Error('Unexpected presentation dependency addition '+old.id);
+ for(const row of oldRows){const n=newRows.find(n=>n.label===row.label);if(!n)throw Error('Missing historical script '+row.label);if(row.label==='src/app.js')continue;if(row.label==='src/actor.js'&&row.path===previous.files.find(f=>f.label==='src/actor.js')?.path)continue;if(row.label==='web/lineups-v8.js'&&row.path!==n.path){if(!row.path.includes('85ed0d61b2c98b233f10c20f91dcbf6004955b24361951895fa4d7cd4eec7c1b')||!n.path.includes('6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2'))throw Error('Unapproved historical helper difference');continue;}if(row.path!==n.path)throw Error('Protected non-presentation script differs '+row.label);}
  presentationPins[old.id]={scripts:old.scripts,css:old.css,rules:old.rules};
 }
 fs.writeFileSync(out+'/presentation-proof.json',JSON.stringify({status:'SAME_MECHANICAL_SCRIPT_BYTES_VERIFIED',pins:presentationPins,app:appPath,css,newId:id,rules,sourceOldCoreUnmodified:true},null,2));
@@ -99,7 +101,7 @@ fs.writeFileSync(repo+'/web/product-bootstrap.js',bootstrap);
 let html=sourceIndex.replace("connect-src 'none'","connect-src 'self' https://ss2-v6-lineups.elreyliu0809.workers.dev; worker-src 'self'").replace('<link rel="stylesheet" href="styles.css">','<style>body[data-web-boot="loading"]>.game-shell{display:none}</style>').replace(/<script src="assets\/actors.js"><\/script>[\s\S]*?<\/body>/,'<script src="bootstrap.js"></script></body>');
 const toolbar='<section class="web-toolbar" aria-label="离线与版本"><span id="web-status" role="status">正在准备游戏…</span><button id="web-offline">下载完整离线包</button><button id="web-pause-download" hidden>暂停下载</button><button id="web-update" hidden>切换已准备新版</button><button id="web-rollback" hidden>回退上一发行版</button><button id="web-loader-update" hidden>启用新版加载器</button></section>';
 html=html.replace('<body>','<body data-web-boot="loading">'+toolbar);
-let sw=fs.readFileSync(repo+'/web/mobile-sw.js','utf8').replace("SHELL=NS+'shell-v1'","SHELL=NS+'shell-pc-consumption-r2'").replace('m.schema!==1||','(m.schema!==1&&m.schema!==2)||').replace('for(const[p,r]of rows)await c.put(p,r);','for(const[p,r]of rows)await c.put(p,r);await self.skipWaiting();');
+let sw=fs.readFileSync(repo+'/web/mobile-sw.js','utf8').replace("SHELL=NS+'shell-v1'","SHELL=NS+'shell-"+id+"'").replace('m.schema!==1||','(m.schema!==1&&m.schema!==2)||').replace('for(const[p,r]of rows)await c.put(p,r);','for(const[p,r]of rows)await c.put(p,r);await self.skipWaiting();');
 // Schema2 is intentionally rejected by the old loader: it cannot activate a new
 // DOM/script contract before the complete shell-v2 loader has installed.
 // This DOM revision uses an isolated shell cache; activate only after complete
