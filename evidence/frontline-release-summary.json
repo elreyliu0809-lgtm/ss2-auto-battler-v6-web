@@ -1,0 +1,53 @@
+{
+  "status": "LOCAL_FINAL_FRONTLINE_R2_READY",
+  "id": "v6-web-frontline-r2",
+  "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
+  "sourceZipSHA256": "a83782d90c9a73122992e58e6b02d804a99fbb75ae6e65c9989fda4b0f68190b",
+  "inputReadySHA256": "8d21f0d4d61714f9305ba26eabe4288603bed2e998a00fd4241af6edfe071189",
+  "releaseManifestSHA256": "dc8b416fbe7c50fee255ff05a2c0495ae291f88d1b18f492d1fc6487cdf0b695",
+  "checks": {
+    "frontline-qa": {
+      "passed": true,
+      "checks": 761,
+      "hits": 160,
+      "sha256": "ae8e2d7fb1328b0c97a7b360bf0ee07facd9e485b6ab9ac2a04a76d75225ae56"
+    },
+    "upgrade-qa": {
+      "passed": true,
+      "checks": 11,
+      "sha256": "3438f3a13d05ee3cf1227029a7a0804f5fb2af664e3c51e654dca24ee58970e2"
+    },
+    "compat-qa": {
+      "passed": true,
+      "checks": 16,
+      "sha256": "605ac1e125a73e78fb33e5a38c4d932b35daade731580d9380dec2f121dbd7cc"
+    },
+    "static-closure": {
+      "passed": true,
+      "checks": 862,
+      "sha256": "e573eabb554a7e87763721ef5f25b2ca9b8813966a138ebc055cbe3475ef1495"
+    }
+  },
+  "objects": 837,
+  "totalBytes": 319305195,
+  "bootBytes": 2984575,
+  "screenshots": [
+    {
+      "path": "F:/AI_TEMP/exports/SS2-AUTO-BATTLER/FRONTLINE-WEB/battle-390.png",
+      "size": 212118,
+      "sha256": "7fe14aeded7d1bb2f5e21a5c6fea435324bcd00bec736874b43849121048a19c"
+    },
+    {
+      "path": "F:/AI_TEMP/exports/SS2-AUTO-BATTLER/FRONTLINE-WEB/battle-901.png",
+      "size": 506617,
+      "sha256": "b15bb7369283481cea26ec88bed9f04c4cc442839f7481b61a63323664568c2e"
+    },
+    {
+      "path": "F:/AI_TEMP/exports/SS2-AUTO-BATTLER/FRONTLINE-WEB/battle-1280.png",
+      "size": 847970,
+      "sha256": "1e0cfb554cc371a8b08f0310def880d7819fd8acdb774e780e205a92c73bc32b"
+    }
+  ],
+  "scope": "Changed boundary checks plus exact-hash reuse of eight rules/storage modules; source494/limited19 technical review remain distinct source evidence",
+  "at": "2026-10-29T02:42:37.340Z"
+}

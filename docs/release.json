@@ -1,12 +1,12 @@
 {
   "schema": 2,
-  "id": "v6-web-rules-uiux-r1-1",
+  "id": "v6-web-frontline-r2",
   "title": "少年演武 · 主题演武",
   "mode": "scene-v1",
   "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
   "content": "MULTIVERSION_NATIVE_SOURCE_AND_THEMATIC_R2",
-  "sourceZipSha256": "a4974684f005d49d53fe9a65386983f6bdba3459973fabcb13ff790ba9e7f7e3",
-  "css": "objects/8c1ac5af0396fd3ed345a9cba6696af71636ea4eb222574d2cd949b061096ff9.css",
+  "sourceZipSha256": "a83782d90c9a73122992e58e6b02d804a99fbb75ae6e65c9989fda4b0f68190b",
+  "css": "objects/dca6c8be7f4844748713beb6fe49230b4e8391c9b0bd49306db71d929518bcda.css",
   "scripts": [
     "objects/8e9bd5f7e3318681c43dbff0b50a902ecd485095173666bc146ba974d4b15b96.js",
     "objects/20c99794c67b2b081437e0499a2e9922c59a856c4e3ea835486262b6eb6be375.js",
@@ -40,9 +40,10 @@
     "objects/8868b41f6509d51c1abd67235665ee9e794e88ac13e864d3a1fe94dbfacff0c4.js",
     "objects/5d9fbf12c7b0871d55381e99ca06a181457cf91c1f73fbdfe585603de29168c3.js",
     "objects/595839bb51d9e897a0db797ea6b49555d43568d545fb03fcd3764f8de7c0d6ae.js",
+    "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
     "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
-    "objects/42e197f4eae4ab976941a7be1d8f46449c3db601393356bcecb12be6175d2f56.js"
+    "objects/b04f34a5c759f9fe8df38a1d92a84daea8b7ce5b1e0c73e9c249bd76eedeb1ef.js"
   ],
   "files": [
     {
@@ -3076,6 +3077,24 @@
       "label": "assets/portraits/900230-9de499034c383495.png"
     },
     {
+      "path": "objects/50ac44ea56cf6b627339c8d3e9746152638845b54ed38524d3cb06c33cda7c96.svg",
+      "size": 406,
+      "sha256": "50ac44ea56cf6b627339c8d3e9746152638845b54ed38524d3cb06c33cda7c96",
+      "label": "assets/ui-battle-stats/attack.svg"
+    },
+    {
+      "path": "objects/64bda36fbdb963b0ccdfbba60f2f1b58b6044b8a5bc98211e417e1871fcbecb8.svg",
+      "size": 394,
+      "sha256": "64bda36fbdb963b0ccdfbba60f2f1b58b6044b8a5bc98211e417e1871fcbecb8",
+      "label": "assets/ui-battle-stats/health.svg"
+    },
+    {
+      "path": "objects/08804e1158d47628584be6060d106edaaea34cb19684eeb8b1fa5e95a9e18424.json",
+      "size": 251,
+      "sha256": "08804e1158d47628584be6060d106edaaea34cb19684eeb8b1fa5e95a9e18424",
+      "label": "assets/ui-battle-stats/provenance.json"
+    },
+    {
       "path": "objects/ae853b1369b8b316944213fe63c0bd2e9791ee8f6239194759c84c46e4a1cd39.svg",
       "size": 206,
       "sha256": "ae853b1369b8b316944213fe63c0bd2e9791ee8f6239194759c84c46e4a1cd39",
@@ -5014,6 +5033,12 @@
       "label": "src/mobile-actions.js"
     },
     {
+      "path": "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
+      "size": 2293,
+      "sha256": "80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0",
+      "label": "src/battle-presentation.js"
+    },
+    {
       "path": "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
       "size": 2773,
       "sha256": "57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1",
@@ -5026,9 +5051,9 @@
       "label": "web/lineups-v8.js"
     },
     {
-      "path": "objects/42e197f4eae4ab976941a7be1d8f46449c3db601393356bcecb12be6175d2f56.js",
-      "size": 76594,
-      "sha256": "42e197f4eae4ab976941a7be1d8f46449c3db601393356bcecb12be6175d2f56",
+      "path": "objects/b04f34a5c759f9fe8df38a1d92a84daea8b7ce5b1e0c73e9c249bd76eedeb1ef.js",
+      "size": 77036,
+      "sha256": "b04f34a5c759f9fe8df38a1d92a84daea8b7ce5b1e0c73e9c249bd76eedeb1ef",
       "label": "src/app.js"
     },
     {
@@ -5038,9 +5063,9 @@
       "label": "web/legacy-upgrade-groups.js"
     },
     {
-      "path": "objects/8c1ac5af0396fd3ed345a9cba6696af71636ea4eb222574d2cd949b061096ff9.css",
-      "size": 42435,
-      "sha256": "8c1ac5af0396fd3ed345a9cba6696af71636ea4eb222574d2cd949b061096ff9",
+      "path": "objects/dca6c8be7f4844748713beb6fe49230b4e8391c9b0bd49306db71d929518bcda.css",
+      "size": 48598,
+      "sha256": "dca6c8be7f4844748713beb6fe49230b4e8391c9b0bd49306db71d929518bcda",
       "label": "styles.css"
     }
   ],
@@ -5048,6 +5073,9 @@
     "objects/a60a73e19aa101f05a36d5b37a6e1f46ecec6fbf631eb8f0ec7f1ec39b616777.jpg",
     "objects/f02376909ea6f4b5fbd72c467c2f1d3cd00b939c73cdb4a57ad657ad77642e6e.png",
     "objects/955be9f5348c3a347383d8bd27784851f8cfcb1c0d209f09c898d823c960b75f.png",
+    "objects/50ac44ea56cf6b627339c8d3e9746152638845b54ed38524d3cb06c33cda7c96.svg",
+    "objects/64bda36fbdb963b0ccdfbba60f2f1b58b6044b8a5bc98211e417e1871fcbecb8.svg",
+    "objects/08804e1158d47628584be6060d106edaaea34cb19684eeb8b1fa5e95a9e18424.json",
     "objects/ae853b1369b8b316944213fe63c0bd2e9791ee8f6239194759c84c46e4a1cd39.svg",
     "objects/5697e079936f746747bb3cf850a95fc8f158593c96e064e70fdf67ad3c3600e3.svg",
     "objects/ca615c43acf64f68b31a84e35b4c132cbcbd5c1ac9919d28adc9eb6c967ced5d.svg",
@@ -5108,11 +5136,12 @@
     "objects/8868b41f6509d51c1abd67235665ee9e794e88ac13e864d3a1fe94dbfacff0c4.js",
     "objects/5d9fbf12c7b0871d55381e99ca06a181457cf91c1f73fbdfe585603de29168c3.js",
     "objects/595839bb51d9e897a0db797ea6b49555d43568d545fb03fcd3764f8de7c0d6ae.js",
+    "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
     "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
-    "objects/42e197f4eae4ab976941a7be1d8f46449c3db601393356bcecb12be6175d2f56.js",
+    "objects/b04f34a5c759f9fe8df38a1d92a84daea8b7ce5b1e0c73e9c249bd76eedeb1ef.js",
     "objects/c4b2190aee7ec5b5a2b9bcae053549adca077969eedd4c86e4577dcce8267c88.js",
-    "objects/8c1ac5af0396fd3ed345a9cba6696af71636ea4eb222574d2cd949b061096ff9.css"
+    "objects/dca6c8be7f4844748713beb6fe49230b4e8391c9b0bd49306db71d929518bcda.css"
   ],
   "actors": {
     "200033": {
@@ -7510,6 +7539,9 @@
     "assets/portraits/900210-2345114f89bf288e.png": "objects/2345114f89bf288e93d4577428d860f53ac945fbd92e67445fc7e09366a00955.png",
     "assets/portraits/900220-3bb53d42550ae145.png": "objects/3bb53d42550ae1458a671ac366e5bc985aceebfeb7faa3e577df0b998dfdfae4.png",
     "assets/portraits/900230-9de499034c383495.png": "objects/9de499034c383495ad3778e2c8be8a5ba8af36f3850275395f517f97a12914ad.png",
+    "assets/ui-battle-stats/attack.svg": "objects/50ac44ea56cf6b627339c8d3e9746152638845b54ed38524d3cb06c33cda7c96.svg",
+    "assets/ui-battle-stats/health.svg": "objects/64bda36fbdb963b0ccdfbba60f2f1b58b6044b8a5bc98211e417e1871fcbecb8.svg",
+    "assets/ui-battle-stats/provenance.json": "objects/08804e1158d47628584be6060d106edaaea34cb19684eeb8b1fa5e95a9e18424.json",
     "assets/ui-feedback/ability.svg": "objects/ae853b1369b8b316944213fe63c0bd2e9791ee8f6239194759c84c46e4a1cd39.svg",
     "assets/ui-feedback/attack.svg": "objects/5697e079936f746747bb3cf850a95fc8f158593c96e064e70fdf67ad3c3600e3.svg",
     "assets/ui-feedback/buff.svg": "objects/ca615c43acf64f68b31a84e35b4c132cbcbd5c1ac9919d28adc9eb6c967ced5d.svg",
@@ -7694,6 +7726,16 @@
       "sha256": "8851f9a2722aca21c6b926c9a1a452a78899f55242ffcea00042ea0c4fd7eecb"
     },
     {
+      "id": "v6-web-rules-uiux-r1-1",
+      "path": "releases/v6-web-rules-uiux-r1-1.json",
+      "sha256": "cb1dce3beb7f72badc2e2c18b50516b5590bbc95908ca386c16045c735896441"
+    },
+    {
+      "id": "v6-web-rules-uiux-r1",
+      "path": "releases/v6-web-rules-uiux-r1.json",
+      "sha256": "d6166a142ba8a432e38c7c1679742402f7adfcbe13e932f13dc5f4b405a21ef9"
+    },
+    {
       "id": "v6-web-v8-r2-items-r2",
       "path": "releases/v6-web-v8-r2-items-r2.json",
       "sha256": "a14c44e2818f07a6dd87437c49511ca725a0a4ad2e4b72a53539843786270e86"
@@ -7702,11 +7744,6 @@
       "id": "v6-web-v8-r2-m1",
       "path": "releases/v6-web-v8-r2-m1.json",
       "sha256": "c859125cdbd5df6040e2338253c65017f923288d39165fb946ffeaea8d56c893"
-    },
-    {
-      "id": "v6-web-rules-uiux-r1",
-      "path": "releases/v6-web-rules-uiux-r1.json",
-      "sha256": "d6166a142ba8a432e38c7c1679742402f7adfcbe13e932f13dc5f4b405a21ef9"
     }
   ],
   "sourceRendererSha256": "d7359c3298d90dbefc8383e857703a36d73f781b5319d390ec0fbec5fb440f80",
