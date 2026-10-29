@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "id": "v6-web-pc-scene-r3",
+  "id": "v6-web-pc-scene-r3-1",
   "title": "少年演武 · 主题演武",
   "mode": "scene-v1",
   "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
@@ -32,7 +32,7 @@
     "objects/de46811d0490f04853ca3f1b6218b008fa954c5fcb15d7f4440b1276ffd37ca7.js",
     "objects/985d628b1f87d6c59f52a07ec514d1df4e78925f8fb724647dd4bc4ada291d01.js",
     "objects/cf212b811fc145275c4cafd35ecac9cc12aac2b13d625ff0f18d83c847793135.js",
-    "objects/538c12b62c0ad2bce03cae6b27cfc9037446eea8c5d8046e2e6706ff870b25a9.js",
+    "objects/afa6a850cd00130078cd7ba629918409af6e162a5bbcfe4aaa2ad4acc0747632.js",
     "objects/a0a3716b79bbe9f48419cc71303bb54e6b64ad5e3ba922f60df34516e5dc037c.js",
     "objects/8157dac608e0dd7a0deee9f0dd33e33c8a47873afdd074dae59d000aa351247f.js",
     "objects/e9d234a8a2ccbf60da50ac22009ca719b1db03612536c8eab250349978db92ee.js",
@@ -44,7 +44,7 @@
     "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
     "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
-    "objects/a8d2b8569e930fe6fb8dc42ee7a3582bb22d4b21c8e5b83840d03f7efc91001a.js"
+    "objects/573b5366e124a51e2943758498e321ba7493b124a08067824f079e950f94e7b5.js"
   ],
   "files": [
     {
@@ -4986,9 +4986,9 @@
       "label": "src/timeline-actor.js"
     },
     {
-      "path": "objects/538c12b62c0ad2bce03cae6b27cfc9037446eea8c5d8046e2e6706ff870b25a9.js",
-      "size": 2692,
-      "sha256": "538c12b62c0ad2bce03cae6b27cfc9037446eea8c5d8046e2e6706ff870b25a9",
+      "path": "objects/afa6a850cd00130078cd7ba629918409af6e162a5bbcfe4aaa2ad4acc0747632.js",
+      "size": 2766,
+      "sha256": "afa6a850cd00130078cd7ba629918409af6e162a5bbcfe4aaa2ad4acc0747632",
       "label": "src/scene-resources.js"
     },
     {
@@ -5058,10 +5058,16 @@
       "label": "web/lineups-v8.js"
     },
     {
-      "path": "objects/a8d2b8569e930fe6fb8dc42ee7a3582bb22d4b21c8e5b83840d03f7efc91001a.js",
-      "size": 78477,
-      "sha256": "a8d2b8569e930fe6fb8dc42ee7a3582bb22d4b21c8e5b83840d03f7efc91001a",
+      "path": "objects/573b5366e124a51e2943758498e321ba7493b124a08067824f079e950f94e7b5.js",
+      "size": 78568,
+      "sha256": "573b5366e124a51e2943758498e321ba7493b124a08067824f079e950f94e7b5",
       "label": "src/app.js"
+    },
+    {
+      "path": "objects/cb5952ce52b8072132b3d16e79b068b6931cdfb7abdd1c449541d6a0c751f246.js",
+      "size": 819,
+      "sha256": "cb5952ce52b8072132b3d16e79b068b6931cdfb7abdd1c449541d6a0c751f246",
+      "label": "web/scene-heads.js"
     },
     {
       "path": "objects/c4b2190aee7ec5b5a2b9bcae053549adca077969eedd4c86e4577dcce8267c88.js",
@@ -5171,7 +5177,7 @@
     "objects/de46811d0490f04853ca3f1b6218b008fa954c5fcb15d7f4440b1276ffd37ca7.js",
     "objects/985d628b1f87d6c59f52a07ec514d1df4e78925f8fb724647dd4bc4ada291d01.js",
     "objects/cf212b811fc145275c4cafd35ecac9cc12aac2b13d625ff0f18d83c847793135.js",
-    "objects/538c12b62c0ad2bce03cae6b27cfc9037446eea8c5d8046e2e6706ff870b25a9.js",
+    "objects/afa6a850cd00130078cd7ba629918409af6e162a5bbcfe4aaa2ad4acc0747632.js",
     "objects/a0a3716b79bbe9f48419cc71303bb54e6b64ad5e3ba922f60df34516e5dc037c.js",
     "objects/8157dac608e0dd7a0deee9f0dd33e33c8a47873afdd074dae59d000aa351247f.js",
     "objects/e9d234a8a2ccbf60da50ac22009ca719b1db03612536c8eab250349978db92ee.js",
@@ -5183,7 +5189,8 @@
     "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
     "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
-    "objects/a8d2b8569e930fe6fb8dc42ee7a3582bb22d4b21c8e5b83840d03f7efc91001a.js",
+    "objects/573b5366e124a51e2943758498e321ba7493b124a08067824f079e950f94e7b5.js",
+    "objects/cb5952ce52b8072132b3d16e79b068b6931cdfb7abdd1c449541d6a0c751f246.js",
     "objects/c4b2190aee7ec5b5a2b9bcae053549adca077969eedd4c86e4577dcce8267c88.js",
     "objects/4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866.css",
     "objects/52c29e6a62e289029aba32411dbf67a62c084b92d0f6012ac2cd77ec06cf95e5.js",
@@ -7769,6 +7776,11 @@
       "id": "v6-web-pc-portraits-r1",
       "path": "releases/v6-web-pc-portraits-r1.json",
       "sha256": "ee4cee5791eddd56c56f07bee2944af58388c764fa05c05d3354220f0dd43d79"
+    },
+    {
+      "id": "v6-web-pc-scene-r3",
+      "path": "releases/v6-web-pc-scene-r3.json",
+      "sha256": "d1011cc1ce707e248d25cabe20ff0d37c88144a7a278c8bebd1de2385e8cefbd"
     },
     {
       "id": "v6-web-product-r2-1",
