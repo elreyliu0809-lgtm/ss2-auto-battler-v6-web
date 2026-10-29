@@ -1,6 +1,6 @@
-const SS2_PRESENTATION_REVISION="v6-web-frontline-r2";
+const SS2_PRESENTATION_REVISION="v6-web-pc-consumption-r2";
 'use strict';
-const BASE=new URL('./',self.location.href),NS='ss2-v6-web:'+BASE.pathname+':',OBJECTS=NS+'objects',META=NS+'meta',SHELL=NS+'shell-frontline-r2',url=p=>new URL(p,BASE).href,key=url('__release_state__');
+const BASE=new URL('./',self.location.href),NS='ss2-v6-web:'+BASE.pathname+':',OBJECTS=NS+'objects',META=NS+'meta',SHELL=NS+'shell-pc-consumption-r2',url=p=>new URL(p,BASE).href,key=url('__release_state__');
 const hex=b=>[...new Uint8Array(b)].map(n=>n.toString(16).padStart(2,'0')).join('');
 async function read(){const r=await(await caches.open(META)).match(key);const s=r?await r.json():{active:null,previous:null,pending:null,releases:{}};s.complete??={};return s;}
 async function write(s){await(await caches.open(META)).put(key,new Response(JSON.stringify(s),{headers:{'Content-Type':'application/json'}}));}

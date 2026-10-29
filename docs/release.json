@@ -1,12 +1,12 @@
 {
   "schema": 2,
-  "id": "v6-web-frontline-r2",
+  "id": "v6-web-pc-consumption-r2",
   "title": "少年演武 · 主题演武",
   "mode": "scene-v1",
   "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
   "content": "MULTIVERSION_NATIVE_SOURCE_AND_THEMATIC_R2",
-  "sourceZipSha256": "a83782d90c9a73122992e58e6b02d804a99fbb75ae6e65c9989fda4b0f68190b",
-  "css": "objects/dca6c8be7f4844748713beb6fe49230b4e8391c9b0bd49306db71d929518bcda.css",
+  "sourceZipSha256": "5f987b50e86b9d89f94e2e344af26f79bf06826822733376f0723099ba5b750a",
+  "css": "objects/4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866.css",
   "scripts": [
     "objects/8e9bd5f7e3318681c43dbff0b50a902ecd485095173666bc146ba974d4b15b96.js",
     "objects/20c99794c67b2b081437e0499a2e9922c59a856c4e3ea835486262b6eb6be375.js",
@@ -43,7 +43,7 @@
     "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
     "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
-    "objects/b04f34a5c759f9fe8df38a1d92a84daea8b7ce5b1e0c73e9c249bd76eedeb1ef.js"
+    "objects/e4926bbf12fe2f44a49874033bc6897e49e5047f7aa133d812a662eff3c63e1c.js"
   ],
   "files": [
     {
@@ -5051,9 +5051,9 @@
       "label": "web/lineups-v8.js"
     },
     {
-      "path": "objects/b04f34a5c759f9fe8df38a1d92a84daea8b7ce5b1e0c73e9c249bd76eedeb1ef.js",
-      "size": 77036,
-      "sha256": "b04f34a5c759f9fe8df38a1d92a84daea8b7ce5b1e0c73e9c249bd76eedeb1ef",
+      "path": "objects/e4926bbf12fe2f44a49874033bc6897e49e5047f7aa133d812a662eff3c63e1c.js",
+      "size": 77949,
+      "sha256": "e4926bbf12fe2f44a49874033bc6897e49e5047f7aa133d812a662eff3c63e1c",
       "label": "src/app.js"
     },
     {
@@ -5063,10 +5063,40 @@
       "label": "web/legacy-upgrade-groups.js"
     },
     {
-      "path": "objects/dca6c8be7f4844748713beb6fe49230b4e8391c9b0bd49306db71d929518bcda.css",
-      "size": 48598,
-      "sha256": "dca6c8be7f4844748713beb6fe49230b4e8391c9b0bd49306db71d929518bcda",
+      "path": "objects/4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866.css",
+      "size": 49580,
+      "sha256": "4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866",
       "label": "styles.css"
+    },
+    {
+      "path": "objects/1b2db4801f64ddf6f48c06b560614dcf9d394ea544ec0afa6ef7b268599fd466.js",
+      "sha256": "1b2db4801f64ddf6f48c06b560614dcf9d394ea544ec0afa6ef7b268599fd466",
+      "size": 41186,
+      "label": "web/legacy-pc-app:v6-web-v8-r2-items-r2"
+    },
+    {
+      "path": "objects/e30f08f1e2bc04bbfcf4154e19ae295d8b3da90d330497d0274f81d784434a38.js",
+      "sha256": "e30f08f1e2bc04bbfcf4154e19ae295d8b3da90d330497d0274f81d784434a38",
+      "size": 71487,
+      "label": "web/legacy-pc-app:v6-web-product-r2-1"
+    },
+    {
+      "path": "objects/450a48f66830c06826f4d9f60158f142f2e513ae56bb750daea512b010003f6f.js",
+      "sha256": "450a48f66830c06826f4d9f60158f142f2e513ae56bb750daea512b010003f6f",
+      "size": 71471,
+      "label": "web/legacy-pc-app:v6-web-pc-portraits-r1"
+    },
+    {
+      "path": "objects/6b0bd1e03893d128f25138dbe911c1ef01d1231d1d7b1a4ab292efbcd09c4979.js",
+      "sha256": "6b0bd1e03893d128f25138dbe911c1ef01d1231d1d7b1a4ab292efbcd09c4979",
+      "size": 74639,
+      "label": "web/legacy-pc-app:v6-web-direct-r1"
+    },
+    {
+      "path": "objects/d9f5e41cd4c580deba81c64d18c676122dada10d0cbd89233fa0896ca21ca1d8.js",
+      "sha256": "d9f5e41cd4c580deba81c64d18c676122dada10d0cbd89233fa0896ca21ca1d8",
+      "size": 5895,
+      "label": "web/legacy-pc-consumption.js"
     }
   ],
   "bootFiles": [
@@ -5139,9 +5169,14 @@
     "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
     "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
-    "objects/b04f34a5c759f9fe8df38a1d92a84daea8b7ce5b1e0c73e9c249bd76eedeb1ef.js",
+    "objects/e4926bbf12fe2f44a49874033bc6897e49e5047f7aa133d812a662eff3c63e1c.js",
     "objects/c4b2190aee7ec5b5a2b9bcae053549adca077969eedd4c86e4577dcce8267c88.js",
-    "objects/dca6c8be7f4844748713beb6fe49230b4e8391c9b0bd49306db71d929518bcda.css"
+    "objects/4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866.css",
+    "objects/1b2db4801f64ddf6f48c06b560614dcf9d394ea544ec0afa6ef7b268599fd466.js",
+    "objects/e30f08f1e2bc04bbfcf4154e19ae295d8b3da90d330497d0274f81d784434a38.js",
+    "objects/450a48f66830c06826f4d9f60158f142f2e513ae56bb750daea512b010003f6f.js",
+    "objects/6b0bd1e03893d128f25138dbe911c1ef01d1231d1d7b1a4ab292efbcd09c4979.js",
+    "objects/d9f5e41cd4c580deba81c64d18c676122dada10d0cbd89233fa0896ca21ca1d8.js"
   ],
   "actors": {
     "200033": {
@@ -7704,6 +7739,11 @@
       "id": "v6-web-direct-r1",
       "path": "releases/v6-web-direct-r1.json",
       "sha256": "bc7c8253e001da6491158d97b29d96808b6f4da675c84e20a8f20349f80ebd53"
+    },
+    {
+      "id": "v6-web-frontline-r2",
+      "path": "releases/v6-web-frontline-r2.json",
+      "sha256": "dc8b416fbe7c50fee255ff05a2c0495ae291f88d1b18f492d1fc6487cdf0b695"
     },
     {
       "id": "v6-web-pc-portraits-r1",

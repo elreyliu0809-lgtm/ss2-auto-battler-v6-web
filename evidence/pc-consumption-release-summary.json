@@ -1,0 +1,54 @@
+{
+  "status": "LOCAL_PC_CONSUMPTION_R2_READY",
+  "release": "v6-web-pc-consumption-r2",
+  "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
+  "sourceZipSHA256": "5f987b50e86b9d89f94e2e344af26f79bf06826822733376f0723099ba5b750a",
+  "inputReadySHA256": "ec7102d274b19bf7461dc2d4cafb0f8fe861363ee071895b308af3cd40ea651c",
+  "releaseManifestSHA256": "56244f88782ebf464c9ee6881628afd30334d54ac1baf04592ce3521ef1228d6",
+  "checks": {
+    "native-qa": {
+      "passed": true,
+      "checks": 25,
+      "sha256": "f5cd0ecd18caae5e88fb5f8e2f6417a01ee31786924a49e606687c8ec3f6b22a"
+    },
+    "history-qa": {
+      "passed": true,
+      "checks": 25,
+      "sha256": "340e3c5de7c3a20cf7f46f27c8cf778d99ccdca87b039bc2092fe7530eba85b4"
+    },
+    "targets-qa": {
+      "passed": true,
+      "checks": 13,
+      "sha256": "df3eb28a00a2d9d53776a95a51719f8d66693f0c45d2b8eb621ae7b1ee5c7f67"
+    },
+    "failure-qa": {
+      "passed": true,
+      "checks": 5,
+      "sha256": "db2de688da687194c3691757deb72150746b3452339fc07f0d2d4bd8900a91a0"
+    },
+    "upgrade-qa": {
+      "passed": true,
+      "checks": 11,
+      "sha256": "b3225cc40285b5b5b7bf03f3995ce988b158a875bdc4bd1e7337b2a114f9afca"
+    },
+    "compat-qa": {
+      "passed": true,
+      "checks": 16,
+      "sha256": "9803fea6dc581545792ecc5d3ce7c352082dd463921aea43ac39037619005bd7"
+    },
+    "static-closure": {
+      "passed": true,
+      "checks": 867,
+      "sha256": "b09f736ee7d7a2ebe303c4f732099b97d5e32306d883443f140d55a8b9624c2d"
+    }
+  },
+  "objects": 842,
+  "totalBytes": 319571768,
+  "bootBytes": 3251148,
+  "limits": [
+    "Source498/254 reused as producer evidence; no fresh independent source review",
+    "Native screenshot initial hidden-shell race retained; final visible-ready gate passed",
+    "Public checks not yet run; physical Safari/human acceptance NOT_RUN"
+  ],
+  "at": "2026-10-29T03:51:52.322Z"
+}
