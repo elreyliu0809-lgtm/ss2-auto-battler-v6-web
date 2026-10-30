@@ -1,5 +1,6 @@
 import fs from'node:fs';import path from'node:path';import crypto from'node:crypto';import vm from'node:vm';import{createRequire}from'node:module';import{execFileSync}from'node:child_process';
 const inputSpec=JSON.parse(fs.readFileSync(process.argv[2]||'F:/AI_TEMP/scratch/20261029-ss2-pc-web-consumption/current-input.json','utf8'));
+const retainedUi=inputSpec.retainedUi?JSON.parse(fs.readFileSync(inputSpec.retainedUi,'utf8')):null;
 const repo=path.resolve(import.meta.dirname,'..'),input=inputSpec.root,out=inputSpec.publisherOut||'F:/AI_TEMP/exports/SS2-AUTO-BATTLER/PC-WEB-CONSUMPTION-20261029/publisher',pub=repo+'/public',id=inputSpec.release||'v6-web-pc-consumption-r2';
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),src=p=>fs.readFileSync(input+'/'+p,'utf8'),files=[],mapping={},actors={},equivalence=[],sourceTransforms=[];
 fs.mkdirSync(out,{recursive:true});fs.mkdirSync(pub+'/objects',{recursive:true});
@@ -63,9 +64,10 @@ const bootFiles=files.filter(f=>!f.label.startsWith('actor:')&&!f.label.startsWi
 const release={schema:2,id,title:'少年演武 · 主题演武',mode:'scene-v1',rules,content:'MULTIVERSION_NATIVE_SOURCE_AND_THEMATIC_R2',sourceZipSha256:inputSpec.sha256,css,scripts,files,bootFiles,actors,assetUrls:mapping,compatibility,backend:{upload:'unsupported-rules-local-only'},legacyReleases,sourceRendererSha256:sha(src('src/actor.js')),sourceTimelineSha256:sha(src('src/timeline-actor.js'))};
 if(files.length>1200||files.reduce((n,f)=>n+f.size,0)>600000000)throw Error('Loader budget exceeded');
 const shells={[id]:sourceIndex};for(const[commit]of [['147ba57'],['34c3f64'],['2f6ba10'],['a631d41'],['5e43f0c'],['933396f'],['d497460'],['3eea024'],['c905de7'],['44f8ed2'],['18b39e8'],['3bdff72']]){const m=JSON.parse(execFileSync('git',['-C',repo,'show',commit+':docs/release.json'],{encoding:'utf8'}));shells[m.id]=execFileSync('git',['-C',repo,'show',commit+':docs/index.html'],{encoding:'utf8'});}
+shells[previous.id]=execFileSync('git',['-C',repo,'show','HEAD:docs/index.html'],{encoding:'utf8'});
 const appPath=files.find(f=>f.label==='src/app.js').path,presentationPins={};
 const priorActorPaths=new Set([previous.files.find(f=>f.label==='src/actor.js')?.path,JSON.parse(execFileSync('git',['-C',repo,'show','18b39e8:docs/release.json'],{encoding:'utf8'})).files.find(f=>f.label==='src/actor.js')?.path]);
-for(const ref of legacyReleases){const old=JSON.parse(fs.readFileSync(pub+'/'+ref.path));if(old.rules!==rules)continue;
+for(const ref of(inputSpec.currentUiOnly?[]:legacyReleases)){const old=JSON.parse(fs.readFileSync(pub+'/'+ref.path));if(old.rules!==rules)continue;
  const oldRows=old.scripts.map(p=>({path:p,label:old.files.find(f=>f.path===p)?.label})),newRows=scripts.map(p=>({path:p,label:files.find(f=>f.path===p)?.label}));
  const added=newRows.filter(r=>!oldRows.some(o=>o.label===r.label));if(added.some(r=>!['src/battle-presentation.js','src/scene-resources.js'].includes(r.label)))throw Error('Unexpected presentation dependency addition '+old.id);
  for(const row of oldRows){const n=newRows.find(n=>n.label===row.label);if(!n)throw Error('Missing historical script '+row.label);if(row.label==='src/app.js')continue;if(row.label==='src/scene-resources.js'&&row.path===previous.files.find(f=>f.label===row.label)?.path)continue;if(row.label==='src/actor.js'&&priorActorPaths.has(row.path))continue;if(row.label==='web/lineups-v8.js'&&row.path!==n.path){if(!row.path.includes('85ed0d61b2c98b233f10c20f91dcbf6004955b24361951895fa4d7cd4eec7c1b')||!n.path.includes('6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2'))throw Error('Unapproved historical helper difference');continue;}if(row.path!==n.path)throw Error('Protected non-presentation script differs '+row.label);}
@@ -89,7 +91,7 @@ bootstrap='const SS2_PC_HEAD_RELEASE='+JSON.stringify(id)+';const SS2_PC_HEADS='
 const overlay=fs.readFileSync(repo+'/web/pc-head-overlay.js','utf8');bootstrap=bootstrap.replace('(async()=>{try{if(!(',overlay+'\n(async()=>{try{if(!(');
 bootstrap=bootstrap.replace('await load(m);showReady(cacheState);','await load(m);showReady(cacheState);installPCHeadOverlay();');
 bootstrap=bootstrap.replace("showReady(await request(cacheState.protocol===2?'CHECK':'PREPARE'));","showReady(await request(cacheState.protocol===2?'CHECK':'PREPARE'));window.SS2_PC_HEAD_OVERLAY?.refresh();");
-bootstrap='const SS2_UI_PATCH='+JSON.stringify({id,rules,css,app:appPath,scripts,pins:presentationPins})+';\n'+bootstrap;
+bootstrap='const SS2_UI_PATCH='+JSON.stringify(retainedUi?.uiPatch||{id,rules,css,app:appPath,scripts,pins:presentationPins})+';\n'+bootstrap;
 const patchHelpers=`function presentationFor(m){const p=SS2_UI_PATCH,pin=p.pins[m.id],ready=cacheState.releases[p.id];return pin&&ready&&ready.rules===m.rules&&m.rules===p.rules&&m.css===pin.css&&JSON.stringify(m.scripts)===JSON.stringify(pin.scripts)?p:null;}\n`;
 bootstrap=bootstrap.replace('async function load(m){const html=SS2_RELEASE_SHELLS[m.id];',patchHelpers+'async function load(m){const ui=presentationFor(m);window.SS2_WEB_UI_RELEASE=ui?.id||m.id;window.SS2_WEB_UI_SCRIPTS=m.scripts.map(p=>ui&&m.files.find(f=>f.path===p)?.label===\'src/app.js\'?ui.app:p);const html=SS2_RELEASE_SHELLS[ui?.id||m.id];');
 bootstrap=bootstrap.replace('css.href=m.css;','css.href=ui?.css||m.css;').replace('for(const src of m.scripts)','for(const src of SS2_WEB_UI_SCRIPTS)');
@@ -97,11 +99,18 @@ bootstrap=bootstrap.replace('showReady(cacheState);await load(m);',"if(SS2_UI_PA
 bootstrap=bootstrap.replace('if(m.id!=='+JSON.stringify(id)+')window.SS2_WEB_UI_READY();','if(!ui&&m.id!=='+JSON.stringify(id)+')window.SS2_WEB_UI_READY();');
 bootstrap=bootstrap.replace('return pin&&ready&&',"return localStorage.getItem(SAVE_KEY+'.ui-rollback')!==m.id&&pin&&ready&&");
 bootstrap=bootstrap.replace("if(!(type==='ACTIVATE'&&!cacheState.pending&&selectedManifest.id!==cacheState.active))await request(type);","if(!(type==='ACTIVATE'&&!cacheState.pending&&selectedManifest.id!==cacheState.active)){const next=await request(type);if(type==='ROLLBACK')localStorage.setItem(SAVE_KEY+'.ui-rollback',next.active);else localStorage.removeItem(SAVE_KEY+'.ui-rollback');}");
-bootstrap='window.SS2_LEGACY_GROUP_SPEC='+JSON.stringify({release:id,pins:legacyGroupPins})+';\n'+bootstrap;
+bootstrap='window.SS2_LEGACY_GROUP_SPEC='+JSON.stringify({release:retainedUi?.revision||id,pins:legacyGroupPins})+';\n'+bootstrap;
 bootstrap=bootstrap.replace('if(SS2_UI_PATCH.pins[m.id]&&!cacheState.releases[SS2_UI_PATCH.id])','if((SS2_UI_PATCH.pins[m.id]||SS2_LEGACY_GROUP_SPEC.pins[m.id])&&!cacheState.releases[SS2_UI_PATCH.id])');
 bootstrap=bootstrap.replace('document.body.dataset.webRelease=m.id;',`if(SS2_LEGACY_GROUP_SPEC.pins[m.id]&&cacheState.releases[SS2_UI_PATCH.id]&&localStorage.getItem(SAVE_KEY+'.ui-rollback')!==m.id)await new Promise((ok,no)=>{const el=document.createElement('script');el.src=`+JSON.stringify(legacyGroupScript)+`;el.onload=ok;el.onerror=()=>no(Error('历史升级组显示未准备好'));document.body.append(el);});document.body.dataset.webRelease=m.id;`);
 bootstrap=bootstrap.replace('window.SS2_WEB_UI_SCRIPTS=m.scripts.map(','window.SS2_WEB_UI_SCRIPTS=ui?ui.scripts:m.scripts.map(');
-if(sceneHeadScript){const a='for(const src of SS2_WEB_UI_SCRIPTS)';if(bootstrap.split(a).length!==2)throw Error('Head pre-app order anchor');bootstrap=bootstrap.replace(a,"if(cacheState.releases[SS2_SCENE_HEAD_SPEC.release])await new Promise((ok,no)=>{const e=document.createElement('script');e.src="+JSON.stringify(sceneHeadScript)+";e.onload=ok;e.onerror=()=>no(Error('人物头像组件未准备好'));document.body.append(e);});"+a);}
+if(sceneHeadScript){const a='for(const src of SS2_WEB_UI_SCRIPTS)';if(bootstrap.split(a).length!==2)throw Error('Head pre-app order anchor');const context=retainedUi?'SS2_SCENE_HEAD_SPEC.release=m.id==='+JSON.stringify(id)+'?'+JSON.stringify(id)+':'+JSON.stringify(retainedUi.revision)+';':'';bootstrap=bootstrap.replace(a,context+"if(cacheState.releases[SS2_SCENE_HEAD_SPEC.release])await new Promise((ok,no)=>{const e=document.createElement('script');e.src="+JSON.stringify(sceneHeadScript)+";e.onload=ok;e.onerror=()=>no(Error('人物头像组件未准备好'));document.body.append(e);});"+a);}
+if(inputSpec.currentUiOnly){
+ if(!retainedUi||retainedUi.revision!==previous.id)throw Error('Current-only retained UI baseline drift');
+ const a='const s=saved(),pinned=s?.webRelease,m=';if(bootstrap.split(a).length!==2)throw Error('Current-only pin preflight anchor');
+ bootstrap=bootstrap.replace(a,'const s=saved(),pinned=s?.webRelease;if(pinned&&pinned!=='+JSON.stringify(id)+'&&!cacheState.releases['+JSON.stringify(retainedUi.revision)+']){try{if(!Object.values(cacheState.releases).some(x=>x.legacyReleases?.some(r=>r.id==='+JSON.stringify(retainedUi.revision)+')))cacheState=await request(\'CHECK\');cacheState=await request(\'RESTORE\',{release:'+JSON.stringify(retainedUi.revision)+',bootOnly:true});}catch{}}const m=');
+ bootstrap=bootstrap.replace('if(s.webRules===selectedManifest.rules)return false;','if(s.webRules===selectedManifest.rules&&(!s.webRelease||s.webRelease===selectedManifest.id))return false;').replace('if(old.rules!==selectedManifest.rules){','if(old.rules!==selectedManifest.rules||target!==selectedManifest.id){').replace("request('RESTORE',{release:target},","request('RESTORE',{release:target,bootOnly:true},");
+ bootstrap='window.SS2_CURRENT_UI_ONLY=true;window.SS2_RETAINED_UI_RELEASE='+JSON.stringify(retainedUi.revision)+';\n'+bootstrap;
+}
 fs.writeFileSync(repo+'/web/product-bootstrap.js',bootstrap);
 let html=sourceIndex.replace("connect-src 'none'","connect-src 'self' https://ss2-v6-lineups.elreyliu0809.workers.dev; worker-src 'self'").replace('<link rel="stylesheet" href="styles.css">','<style>body[data-web-boot="loading"]>.game-shell{display:none}</style>').replace(/<script src="assets\/actors.js"><\/script>[\s\S]*?<\/body>/,'<script src="bootstrap.js"></script></body>');
 const toolbar='<section class="web-toolbar" aria-label="离线与版本"><span id="web-status" role="status">正在准备游戏…</span><button id="web-offline">下载完整离线包</button><button id="web-pause-download" hidden>暂停下载</button><button id="web-update" hidden>切换已准备新版</button><button id="web-rollback" hidden>回退上一发行版</button><button id="web-loader-update" hidden>启用新版加载器</button></section>';
@@ -112,6 +121,12 @@ let sw=fs.readFileSync(repo+'/web/mobile-sw.js','utf8').replace("SHELL=NS+'shell
 // This DOM revision uses an isolated shell cache; activate only after complete
 // shell installation, preserving the prior shell if download fails.
 sw=sw.replace('js|css|svg|png|jpg','js|css|svg|png|jpg|json');
+if(inputSpec.currentUiOnly){
+ const once=(a,b)=>{if(sw.split(a).length!==2)throw Error('Retained boot restore anchor '+a.slice(0,50));sw=sw.replace(a,b);};
+ once('async function restore(id,port){','async function restore(id,port,bootOnly=false){');
+ once('await download(m,m.files.map(f=>f.path),port);const latest=await read();latest.releases[id]=m;latest.complete[id]=true;','await download(m,bootOnly&&m.bootFiles?m.bootFiles:m.files.map(f=>f.path),port);const latest=await read();latest.releases[id]=m;if(!bootOnly||!m.bootFiles)latest.complete[id]=true;');
+ once('restore(e.data.release,port)','restore(e.data.release,port,e.data.bootOnly===true)');
+}
 sw='const SS2_PRESENTATION_REVISION='+JSON.stringify(id)+';\n'+sw;
 fs.writeFileSync(repo+'/web/product-sw.js',sw);
 fs.writeFileSync(pub+'/index.html',html);fs.writeFileSync(pub+'/bootstrap.js',bootstrap);fs.writeFileSync(pub+'/sw.js',sw);fs.writeFileSync(pub+'/release.json',JSON.stringify(release,null,2));fs.writeFileSync(pub+'/.nojekyll','');

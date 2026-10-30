@@ -1,12 +1,12 @@
 {
   "schema": 2,
-  "id": "v6-web-pc-scene-r3-1",
+  "id": "v6-web-mobile-shop-a-r3",
   "title": "少年演武 · 主题演武",
   "mode": "scene-v1",
   "rules": "v8-rules-uiux-9d148594e5fc2a31e2a25754",
   "content": "MULTIVERSION_NATIVE_SOURCE_AND_THEMATIC_R2",
-  "sourceZipSha256": "89ab06857fbf4450cfa9aa02e48990fafa94ec511a55cd4175d59d697b0c4525",
-  "css": "objects/4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866.css",
+  "sourceZipSha256": "e6d5f70bf904bb6825804b2aea64849634a52d131805e643ad96263751207422",
+  "css": "objects/2ab4d3d151a972df4ecc5bb90ac2434e073bc371a5c21deddee0dcb25fc6bebb.css",
   "scripts": [
     "objects/8e9bd5f7e3318681c43dbff0b50a902ecd485095173666bc146ba974d4b15b96.js",
     "objects/20c99794c67b2b081437e0499a2e9922c59a856c4e3ea835486262b6eb6be375.js",
@@ -44,7 +44,7 @@
     "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
     "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
-    "objects/573b5366e124a51e2943758498e321ba7493b124a08067824f079e950f94e7b5.js"
+    "objects/faf609ae83d4cdd7dc4adeca86cb28bb150464b7ddb90b8a74e7cc6bef65608e.js"
   ],
   "files": [
     {
@@ -5058,9 +5058,9 @@
       "label": "web/lineups-v8.js"
     },
     {
-      "path": "objects/573b5366e124a51e2943758498e321ba7493b124a08067824f079e950f94e7b5.js",
-      "size": 78568,
-      "sha256": "573b5366e124a51e2943758498e321ba7493b124a08067824f079e950f94e7b5",
+      "path": "objects/faf609ae83d4cdd7dc4adeca86cb28bb150464b7ddb90b8a74e7cc6bef65608e.js",
+      "size": 83881,
+      "sha256": "faf609ae83d4cdd7dc4adeca86cb28bb150464b7ddb90b8a74e7cc6bef65608e",
       "label": "src/app.js"
     },
     {
@@ -5076,9 +5076,9 @@
       "label": "web/legacy-upgrade-groups.js"
     },
     {
-      "path": "objects/4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866.css",
-      "size": 49580,
-      "sha256": "4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866",
+      "path": "objects/2ab4d3d151a972df4ecc5bb90ac2434e073bc371a5c21deddee0dcb25fc6bebb.css",
+      "size": 64646,
+      "sha256": "2ab4d3d151a972df4ecc5bb90ac2434e073bc371a5c21deddee0dcb25fc6bebb",
       "label": "styles.css"
     },
     {
@@ -5189,10 +5189,10 @@
     "objects/80693062cbd7dc60a16802ae8696710a2d680762ecbddb51b4d58d3f5c11e2c0.js",
     "objects/57a92f024a5e1169b6b0f7278b4fb300f2ad886bfb87ec12110f48bfb27a58d1.js",
     "objects/6fb67354e11a835c3b38d59265139a30d1ef138486514ca4d3dfba73c69ae4a2.js",
-    "objects/573b5366e124a51e2943758498e321ba7493b124a08067824f079e950f94e7b5.js",
+    "objects/faf609ae83d4cdd7dc4adeca86cb28bb150464b7ddb90b8a74e7cc6bef65608e.js",
     "objects/cb5952ce52b8072132b3d16e79b068b6931cdfb7abdd1c449541d6a0c751f246.js",
     "objects/c4b2190aee7ec5b5a2b9bcae053549adca077969eedd4c86e4577dcce8267c88.js",
-    "objects/4e14bcfe460f4f6764a5a110a5ede38a9480cfa4b55bfdf512ee25ffdb131866.css",
+    "objects/2ab4d3d151a972df4ecc5bb90ac2434e073bc371a5c21deddee0dcb25fc6bebb.css",
     "objects/52c29e6a62e289029aba32411dbf67a62c084b92d0f6012ac2cd77ec06cf95e5.js",
     "objects/e26afcb03af3cd13c15f58acbe6af0f6d77b1230cdde634213fcbc36580a957f.js",
     "objects/e01e2c80396b3f6e4d624d1053b6faa9928a81084f0d699d7a0d7f0f372a538b.js",
@@ -7776,6 +7776,11 @@
       "id": "v6-web-pc-portraits-r1",
       "path": "releases/v6-web-pc-portraits-r1.json",
       "sha256": "ee4cee5791eddd56c56f07bee2944af58388c764fa05c05d3354220f0dd43d79"
+    },
+    {
+      "id": "v6-web-pc-scene-r3-1",
+      "path": "releases/v6-web-pc-scene-r3-1.json",
+      "sha256": "f433a53ded7568668c49fd5a9c70cb704003a42249579eaf126f5f6452ee640e"
     },
     {
       "id": "v6-web-pc-scene-r3",

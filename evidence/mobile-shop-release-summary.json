@@ -1,0 +1,74 @@
+{
+  "status": "LOCAL_MOBILE_SHOP_WEB_READY",
+  "release": "v6-web-mobile-shop-a-r3",
+  "inputReadySHA256": "9a42fef851e8e3dd4d014e107683e037a06a82f798449f1dd68ba02437624d08",
+  "sourceZipSHA256": "e6d5f70bf904bb6825804b2aea64849634a52d131805e643ad96263751207422",
+  "manifestSHA256": "e7936c1ef388d76a6aedf66fa863c554868b38cb4bd7f40723ef41038a2b2a8e",
+  "checks": {
+    "static-check": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/static-check.json",
+      "sha256": "a44a15e7ebfa15af92c99fdbeacf0f66af56a8c00491643160c7eef47be6b6c5",
+      "checks": 873
+    },
+    "repro-build": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/repro-build.json",
+      "sha256": "9970e7cb437795874939bbb2871f49d4e5abf7fd2f85002e49e6e1e95607de33",
+      "checks": null
+    },
+    "history-qa": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/history-qa.json",
+      "sha256": "340e3c5de7c3a20cf7f46f27c8cf778d99ccdca87b039bc2092fe7530eba85b4",
+      "checks": 25
+    },
+    "upgrade-qa": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/upgrade-qa.json",
+      "sha256": "3416bf35223333fd958849750eeccea98db727b7d58559f0c8ddfc75589c43c4",
+      "checks": 11
+    },
+    "avatar-cache-qa": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/avatar-cache-qa.json",
+      "sha256": "17cb713f356dec85be1a2649ef5c8702235dace458769ed799e5308e7b51d526",
+      "checks": 22
+    },
+    "retained-ui-qa": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/retained-ui-qa.json",
+      "sha256": "2f861bd29b6e3048cb44ea02f6e359800d063bc62532c440a52d2e999c231c21",
+      "checks": 31
+    },
+    "scene-cold-qa": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/scene-cold-qa.json",
+      "sha256": "299509d8f70c5189b6546088038bf94a2740526f74040e528a4130b409c251a2",
+      "checks": 41
+    },
+    "scene-failure-qa": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/scene-failure-qa.json",
+      "sha256": "06b1b56e9a6fa533b1f11ea1f5e3b1ca52d77306b81af157abf5cf8c61494c56",
+      "checks": 41
+    },
+    "scene-cancel-qa": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/scene-cancel-qa.json",
+      "sha256": "3d4e0ab8f602c9fd6219bbf1f456e5fe8fb1878cc2da4f00ede69974c3c3caf4",
+      "checks": 26
+    },
+    "retained-restore-failure-qa": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/retained-restore-failure-qa.json",
+      "sha256": "78342183c3ea99481b9b8b2835a03e69626524eeb01b840b9e096ab9e009532b",
+      "checks": 8
+    },
+    "webUI": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/web-local/latest.json",
+      "checks": 301,
+      "sha256": "ec3ab00d5600d092adadecc6e14fc0a18762619c76b13a0dd5b8c056ab742244"
+    },
+    "r3Hints": {
+      "path": "F:\\AI_TEMP\\exports\\SS2-AUTO-BATTLER\\MOBILE-SHOP-WEB-20261030\\R3/hints-local/latest.json",
+      "checks": 60,
+      "sha256": "3585e1c949c991e65cb1587c5a77477a15112c583a6a73b25fc46a594427aced"
+    }
+  },
+  "sourceIndependentReview": "NOT_RUN",
+  "physicalDeviceAndHuman": "NOT_RUN",
+  "currentUiOnly": true,
+  "oldUiRetained": "v6-web-pc-scene-r3-1",
+  "at": "2026-10-30T01:30:04.143Z"
+}
