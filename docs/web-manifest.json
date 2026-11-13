@@ -1,0 +1,1003 @@
+{
+  "version": "source53-r3-svn323591-20261113-r1",
+  "sourceSvnRevision": 323591,
+  "sourceManifestSHA256": "48199826f70f64446c412987b1b90a019a612818746b5a4a5637495b23c1aa83",
+  "shell": [
+    "./",
+    "index.html",
+    "bootstrap.js",
+    "styles.css",
+    "yanwu-source53-r3.css",
+    "assets/actors.js",
+    "src/timeline-actor.js",
+    "src/scene-resources.js",
+    "src/actor.js",
+    "src/portraits.js",
+    "src/yanwu-source53-data-r3.js",
+    "src/yanwu-source53-engine-r3.js",
+    "src/yanwu-source53-core-r3.js",
+    "src/yanwu-source53-app-r3.js"
+  ],
+  "files": [
+    {
+      "path": "assets/actor-data/1100140.js",
+      "size": 1450211,
+      "sha256": "d5b02ad8217093a346840e711ff281b66a1fdfed07c0989e6a25250442e135cd"
+    },
+    {
+      "path": "assets/actor-data/1100150.js",
+      "size": 1553134,
+      "sha256": "47d119cb5ccff578146538b1242f34a8aece424ea2fb8b0049735bf03a10dc0d"
+    },
+    {
+      "path": "assets/actor-data/1100160.js",
+      "size": 1260597,
+      "sha256": "2067472483e4e0db4b7822fa3a217167173e8a4515f22a019cc7e59debe9a8ce"
+    },
+    {
+      "path": "assets/actor-data/1100170.js",
+      "size": 1417389,
+      "sha256": "710ef2d922e74f5258595b2920f08481751c2a24e250b7429e7fc96795fbf9fe"
+    },
+    {
+      "path": "assets/actor-data/1100220.js",
+      "size": 1408103,
+      "sha256": "6a8c2522f4209b1ee496082ff8605b6533e5b0bc3bc36915f8e9b4891dca179c"
+    },
+    {
+      "path": "assets/actor-data/1100230.js",
+      "size": 985312,
+      "sha256": "71cb4411842290d5e392a54a7dbdd8c45482b09e52c2326846776fda4d27322a"
+    },
+    {
+      "path": "assets/actor-data/1100240.js",
+      "size": 2875361,
+      "sha256": "f713cbb90def14fb089e671b20ea543fa307b5bc3949dfece2823d51ac01c6e6"
+    },
+    {
+      "path": "assets/actor-data/1100250.js",
+      "size": 2102807,
+      "sha256": "86e37ed2bece7e53643cadfc0de17728d22a9441c967350ddf276c1e37a4770a"
+    },
+    {
+      "path": "assets/actor-data/1100260.js",
+      "size": 969550,
+      "sha256": "36216aa695c4a144de556750622037dfbd3386a43cf487e27e062d3e32aaa869"
+    },
+    {
+      "path": "assets/actor-data/1100270.js",
+      "size": 1529643,
+      "sha256": "4dd4c658d9ba5f63dd10b64e14619d4e3312a80a8bafa11c0ef089aea195381a"
+    },
+    {
+      "path": "assets/actor-data/1100280.js",
+      "size": 725733,
+      "sha256": "89c346b2a991f0bf74d1ab68685a2fa1f1452c29706951c5676e7cb82560f85d"
+    },
+    {
+      "path": "assets/actor-data/1100290.js",
+      "size": 2345481,
+      "sha256": "2b34f7c5d9b30b51db365d7e877eef1d6bd4bebe5b3e9c7845b068d2758c1553"
+    },
+    {
+      "path": "assets/actor-data/1100300.js",
+      "size": 1957336,
+      "sha256": "d8a1d9b2fb996a444a8f58b5429d07a47a0f56f77667cb1088312d6dd186ea2d"
+    },
+    {
+      "path": "assets/actor-data/1100310.js",
+      "size": 1396746,
+      "sha256": "2c6d81038ef100f5af946c6c4e5a3d31c9362ecdbbc184336fae302e4bab3d2d"
+    },
+    {
+      "path": "assets/actor-data/1200010.js",
+      "size": 1183463,
+      "sha256": "8cb4eadf4a699d0f424f39e48b9d3433c044dcbb945a254cd45dd9aa6e9842ab"
+    },
+    {
+      "path": "assets/actor-data/1200020.js",
+      "size": 1096590,
+      "sha256": "a25a84bcb2bd4de54d13ae5053aa52f47b9e49ac986632df918693926afe0237"
+    },
+    {
+      "path": "assets/actor-data/1200030.js",
+      "size": 825423,
+      "sha256": "786af8cb6430b273d53e8f411ce3c121ef64e437cce27fc40ca5b531dc9f1f83"
+    },
+    {
+      "path": "assets/actor-data/1200040.js",
+      "size": 1445836,
+      "sha256": "b5729b4024f888bb171dc1cdaaa36d5302a56313ec5acd4e856d9b67a462049e"
+    },
+    {
+      "path": "assets/actor-data/1200050.js",
+      "size": 969722,
+      "sha256": "39e8be2ea466a5084389a31975a1423ed39a84148e41360a8da3b8a45301eb8c"
+    },
+    {
+      "path": "assets/actor-data/1200060.js",
+      "size": 743290,
+      "sha256": "fb4e190bfc0e0337539255cee5c658067846600ff44514bc34e0e3734f72a836"
+    },
+    {
+      "path": "assets/actor-data/1200070.js",
+      "size": 875171,
+      "sha256": "736caf6fc04dade68117b86df4757e6e95a39f9fa1dad35a488c19573a6af94a"
+    },
+    {
+      "path": "assets/actor-data/1200080.js",
+      "size": 1968672,
+      "sha256": "8e77f5ac215c00c92f4724499c89d94c591b26f3de73c5c635056f2adefe5e0f"
+    },
+    {
+      "path": "assets/actor-data/1200090.js",
+      "size": 1395709,
+      "sha256": "42b64bc27ffa652e87fbf18cc25a0262f15de0c740f02b80fd8fff3f4dbf4e0a"
+    },
+    {
+      "path": "assets/actor-data/1200100.js",
+      "size": 1368765,
+      "sha256": "f97abd5d96a74699274deb1207ca4184a921a2fc153b341dcd775e9270f52e5a"
+    },
+    {
+      "path": "assets/actor-data/1200110.js",
+      "size": 1253016,
+      "sha256": "8db1a21ad9f6e942e30ef6fbfd9eed9853560dec4259132b2eb33fa138e2493c"
+    },
+    {
+      "path": "assets/actor-data/1200120.js",
+      "size": 2177315,
+      "sha256": "0c0e83f61d9287eeddcc22763542b3ec7f46266a74c22cb3d314892c5730bd72"
+    },
+    {
+      "path": "assets/actor-data/1200130.js",
+      "size": 1082278,
+      "sha256": "0dfc0fd5daa6a0b4dbffefb7a21c52b77271f58955d5dcd68456d0f5ab925aca"
+    },
+    {
+      "path": "assets/actor-data/1200140.js",
+      "size": 1160166,
+      "sha256": "03bc0ea08c76f87b1a845dba85b11c6c97dc33960b93efbdf532f1f6ba8ba5b4"
+    },
+    {
+      "path": "assets/actor-data/1200150.js",
+      "size": 1700843,
+      "sha256": "e98bcfa55eb160a1c335e4764e92bbd8fcf0069b18204895f5a08ba5e6fd9f5c"
+    },
+    {
+      "path": "assets/actor-data/1200160.js",
+      "size": 1732365,
+      "sha256": "35e2b48d1715031c55faa2936bd0f1b86b3dc0adccfe204d3176e9ace8ff8d35"
+    },
+    {
+      "path": "assets/actor-data/1200170.js",
+      "size": 1841016,
+      "sha256": "599305991bf77adf3d0f17a492bfa1e2a1c318e930cf416a6ae714f9ed29ebfe"
+    },
+    {
+      "path": "assets/actor-data/1200180.js",
+      "size": 1487203,
+      "sha256": "4493efe5bffb00ca7c1651afd12a3a461ff99a0ef2cb346bd0ab11bef65a65d5"
+    },
+    {
+      "path": "assets/actor-data/1200190.js",
+      "size": 931645,
+      "sha256": "1620c2ac0803b4ec1919557d644e7002545ae1c231377d15d1f80c2d0a0e2cbc"
+    },
+    {
+      "path": "assets/actor-data/1200200.js",
+      "size": 1737008,
+      "sha256": "dbc7b82125bea61edee0dc926bd775b8b974b947c22a78750298c2a376603f72"
+    },
+    {
+      "path": "assets/actor-data/1200210.js",
+      "size": 1372661,
+      "sha256": "b4734bd2682ea26850235315e40ea9ed3065fc18a3f83d32f004a1883a078295"
+    },
+    {
+      "path": "assets/actor-data/1200220.js",
+      "size": 1470719,
+      "sha256": "d2dc4543e7a5c3401edd1324b7b03706d9346932373e2b317c1bc072b4cd74ff"
+    },
+    {
+      "path": "assets/actor-data/1200230.js",
+      "size": 1706474,
+      "sha256": "82c1328711c3e5b33fef95a66b811c50a197a059467e0d21d25b58fb5d922b07"
+    },
+    {
+      "path": "assets/actor-data/1200240.js",
+      "size": 1489971,
+      "sha256": "f89709bbfb73408af0c1f36d6076f22bfaecbd0271f241e2e9c613d0583fb7bb"
+    },
+    {
+      "path": "assets/actor-data/1300010.js",
+      "size": 1864278,
+      "sha256": "1da3ade5d3657600566a2451b77538f9b7efcebe167f7ca0af153f8ab2fafac8"
+    },
+    {
+      "path": "assets/actor-data/1300020.js",
+      "size": 1209944,
+      "sha256": "49401a241c28a72a215f5fe6ee940f6629e793d882cfde6af49bab4ca743fa36"
+    },
+    {
+      "path": "assets/actor-data/1300030.js",
+      "size": 1608044,
+      "sha256": "b25145ab1eca05a06c1c65230835c2c914c6980c3e10f1dac9919682a446460b"
+    },
+    {
+      "path": "assets/actor-data/1300040.js",
+      "size": 1298451,
+      "sha256": "5162d0696df04521bc14576a23c50717cb3b5f2d952ffdc12a7086eb24a92ac8"
+    },
+    {
+      "path": "assets/actor-data/1300050.js",
+      "size": 1624936,
+      "sha256": "0199a0df342f54c9daa9b30a2359a44133336a8207ddf1ed66d088f329ec9064"
+    },
+    {
+      "path": "assets/actor-data/1300060.js",
+      "size": 959670,
+      "sha256": "a8a294ca6e7ba10160d2f48590251f0d99adfd033f4f2640c5f8058be53cbe60"
+    },
+    {
+      "path": "assets/actor-data/1300070.js",
+      "size": 1302838,
+      "sha256": "499e7bdad718ad6e9e06fd30bfe75cb8f15a57c0162e6d94df02636acba53b69"
+    },
+    {
+      "path": "assets/actor-data/1300080.js",
+      "size": 1625576,
+      "sha256": "9cda07ba06b805dfde0c1c6643e9c9817b9408df2371412f92aba8f486b1162f"
+    },
+    {
+      "path": "assets/actor-data/1300090.js",
+      "size": 1150119,
+      "sha256": "c575a38fb0029a1721bf16991c84587bc8f3950a33debfec908cc781b098b458"
+    },
+    {
+      "path": "assets/actors/1100140-battle.png",
+      "size": 225956,
+      "sha256": "a0ca08a68ec59e6a5f29accbcd6658a82ac6a44b60d157e8211bda9a8f969ba4"
+    },
+    {
+      "path": "assets/actors/1100150-battle.png",
+      "size": 172941,
+      "sha256": "479ba85cb40b8937d7c630aeb3ac454b7b1cd84e4a44401f85f1028a52f3d871"
+    },
+    {
+      "path": "assets/actors/1100160-battle.png",
+      "size": 229270,
+      "sha256": "d666289e9bd9e04067379c53b639c9f497024ef93a3d0be703ceaf17b5949acc"
+    },
+    {
+      "path": "assets/actors/1100170-battle.png",
+      "size": 221964,
+      "sha256": "e6abaf1deb7e2542fd3fa1cde0ce8bb1ffa1db09f9f8e9b78b69e176d36f8861"
+    },
+    {
+      "path": "assets/actors/1100220-battle.png",
+      "size": 215891,
+      "sha256": "3cbb4f27383303e6ed7b50e0aa251063d4e3834b96d2105d01e9c8c40c42e12d"
+    },
+    {
+      "path": "assets/actors/1100230-battle.png",
+      "size": 180112,
+      "sha256": "fbbb8b45cdf42f79bed82c3afe1634a695bddfef3841c077fefd1b78600289f8"
+    },
+    {
+      "path": "assets/actors/1100240-battle.png",
+      "size": 246238,
+      "sha256": "f5949338733ed02b37a3c9734868e116c12481f0045ac62b3dfcca982c719a84"
+    },
+    {
+      "path": "assets/actors/1100250-battle.png",
+      "size": 201675,
+      "sha256": "c88e9ec553d27616aa73de0fc1374a3f63ffb470575ffdf3ec06656468d33e6e"
+    },
+    {
+      "path": "assets/actors/1100260-battle.png",
+      "size": 237047,
+      "sha256": "96a6fa161b55d7598ce09207fe529cafe230bb5d7387c2af1193ba02a5793f35"
+    },
+    {
+      "path": "assets/actors/1100270-battle.png",
+      "size": 258788,
+      "sha256": "160ac98939085b915a04fb69f9781e33875cb63a5783f7002bd641b6bc2b2682"
+    },
+    {
+      "path": "assets/actors/1100280-battle.png",
+      "size": 278580,
+      "sha256": "cdb178ffbb53aa0249cf94149e9b698c5dd761bce9fbf7246ec23b67bfe60462"
+    },
+    {
+      "path": "assets/actors/1100290-battle.png",
+      "size": 267618,
+      "sha256": "a09a42a18e1b0292f140b0d0e88c488d00fb1ce6f904c9aef94f324b05f5ab7f"
+    },
+    {
+      "path": "assets/actors/1100300-battle.png",
+      "size": 229809,
+      "sha256": "805dd0dfab8f485b9ddc5945a01187269f03d646370d4e5a61ffc87c11e30b80"
+    },
+    {
+      "path": "assets/actors/1100310-battle.png",
+      "size": 316019,
+      "sha256": "41dff6b34d3915636aeaa04ad7eead4264a04ef5548ecae3dc449c6d60528d37"
+    },
+    {
+      "path": "assets/actors/v8-high-1200010-a24719ff8432-1200010-battle.png",
+      "size": 127205,
+      "sha256": "a24719ff843219d3d7bfe6a30c50faaed0274513c5306d4d89c98181450f614e"
+    },
+    {
+      "path": "assets/actors/v8-high-1200020-10645c0d1803-1200020-battle.png",
+      "size": 169979,
+      "sha256": "10645c0d1803347f9470c0b6b69ccdede742fba57582051eea304ef123f3c810"
+    },
+    {
+      "path": "assets/actors/v8-high-1200030-159f2719308e-1200030-battle.png",
+      "size": 258472,
+      "sha256": "159f2719308e2f5de62e1d53c834d436c8fe9063719fc72f2249240e0376752a"
+    },
+    {
+      "path": "assets/actors/v8-high-1200040-4957c8e622d4-1200040-battle.png",
+      "size": 185438,
+      "sha256": "4957c8e622d4fccdc8f1abb7c16aae116031fbae91e0a7b26aa05236e03d4e80"
+    },
+    {
+      "path": "assets/actors/v8-high-1200050-c892d694a006-1200050-battle.png",
+      "size": 368568,
+      "sha256": "c892d694a006ec00554731474739ec7791edc4d644b637bc256bb46235b8c766"
+    },
+    {
+      "path": "assets/actors/v8-high-1200060-12a8e968f512-1200060-battle.png",
+      "size": 250703,
+      "sha256": "12a8e968f5125c8b9348a195435f90964323351fbb34b1a53895b15b8fbba81b"
+    },
+    {
+      "path": "assets/actors/v8-high-1200070-e911b0328528-1200070-battle.png",
+      "size": 186000,
+      "sha256": "e911b0328528bafac253b840d6c0bb331395417a5f7422d2f618959f0ddba180"
+    },
+    {
+      "path": "assets/actors/v8-high-1200080-f1ecc8699440-1200080-battle.png",
+      "size": 331164,
+      "sha256": "f1ecc86994401b901be29285662531e0b3ce904119506e5b2f66395300b28562"
+    },
+    {
+      "path": "assets/actors/v8-high-1200090-726ff694dabf-1200090-battle.png",
+      "size": 648457,
+      "sha256": "726ff694dabfe257e0602e9d7d29a778738c70603ce1a9206d93939d9c13cdd9"
+    },
+    {
+      "path": "assets/actors/v8-high-1200100-4425d0e85e43-1200100-battle.png",
+      "size": 425062,
+      "sha256": "4425d0e85e43dcf94ff43d0739d350d9a707437d781ca0a51a140d2f1bd72163"
+    },
+    {
+      "path": "assets/actors/v8-high-1200110-e5e1b21ce968-1200110-battle.png",
+      "size": 155323,
+      "sha256": "e5e1b21ce968440a647397367cab1ca2ed1ec7a42eddeb4c0d14e94dbd263a18"
+    },
+    {
+      "path": "assets/actors/v8-high-1200120-bd24e588225d-1200120-battle.png",
+      "size": 513907,
+      "sha256": "bd24e588225d08382cf7a27eb57d28e8ddee158b649c5fe22995a0ddf936cd7d"
+    },
+    {
+      "path": "assets/actors/v8-high-1200130-30557900771d-1200130-battle.png",
+      "size": 172705,
+      "sha256": "30557900771dd5335ab902a7d4cfdc641b685ef00ce07c215aa6ce9fd5703e93"
+    },
+    {
+      "path": "assets/actors/v8-high-1200140-25e056225aba-1200140-battle.png",
+      "size": 195901,
+      "sha256": "25e056225aba89f9e9ee772e59647fbed61fd8a9f6d7cf486bb466b6ffdf44d9"
+    },
+    {
+      "path": "assets/actors/v8-high-1200150-26b1ac9dd606-1200150-battle.png",
+      "size": 323584,
+      "sha256": "26b1ac9dd60638aa6589a5894f8b5f13a5998e1777624b3ba462e6ccc470fd76"
+    },
+    {
+      "path": "assets/actors/v8-high-1200160-374850606d91-1200160-battle.png",
+      "size": 238222,
+      "sha256": "374850606d91c082b77b1333faa87806a0bd896735ac21aa9de241b4a2d5379a"
+    },
+    {
+      "path": "assets/actors/v8-high-1200170-35ed023a9c59-1200170-battle.png",
+      "size": 332111,
+      "sha256": "35ed023a9c59e54d76f83fcf746766caf13b0a33cae012e8a9d823392de32888"
+    },
+    {
+      "path": "assets/actors/v8-high-1200180-c9b59aa38c25-1200180-battle.png",
+      "size": 208118,
+      "sha256": "c9b59aa38c25acc8a81abb314a6ee03202ac96fe3bf34246d5e7b4329b939a54"
+    },
+    {
+      "path": "assets/actors/v8-high-1200190-31fdf76e1778-1200190-battle.png",
+      "size": 220984,
+      "sha256": "31fdf76e1778f6382110167c8885ee38019eaf4644796bd5faccab2d03729a97"
+    },
+    {
+      "path": "assets/actors/v8-high-1200200-4f2cb1121b9d-1200200-battle.png",
+      "size": 269625,
+      "sha256": "4f2cb1121b9d240ecd3a33123a1c64e9a35fc76c445d755fee229cb5376dac58"
+    },
+    {
+      "path": "assets/actors/v8-high-1200210-87b9c6044091-1200210-battle.png",
+      "size": 237657,
+      "sha256": "87b9c6044091553fe4a8ba054a5b7f510e4d1b6ca99117b3b20df5c378a64793"
+    },
+    {
+      "path": "assets/actors/v8-high-1200220-6992a269a9b4-1200220-battle.png",
+      "size": 262453,
+      "sha256": "6992a269a9b45e672b29ce81d68f97b168b10e30f9e1c1ec48387cd586dce091"
+    },
+    {
+      "path": "assets/actors/v8-high-1200230-e8f583a99bdc-1200230-battle.png",
+      "size": 572009,
+      "sha256": "e8f583a99bdc8f0f5f7d496bc92247c3e54ccf4563642bda2aada0970a916bb4"
+    },
+    {
+      "path": "assets/actors/v8-high-1200240-a0aabe6ea70c-1200240-battle.png",
+      "size": 499066,
+      "sha256": "a0aabe6ea70cc624e9270b44a1cd8c595a65d0b643e832ee3dbf5b863c867be6"
+    },
+    {
+      "path": "assets/actors/v8-high-1300010-dae907676656-1300010-battle.png",
+      "size": 249048,
+      "sha256": "dae907676656cadc1d86615acff170fb424fac16654eab182e3e59c1b29a68be"
+    },
+    {
+      "path": "assets/actors/v8-high-1300020-f6f9b4dd629e-1300020-battle.png",
+      "size": 139219,
+      "sha256": "f6f9b4dd629e540ebbeead5aa9fd2916556516d5cbc603125f195d67e82de31e"
+    },
+    {
+      "path": "assets/actors/v8-high-1300030-efb5e2aafc03-1300030-battle.png",
+      "size": 224143,
+      "sha256": "efb5e2aafc034f02bf8400d24b43346f245a355ea85ab45626dade6d746dd29e"
+    },
+    {
+      "path": "assets/actors/v8-high-1300040-094c449a904b-1300040-battle.png",
+      "size": 175617,
+      "sha256": "094c449a904bd73a8b2b25fb825696e01367441bad63640908d0eff78ac29f8e"
+    },
+    {
+      "path": "assets/actors/v8-high-1300050-6cefe425a209-1300050-battle.png",
+      "size": 257780,
+      "sha256": "6cefe425a209b6f71a3b85eaa34d0517344adda7d5bc87a21fbd2ab6c685ece1"
+    },
+    {
+      "path": "assets/actors/v8-high-1300060-0ee61248bdc4-1300060-battle.png",
+      "size": 202397,
+      "sha256": "0ee61248bdc4202506fbb7aecfc826e444605589bc5b8f157c698519f4438afa"
+    },
+    {
+      "path": "assets/actors/v8-high-1300070-0f7e03a5e8c0-1300070-battle.png",
+      "size": 260874,
+      "sha256": "0f7e03a5e8c08be9d1cfc5650bf732b2cd154ebb12a4b2bcb31530c1e8b9cbd1"
+    },
+    {
+      "path": "assets/actors/v8-high-1300080-0d80be040b80-1300080-battle.png",
+      "size": 219040,
+      "sha256": "0d80be040b800b675fd1fb4c9de15277ff2268c12a108fe942cc88008fc0f70e"
+    },
+    {
+      "path": "assets/actors/v8-high-1300090-34728512fcef-1300090-battle.png",
+      "size": 228523,
+      "sha256": "34728512fcef4aa2f1ecb30da812dc52b70fb1431ad1784f7bb7c5ac537599ba"
+    },
+    {
+      "path": "assets/actors.js",
+      "size": 84701,
+      "sha256": "dbd6d10f6df2838810809df3b5d2f4b462eeeb0db1dc2ca138089e0efa0d42a8"
+    },
+    {
+      "path": "assets/btn_big_1.png",
+      "size": 9457,
+      "sha256": "f02376909ea6f4b5fbd72c467c2f1d3cd00b939c73cdb4a57ad657ad77642e6e"
+    },
+    {
+      "path": "assets/btn_middle_2.png",
+      "size": 8457,
+      "sha256": "955be9f5348c3a347383d8bd27784851f8cfcb1c0d209f09c898d823c960b75f"
+    },
+    {
+      "path": "assets/items-v8/sap-food-0-aee08dfe4aace0b7.png",
+      "size": 13647,
+      "sha256": "aee08dfe4aace0b759f67787ad19bad77dde1793958a5bb7b1ba8e8dde6a61c8"
+    },
+    {
+      "path": "assets/items-v8/sap-food-10-0f670ad5d813f257.png",
+      "size": 18184,
+      "sha256": "0f670ad5d813f257f7edeb6020e80e661a061974a680da99cddfc7f7a0278cab"
+    },
+    {
+      "path": "assets/items-v8/sap-food-102-93b023d3c4132dde.png",
+      "size": 13935,
+      "sha256": "93b023d3c4132ddec036bf563f66a25f1cb22d2312f78a4de8890e86d68ae7a6"
+    },
+    {
+      "path": "assets/items-v8/sap-food-103-9530e90fb6669d6b.png",
+      "size": 15826,
+      "sha256": "9530e90fb6669d6b97515b4b91b5c07774b8a67fe4821590e4f74f5e77a401fe"
+    },
+    {
+      "path": "assets/items-v8/sap-food-130-2ad0ac987dc92035.png",
+      "size": 62874,
+      "sha256": "2ad0ac987dc9203585a810706879a15226b87c390f63db3670add0471754c17f"
+    },
+    {
+      "path": "assets/items-v8/sap-food-131-49bf348a4858fbb9.png",
+      "size": 69199,
+      "sha256": "49bf348a4858fbb9d51c8055a410be681ea563752b609bf1ce6e63bfec234974"
+    },
+    {
+      "path": "assets/items-v8/sap-food-132-aa784fc80d9819a6.png",
+      "size": 63252,
+      "sha256": "aa784fc80d9819a673032d77c53f5af8524814cf34eca1c69df8f4d1c62b284e"
+    },
+    {
+      "path": "assets/items-v8/sap-food-134-93b023d3c4132dde.png",
+      "size": 13935,
+      "sha256": "93b023d3c4132ddec036bf563f66a25f1cb22d2312f78a4de8890e86d68ae7a6"
+    },
+    {
+      "path": "assets/items-v8/sap-food-135-9530e90fb6669d6b.png",
+      "size": 15826,
+      "sha256": "9530e90fb6669d6b97515b4b91b5c07774b8a67fe4821590e4f74f5e77a401fe"
+    },
+    {
+      "path": "assets/items-v8/sap-food-139-2ad0ac987dc92035.png",
+      "size": 62874,
+      "sha256": "2ad0ac987dc9203585a810706879a15226b87c390f63db3670add0471754c17f"
+    },
+    {
+      "path": "assets/items-v8/sap-food-16-929c4186e96e8fea.png",
+      "size": 12024,
+      "sha256": "929c4186e96e8fea965d330ada5eb15f181db77cc4703777665bb62f8eb1342e"
+    },
+    {
+      "path": "assets/items-v8/sap-food-22-38c5ef1e14c21fb4.png",
+      "size": 17764,
+      "sha256": "38c5ef1e14c21fb4e1058967ae7641286cefe71c4e924da340bdbdba2ddf18a6"
+    },
+    {
+      "path": "assets/items-v8/sap-food-23-fc9dec64a3084abd.png",
+      "size": 13573,
+      "sha256": "fc9dec64a3084abd12d5f327a69aeceb74a57f59e05384ed2a47313b496d7290"
+    },
+    {
+      "path": "assets/items-v8/sap-food-38-8ef216703e413a0b.png",
+      "size": 19541,
+      "sha256": "8ef216703e413a0b5f8415d9a353be8f7dc7b53ed22496e311c4606f1838d0c0"
+    },
+    {
+      "path": "assets/items-v8/sap-food-40-26d65686259fac69.png",
+      "size": 16110,
+      "sha256": "26d65686259fac69c3a4360cadb286cbec32319249091840826dee3c69d0e944"
+    },
+    {
+      "path": "assets/items-v8/sap-food-49-aee08dfe4aace0b7.png",
+      "size": 13647,
+      "sha256": "aee08dfe4aace0b759f67787ad19bad77dde1793958a5bb7b1ba8e8dde6a61c8"
+    },
+    {
+      "path": "assets/items-v8/sap-food-50-2cac8c835387d66d.png",
+      "size": 12170,
+      "sha256": "2cac8c835387d66d12eae5adfa77f1029ae61f907b5c750767abe33b29038d03"
+    },
+    {
+      "path": "assets/items-v8/sap-food-51-cd2fc683a1437df7.png",
+      "size": 18353,
+      "sha256": "cd2fc683a1437df76f64da832fc56d6f6a6dec2aa741a3f857c5d4ac1a45542a"
+    },
+    {
+      "path": "assets/items-v8/sap-food-58-93b023d3c4132dde.png",
+      "size": 13935,
+      "sha256": "93b023d3c4132ddec036bf563f66a25f1cb22d2312f78a4de8890e86d68ae7a6"
+    },
+    {
+      "path": "assets/items-v8/sap-food-6-347d3d4cd021ff0b.png",
+      "size": 20365,
+      "sha256": "347d3d4cd021ff0b1bf94021e84616555abb391325f80f3438b2d9a5a04f020e"
+    },
+    {
+      "path": "assets/items-v8/sap-food-63-44a4ed18e39a14f3.png",
+      "size": 11555,
+      "sha256": "44a4ed18e39a14f3f529056b4a566933a3f29e643d3846c3eec0e53fc1673861"
+    },
+    {
+      "path": "assets/items-v8/sap-food-73-9b55aa7c5ed65974.png",
+      "size": 10836,
+      "sha256": "9b55aa7c5ed6597437caff881b249c947c09074300051fc14dcc2a142e6b21d9"
+    },
+    {
+      "path": "assets/items-v8/sap-food-79-b2eba795813e227b.png",
+      "size": 16085,
+      "sha256": "b2eba795813e227b1c7822530d87da0ead016838298432f99b67a8d9e6114030"
+    },
+    {
+      "path": "assets/items-v8/sap-food-82-b6cf9c6ac43766d6.png",
+      "size": 9994,
+      "sha256": "b6cf9c6ac43766d64f7e2ec8173a1a306ca4b1789a55ab8a2cde2ba5a3326de2"
+    },
+    {
+      "path": "assets/items-v8/sap-food-9-df3dd6c5f790d256.png",
+      "size": 12219,
+      "sha256": "df3dd6c5f790d256d7a866a87aa3d4db529619601cd50ca47c0a44ebee04db29"
+    },
+    {
+      "path": "assets/items-v8/sap-food-92-f82be19e866cccbf.png",
+      "size": 17443,
+      "sha256": "f82be19e866cccbfa7c41a9d72c28028813cc41ff6fbce777a54460d50443298"
+    },
+    {
+      "path": "assets/items-v8/sap-food-96-b3045718d693b050.png",
+      "size": 86353,
+      "sha256": "b3045718d693b050856e5ab4d2a89a6032a82452b8ac68cc93f0d35536036cce"
+    },
+    {
+      "path": "assets/items-v8/sap-perk-0-92aeef7e840d7e46.png",
+      "size": 14004,
+      "sha256": "92aeef7e840d7e46370b74c80b76dec987fc6716056676bdc259bbfe14719557"
+    },
+    {
+      "path": "assets/items-v8/sap-perk-2-7cfdc5e26adf96a8.png",
+      "size": 21050,
+      "sha256": "7cfdc5e26adf96a8516f6b3ee9e36b02807a38f3ee381fa33361252a9aa0f3ae"
+    },
+    {
+      "path": "assets/portraits/1100140-88faa09548d34229.png",
+      "size": 16269,
+      "sha256": "88faa09548d3422993c1e0a09c85edfb4d07cf9b828f367ddbc751b57cbae19d"
+    },
+    {
+      "path": "assets/portraits/1100150-a784beaa09cf9285.png",
+      "size": 17561,
+      "sha256": "a784beaa09cf92857e7f938d78d328c837f958a5a22069b742724025ce82ef50"
+    },
+    {
+      "path": "assets/portraits/1100160-26fc2d70d8b57826.png",
+      "size": 17360,
+      "sha256": "26fc2d70d8b57826fcfdaddbde68cd23bb05600b48c75559c6ca42397d937f2a"
+    },
+    {
+      "path": "assets/portraits/1100170-c88f72306074fac3.png",
+      "size": 17150,
+      "sha256": "c88f72306074fac36e1e109c454486cb0538f1b1d593dfa0e5e1d3828e65f579"
+    },
+    {
+      "path": "assets/portraits/1100220-684757aa1581684c.png",
+      "size": 17780,
+      "sha256": "684757aa1581684cc7ff6fc9a655c9a9927513eddfc090137f94b8a6c32a9ee8"
+    },
+    {
+      "path": "assets/portraits/1100230-078826d7e695add7.png",
+      "size": 16414,
+      "sha256": "078826d7e695add7a853f00705a7c6d2e881288ffbeea97c1137da37ab990871"
+    },
+    {
+      "path": "assets/portraits/1100240-efc735f64d0a68b3.png",
+      "size": 18606,
+      "sha256": "efc735f64d0a68b3528ddeef3b5af97bb6a3d8700a7526e3cf2e9225a6a357b8"
+    },
+    {
+      "path": "assets/portraits/1100250-4bc57c399417d4c9.png",
+      "size": 15090,
+      "sha256": "4bc57c399417d4c9335cff09b6a7de4a5a552a91de15c16ebf42af62270fe557"
+    },
+    {
+      "path": "assets/portraits/1100260-d6b433a8d49006eb.png",
+      "size": 19731,
+      "sha256": "d6b433a8d49006eb9c91c61fb1f26c5a0225afa31bce8a783b65513a2149de05"
+    },
+    {
+      "path": "assets/portraits/1100270-171e572885581048.png",
+      "size": 19815,
+      "sha256": "171e572885581048c1221db9c947707c34f961405ed4391025e498013c90c194"
+    },
+    {
+      "path": "assets/portraits/1100280-a69e9dae68219d6b.png",
+      "size": 18010,
+      "sha256": "a69e9dae68219d6bb27d3b5e147eb38c85419d24d641b9f4d31853bdcf3e6429"
+    },
+    {
+      "path": "assets/portraits/1100290-ad3edb54d9d3beb5.png",
+      "size": 20138,
+      "sha256": "ad3edb54d9d3beb506a77ee8725e2fda62ed38e459879f9217cc4ab818581b96"
+    },
+    {
+      "path": "assets/portraits/1100300-512f21cc101ab4ad.png",
+      "size": 18523,
+      "sha256": "512f21cc101ab4ada00de94d5e6ba6fe19f936d9edbdc3db315d7176fe6dff1f"
+    },
+    {
+      "path": "assets/portraits/1100310-3814fe8e5d8d1a1d.png",
+      "size": 20067,
+      "sha256": "3814fe8e5d8d1a1dd15b0a440df921c860ab88056283773b115faebbd27d33c3"
+    },
+    {
+      "path": "assets/portraits/1200010-7580a89604f57404.png",
+      "size": 20687,
+      "sha256": "7580a89604f57404edd509a52513345ad55333c78de9de3531a9871199a1784c"
+    },
+    {
+      "path": "assets/portraits/1200020-d9e89c2562b2065a.png",
+      "size": 19628,
+      "sha256": "d9e89c2562b2065a8810b2b65752563c1d149d56d1332c49711b761801c14493"
+    },
+    {
+      "path": "assets/portraits/1200030-280d1711878d24bf.png",
+      "size": 20495,
+      "sha256": "280d1711878d24bf6443ea915b1f6fa6b2f15be6b4e04be5b7ffad9733f2dd21"
+    },
+    {
+      "path": "assets/portraits/1200040-d2cec26296ea5895.png",
+      "size": 19468,
+      "sha256": "d2cec26296ea58959567558dbf2b8dffff272c0c863453ad5905515882b5555a"
+    },
+    {
+      "path": "assets/portraits/1200050-1ab09790a4067f70.png",
+      "size": 17634,
+      "sha256": "1ab09790a4067f7051dbb8ee18ed2d976ec73bde5dfc9991841b16c03932281b"
+    },
+    {
+      "path": "assets/portraits/1200060-4359f3e417036c39.png",
+      "size": 17683,
+      "sha256": "4359f3e417036c398243464191995bebcf7329780ea3232d61255b6803652838"
+    },
+    {
+      "path": "assets/portraits/1200070-f8a546981c7496f1.png",
+      "size": 17120,
+      "sha256": "f8a546981c7496f165af93d7d48a834dcc556f7b22df0e442d5716f186cdd0f0"
+    },
+    {
+      "path": "assets/portraits/1200080-ff32780ae9e95b46.png",
+      "size": 19317,
+      "sha256": "ff32780ae9e95b4676021ee8541bcbc992c53b1b39b646c6cf12067d905a8e07"
+    },
+    {
+      "path": "assets/portraits/1200090-91bea02b30ccf36f.png",
+      "size": 17979,
+      "sha256": "91bea02b30ccf36f38c1ff5efcdbd64238418ced7d18947640e00e0094d379ba"
+    },
+    {
+      "path": "assets/portraits/1200100-e1a9bfc60dc96f8f.png",
+      "size": 17024,
+      "sha256": "e1a9bfc60dc96f8f7004bc875830ffda6147291a0600d61224536ef6283fb6d3"
+    },
+    {
+      "path": "assets/portraits/1200110-7078bf6e48e9a322.png",
+      "size": 17177,
+      "sha256": "7078bf6e48e9a322cf6f0f175e90f98d823d4e11821ffd849a123ad44ebc3407"
+    },
+    {
+      "path": "assets/portraits/1200120-6265007190e82d9e.png",
+      "size": 17346,
+      "sha256": "6265007190e82d9ef58588087507024a0ceb81735e55cd2a69f55a96fd4c6519"
+    },
+    {
+      "path": "assets/portraits/1200130-1560381a00331753.png",
+      "size": 16771,
+      "sha256": "1560381a003317535f3cb1d74b3a6094da50d65b8fc5a7b53893f2630d5454fd"
+    },
+    {
+      "path": "assets/portraits/1200140-abc30d2edae0a1f8.png",
+      "size": 17607,
+      "sha256": "abc30d2edae0a1f8b09f0a64ecb7a244b3d06dc78f1ff70d46dfccbf82343465"
+    },
+    {
+      "path": "assets/portraits/1200150-0be9af0be7ca0e97.png",
+      "size": 16398,
+      "sha256": "0be9af0be7ca0e9774cfbed9bacfc9d9c42bc79d345e7e6d729ceedc372eb746"
+    },
+    {
+      "path": "assets/portraits/1200160-f6ddf6a5fa9c21af.png",
+      "size": 17638,
+      "sha256": "f6ddf6a5fa9c21af341a1d616bb385e96667a7677010325b9752b6b158f66ecc"
+    },
+    {
+      "path": "assets/portraits/1200170-d9f02cb7382d78d0.png",
+      "size": 19920,
+      "sha256": "d9f02cb7382d78d03f0eff166585dff7c459571c454b15f910fab008136e4f28"
+    },
+    {
+      "path": "assets/portraits/1200180-e99ff9971f2f6fea.png",
+      "size": 20575,
+      "sha256": "e99ff9971f2f6feae5805272ebc96de710e7628b91ce0a0ed4eca4209db50d86"
+    },
+    {
+      "path": "assets/portraits/1200190-d5c489c8ded8e15a.png",
+      "size": 20416,
+      "sha256": "d5c489c8ded8e15a2237bb44f1a6c5a697682863c94c7bb43a42540a016b12eb"
+    },
+    {
+      "path": "assets/portraits/1200200-f1b1bf39b9bc87e5.png",
+      "size": 21038,
+      "sha256": "f1b1bf39b9bc87e5ddaf74aadd2fa5315c61beb48e4e6bb2dd95a6d6229a110f"
+    },
+    {
+      "path": "assets/portraits/1200210-7f1b061f46866ea8.png",
+      "size": 18795,
+      "sha256": "7f1b061f46866ea8020ca8c115e39899b8f6d8fbf824b6b703cd3e99407ea8f8"
+    },
+    {
+      "path": "assets/portraits/1200220-c287afa972af38e1.png",
+      "size": 19721,
+      "sha256": "c287afa972af38e1a3e85aa40cfcbf46746d360da19648a22a55ce116c35b3d5"
+    },
+    {
+      "path": "assets/portraits/1200230-31fa62009598aeba.png",
+      "size": 20212,
+      "sha256": "31fa62009598aeba3818b7ece0c06c9cc59d66cb5d2c0bfadb164979e43e62c1"
+    },
+    {
+      "path": "assets/portraits/1200240-0cb3a7a5b37f9e31.png",
+      "size": 21777,
+      "sha256": "0cb3a7a5b37f9e31e513cd82a0e9340555edaa9dfe3dd8f5f922a27734bd984a"
+    },
+    {
+      "path": "assets/portraits/1300010-d4ef74ceb61c61f4.png",
+      "size": 15733,
+      "sha256": "d4ef74ceb61c61f439b4136ecdf7f9e771b15505ca8e4a50cf9e00c0890ce8ab"
+    },
+    {
+      "path": "assets/portraits/1300020-a9d4f7e05d627b79.png",
+      "size": 19427,
+      "sha256": "a9d4f7e05d627b79265fde0f45ea6bb0ffccf847b467cfaa9250c25309a96f69"
+    },
+    {
+      "path": "assets/portraits/1300030-f3c5a761f8a68573.png",
+      "size": 18984,
+      "sha256": "f3c5a761f8a685730b672803914af4867b453250a584cbc34839ed175e02ef22"
+    },
+    {
+      "path": "assets/portraits/1300040-56b2c03c35525b69.png",
+      "size": 19927,
+      "sha256": "56b2c03c35525b6968c5a12d4c18341e6f77599107bb82ee2e5ee3ac14c6a149"
+    },
+    {
+      "path": "assets/portraits/1300050-83f50a81feb705f1.png",
+      "size": 20277,
+      "sha256": "83f50a81feb705f1ff56bcca9df1a9c7f7e007a9ba630f77a7fff196af198bf6"
+    },
+    {
+      "path": "assets/portraits/1300060-4a312ee16545fb75.png",
+      "size": 17765,
+      "sha256": "4a312ee16545fb759a7c6df192343344b789f9403617f9654b9f646cf48a1c7b"
+    },
+    {
+      "path": "assets/portraits/1300070-dded8cebecc11c19.png",
+      "size": 18464,
+      "sha256": "dded8cebecc11c19d4029b8a741040ed6c31121e584f2c1013ceb3ebf9b903f0"
+    },
+    {
+      "path": "assets/portraits/1300080-70490ac057253dd3.png",
+      "size": 19960,
+      "sha256": "70490ac057253dd31e6de3d64d41fdebc52c4c90604628e424080a9f000ec4af"
+    },
+    {
+      "path": "assets/portraits/1300090-3152a34d9af7aea9.png",
+      "size": 18433,
+      "sha256": "3152a34d9af7aea935a40613b03f9ec32c2f6cb356ad774402c859a4e577e6e5"
+    },
+    {
+      "path": "assets/ui-battle-stats/attack.svg",
+      "size": 406,
+      "sha256": "50ac44ea56cf6b627339c8d3e9746152638845b54ed38524d3cb06c33cda7c96"
+    },
+    {
+      "path": "assets/ui-battle-stats/health.svg",
+      "size": 394,
+      "sha256": "64bda36fbdb963b0ccdfbba60f2f1b58b6044b8a5bc98211e417e1871fcbecb8"
+    },
+    {
+      "path": "assets/yanwu-source53/actor-data/210040.js",
+      "size": 1489084,
+      "sha256": "e2f85b7ead10b7f8ea816da15501a19668adf8fc2444accac5cb7c4738d1c05e"
+    },
+    {
+      "path": "assets/yanwu-source53/actor-data/210050.js",
+      "size": 1722039,
+      "sha256": "2188be03e8b97d366d9b955605b790fb674a443252d5f6c16ba996b8d08c5485"
+    },
+    {
+      "path": "assets/yanwu-source53/actor-data/210060.js",
+      "size": 1656873,
+      "sha256": "e9dc26484961c4c653dfd8f44bb39b898821568422daea7ae0e84e20bd4c51c7"
+    },
+    {
+      "path": "assets/yanwu-source53/actors/210040-battle.png",
+      "size": 270111,
+      "sha256": "76969323102ac948db185065058378655164ce7de48a79acd811c66850a3fc4a"
+    },
+    {
+      "path": "assets/yanwu-source53/actors/210040-icon.png",
+      "size": 20448,
+      "sha256": "d67192ad7f15243266026933bb079a182b20363201ebc02a8f42a2e513d5f21f"
+    },
+    {
+      "path": "assets/yanwu-source53/actors/210050-battle.png",
+      "size": 590267,
+      "sha256": "8c23c10804396db9abd8239a19869a1ec538629f524637e99c08e9a47091acd3"
+    },
+    {
+      "path": "assets/yanwu-source53/actors/210050-icon.png",
+      "size": 15630,
+      "sha256": "cfdbccaf217e352c25219af701df9d1e55ce35832a1e21014484185c7906ae3b"
+    },
+    {
+      "path": "assets/yanwu-source53/actors/210060-battle.png",
+      "size": 142773,
+      "sha256": "3bbd045526c0e94accc840bad1c25fde5a08987572a2780aff8e8b5f0ec77109"
+    },
+    {
+      "path": "assets/yanwu-source53/actors/210060-icon.png",
+      "size": 16613,
+      "sha256": "43bc3e062d17a9fcc36101a52ef869927ba8bb656664e6598a1ded46e8a6574e"
+    },
+    {
+      "path": "bootstrap.js",
+      "size": 2781,
+      "sha256": "d187fae2bb6ad12e829f0ace9ed6da75fb734f8d38dd0efffee7eea98a3ab058"
+    },
+    {
+      "path": "index.html",
+      "size": 3616,
+      "sha256": "17e42e78c07fcc8d5d2abd7f927d1a301922e1277e0d3b8f7e7a0e5a6514332f"
+    },
+    {
+      "path": "src/actor.js",
+      "size": 17685,
+      "sha256": "a0a3716b79bbe9f48419cc71303bb54e6b64ad5e3ba922f60df34516e5dc037c"
+    },
+    {
+      "path": "src/portraits.js",
+      "size": 66027,
+      "sha256": "fb0937318bc99a8abb47eaafaa97d9e317fde22c7308845309a476e4a32d6d3d"
+    },
+    {
+      "path": "src/scene-resources.js",
+      "size": 2711,
+      "sha256": "cace52d184906340051e56e5114f7872575f20bda47dd5495ef90602635e4240"
+    },
+    {
+      "path": "src/timeline-actor.js",
+      "size": 9848,
+      "sha256": "cf212b811fc145275c4cafd35ecac9cc12aac2b13d625ff0f18d83c847793135"
+    },
+    {
+      "path": "src/yanwu-source53-app-r3.js",
+      "size": 35421,
+      "sha256": "38a2bcbf20e5ad11caf4f9f99d3bf86ce7073141748fcb10fada7aa356bf1d8b"
+    },
+    {
+      "path": "src/yanwu-source53-core-r3.js",
+      "size": 8727,
+      "sha256": "fbdc69810f8bfb2b29aa3c34221825501e24410c5a70265d829207102064b53e"
+    },
+    {
+      "path": "src/yanwu-source53-data-r3.js",
+      "size": 996279,
+      "sha256": "e27af11fd9f820718a868632547d5d3af64e0b8828202e7f74d4e0a50ae3e465"
+    },
+    {
+      "path": "src/yanwu-source53-engine-r3.js",
+      "size": 37546,
+      "sha256": "0d700be1ff0629aa8a568c7c3e1a476b0cee1f920b6a39b110c8c66b466be128"
+    },
+    {
+      "path": "styles.css",
+      "size": 64210,
+      "sha256": "a409ea3099f25f8038e28e3ca99f84567cd5f999cd7194501760bcbdd91f3d01"
+    },
+    {
+      "path": "yanwu-source53-r3.css",
+      "size": 5951,
+      "sha256": "b40db93fe770ec0d1b183f330893062d99072516fe702475b121bf95e9055e8b"
+    }
+  ]
+}

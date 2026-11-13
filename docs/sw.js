@@ -1,20 +1,285 @@
-const SS2_PRESENTATION_REVISION="v6-web-mobile-shop-a-r3";
 'use strict';
-const BASE=new URL('./',self.location.href),NS='ss2-v6-web:'+BASE.pathname+':',OBJECTS=NS+'objects',META=NS+'meta',SHELL=NS+'shell-v6-web-mobile-shop-a-r3',url=p=>new URL(p,BASE).href,key=url('__release_state__');
-const hex=b=>[...new Uint8Array(b)].map(n=>n.toString(16).padStart(2,'0')).join('');
-async function read(){const r=await(await caches.open(META)).match(key);const s=r?await r.json():{active:null,previous:null,pending:null,releases:{}};s.complete??={};return s;}
-async function write(s){await(await caches.open(META)).put(key,new Response(JSON.stringify(s),{headers:{'Content-Type':'application/json'}}));}
-const isComplete=(s,id)=>!!id&&(s.complete[id]===true||!s.releases[id]?.mode);
-async function state(){const s=await read();return{...s,protocol:2,offlineComplete:isComplete(s,s.active)};}
-self.addEventListener('install',e=>e.waitUntil((async()=>{const rows=await Promise.all(['','index.html','bootstrap.js'].map(async p=>{const r=await fetch(url(p),{cache:'reload'});if(!r.ok)throw Error('启动页下载失败');return[url(p),r];}));const c=await caches.open(SHELL);for(const[p,r]of rows)await c.put(p,r);await self.skipWaiting();})()));
-self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
-const pending=new Map();
-async function object(f,progress=()=>{},signal){const c=await caches.open(OBJECTS),cached=await c.match(url(f.path));if(cached){progress(f.size);return cached;}if(pending.has(f.path)){const r=await pending.get(f.path);progress(f.size);return r.clone();}
- const work=(async()=>{const abort=new AbortController();let idle=setTimeout(()=>abort.abort(),45000),count=0;const cancel=()=>abort.abort();signal?.addEventListener('abort',cancel,{once:true});try{if(signal?.aborted)throw Error('离线下载已暂停');const r=await fetch(url(f.path),{cache:'no-store',signal:abort.signal});if(!r.ok)throw Error('资源下载中断：'+r.status);const reader=r.body.getReader(),chunks=[];while(true){const x=await reader.read();if(x.done)break;count+=x.value.byteLength;if(count>f.size){await reader.cancel();throw Error('资源长度超出清单');}chunks.push(x.value);progress(x.value.byteLength);clearTimeout(idle);idle=setTimeout(()=>abort.abort(),45000);}const bytes=new Uint8Array(count);let i=0;for(const b of chunks){bytes.set(b,i);i+=b.length;}if(count!==f.size||hex(await crypto.subtle.digest('SHA-256',bytes))!==f.sha256)throw Error('资源完整性校验失败');const result=new Response(bytes,{headers:{'Content-Type':r.headers.get('Content-Type')||'application/octet-stream'}});await c.put(url(f.path),result.clone());return result;}finally{clearTimeout(idle);signal?.removeEventListener('abort',cancel);}})();pending.set(f.path,work);try{return(await work).clone();}finally{pending.delete(f.path);}}
-function validate(m){const expanded=!!m.compatibility&&m.rules?.startsWith('v8-');if((m.schema!==1&&m.schema!==2)||!/^v6-web-[a-zA-Z0-9.-]+$/.test(m.id)||!Array.isArray(m.files)||m.files.length>(expanded?1200:300)||!Array.isArray(m.scripts))throw Error('版本清单不合法');let total=0;const paths=new Set();for(const f of m.files){if(!/^objects\/[a-f0-9]{64}\.(js|css|svg|png|jpg|json)$/.test(f.path)||!f.path.includes(f.sha256)||!Number.isSafeInteger(f.size)||f.size<0||f.size>20000000||paths.has(f.path))throw Error('资源清单不合法');total+=f.size;paths.add(f.path);}if(total>(expanded?600000000:100000000)||![m.css,...m.scripts,...(m.bootFiles||[])].every(p=>paths.has(p)))throw Error('版本依赖不合法');return m;}
-async function download(m,paths,port,signal){const wanted=new Set(paths),files=m.files.filter(f=>wanted.has(f.path));if(wanted.size!==files.length)throw Error('资源不属于当前发行包');let done=0,next=0,total=files.reduce((n,f)=>n+f.size,0);const notify=n=>{done+=n;port?.postMessage({progress:true,done,total});};await Promise.all(Array.from({length:Math.min(3,files.length)},async()=>{while(next<files.length){if(signal?.aborted)throw Error('离线下载已暂停');const f=files[next++];await object(f,notify,signal);}}));return{done,total};}
-let preparation=null,fullJob=null;
-async function prepare(port,full){const response=await fetch(url('release.json'),{cache:'no-store'});if(!response.ok)throw Error('版本检查失败');const m=validate(await response.json()),before=await read();if(before.releases[m.id]&&JSON.stringify(before.releases[m.id])!==JSON.stringify(m))throw Error('相同发行编号禁止改写');await download(m,full||!m.bootFiles?m.files.map(f=>f.path):m.bootFiles,port);const s=await read();s.releases[m.id]=m;if(full||!m.bootFiles)s.complete[m.id]=true;if(!s.active)s.active=m.id;else if(s.active!==m.id)s.pending=m.id;await write(s);return state();}
-self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(u.origin!==BASE.origin||!u.href.startsWith(BASE.href)||e.request.method!=='GET')return;if(u.pathname.includes('/objects/'))e.respondWith((async()=>{const s=await read(),rel=u.href.slice(BASE.href.length),f=Object.values(s.releases).flatMap(m=>m.files).find(f=>f.path===rel);if(!f)return new Response('Unregistered resource',{status:404});try{return await object(f);}catch(error){return new Response(error.message,{status:503});}})());else if(e.request.mode==='navigate'||u.pathname.endsWith('/bootstrap.js'))e.respondWith((async()=>await(await caches.open(SHELL)).match(e.request,{ignoreSearch:true})||fetch(e.request))());});
-async function restore(id,port,bootOnly=false){const s=await read();if(s.releases[id])return state();const ref=Object.values(s.releases).flatMap(m=>m.legacyReleases||[]).find(x=>x.id===id);if(!ref||!/^releases\/v6-web-[a-zA-Z0-9.-]+\.json$/.test(ref.path))throw Error('没有登记的历史发行包，请导出保留存档');const r=await fetch(url(ref.path),{cache:'no-store'});if(!r.ok)throw Error('历史版本清单未取得');const bytes=await r.arrayBuffer();if(hex(await crypto.subtle.digest('SHA-256',bytes))!==ref.sha256)throw Error('历史清单完整性校验失败');const m=validate(JSON.parse(new TextDecoder().decode(bytes)));if(m.id!==id)throw Error('历史发行编号不匹配');await download(m,bootOnly&&m.bootFiles?m.bootFiles:m.files.map(f=>f.path),port);const latest=await read();latest.releases[id]=m;if(!bootOnly||!m.bootFiles)latest.complete[id]=true;await write(latest);return state();}
-self.addEventListener('message',e=>{if(e.data?.type==='ACTIVATE_LOADER'){e.waitUntil(self.skipWaiting());return;}const port=e.ports[0];if(!port)return;e.waitUntil((async()=>{try{const t=e.data?.type;let result;if(t==='STATUS')result=await state();else if(t==='ENTRY'||t==='CHECK'||t==='PREPARE'){if(!preparation)preparation=prepare(port,t==='PREPARE').finally(()=>{preparation=null;});result=await preparation;}else if(t==='RESTORE')result=await restore(e.data.release,port,e.data.bootOnly===true);else if(t==='ENSURE'){const s=await read(),m=s.releases[e.data.release];if(!m||!Array.isArray(e.data.paths)||e.data.paths.length>1200)throw Error('当前场景清单不合法');await download(m,e.data.paths,port);result=await state();}else if(t==='FULL'){if(fullJob)throw Error('完整离线包正在下载');const s=await read(),m=s.releases[e.data.release||s.active];if(!m)throw Error('缺少发行包');const controller=new AbortController();fullJob=controller;try{await download(m,m.files.map(f=>f.path),port,controller.signal);const latest=await read();latest.complete[m.id]=true;await write(latest);result=await state();}finally{fullJob=null;}}else if(t==='CANCEL'){fullJob?.abort();result=await state();}else if(t==='ACTIVATE'||t==='ROLLBACK'){const s=await read(),target=t==='ACTIVATE'?s.pending:s.previous,m=s.releases[target];if(!m)throw Error('没有可切换版本');for(const p of m.bootFiles||m.files.map(f=>f.path))if(!await(await caches.open(OBJECTS)).match(url(p)))throw Error('目标版本启动缓存不完整');const old=s.active;s.active=target;s.previous=old;s.pending=null;await write(s);result=await state();}else throw Error('未知缓存操作');port.postMessage({ok:true,state:result});}catch(error){port.postMessage({ok:false,error:error.name==='AbortError'?'网络无进展或下载已暂停':error.message});}})());});
+const VERSION = 'source53-r3-svn323591-20261113-r1';
+self.SS2Source53Web = {version: VERSION};
+const BASE = new URL('./', self.location.href);
+const NS = 'ss2-source53-web:' + BASE.pathname + ':';
+const OLD_NS = 'ss2-v6-web:' + BASE.pathname + ':';
+const CACHE = NS + VERSION;
+const META = new URL('__ss2_publication_manifest__', BASE).href;
+const INDEX = new URL('index.html', BASE).href;
+const REQUIRED = [
+  'index.html', 'bootstrap.js', 'styles.css', 'yanwu-source53-r3.css',
+  'assets/actors.js', 'src/timeline-actor.js', 'src/scene-resources.js',
+  'src/actor.js', 'src/portraits.js', 'src/yanwu-source53-data-r3.js',
+  'src/yanwu-source53-engine-r3.js', 'src/yanwu-source53-core-r3.js',
+  'src/yanwu-source53-app-r3.js'
+];
+const pending = new Map();
+let manifestPromise;
+
+function inBase(u) {
+  return u.origin === BASE.origin && u.pathname.startsWith(BASE.pathname);
+}
+function canonicalPath(path) {
+  if (typeof path !== 'string' || !path || /[\\?#]/.test(path) ||
+      path.startsWith('/') || /^[a-z][a-z0-9+.-]*:/i.test(path)) {
+    throw Error('Invalid manifest path');
+  }
+  if (path === './') return INDEX;
+  if (path.startsWith('./')) path = path.slice(2);
+  const segments = path.split('/');
+  for (const segment of segments) {
+    const decoded = decodeURIComponent(segment);
+    if (!decoded || decoded === '.' || decoded === '..' || /[\\/\u0000-\u001f]/.test(decoded)) {
+      throw Error('Invalid manifest path');
+    }
+  }
+  const u = new URL(path, BASE);
+  if (!inBase(u) || u.search || u.hash ||
+      u.href === new URL('sw.js', BASE).href ||
+      u.href === new URL('web-manifest.json', BASE).href || u.href === META) {
+    throw Error('Invalid manifest path');
+  }
+  return u.href;
+}
+function validateManifest(raw) {
+  if (!raw || raw.version !== VERSION || !Array.isArray(raw.files) ||
+      !Array.isArray(raw.shell) || !raw.files.length || !raw.shell.length) {
+    throw Error('Invalid publication manifest');
+  }
+  const files = new Map();
+  for (const row of raw.files) {
+    if (!row || !Number.isSafeInteger(row.size) || row.size < 0 ||
+        typeof row.sha256 !== 'string' || !/^[a-f0-9]{64}$/i.test(row.sha256)) {
+      throw Error('Invalid manifest file');
+    }
+    const key = canonicalPath(row.path);
+    const file = {size: row.size, sha256: row.sha256.toLowerCase()};
+    const previous = files.get(key);
+    if (previous && (previous.size !== file.size || previous.sha256 !== file.sha256)) {
+      throw Error('Conflicting manifest paths');
+    }
+    files.set(key, file);
+  }
+  const shell = new Set();
+  let total = 0;
+  for (const path of raw.shell) {
+    const key = canonicalPath(path);
+    const file = files.get(key);
+    if (!file) throw Error('Shell file missing from manifest');
+    if (!shell.has(key)) {
+      // Keep installation small; models and large images are demand-only.
+      if (file.size > 4 * 1024 * 1024) throw Error('Shell file too large');
+      total += file.size;
+      shell.add(key);
+    }
+  }
+  if (total > 32 * 1024 * 1024 || !raw.shell.includes('./') ||
+      !REQUIRED.every(path => shell.has(new URL(path, BASE).href))) {
+    throw Error('Incomplete or oversized shell');
+  }
+  return {raw, files, shell};
+}
+function hex(buffer) {
+  return Array.from(new Uint8Array(buffer), n => n.toString(16).padStart(2, '0')).join('');
+}
+function responseAt(response, key) {
+  if (!response.ok || response.status !== 200 || response.type === 'opaque' ||
+      response.type === 'opaqueredirect' || response.redirected) return false;
+  if (!response.url) return true; // Cache-created responses may have no URL.
+  const u = new URL(response.url);
+  if (!inBase(u)) return false;
+  u.search = '';
+  u.hash = '';
+  if (u.href === BASE.href) return key === INDEX;
+  return u.href === key;
+}
+async function validBody(response, key, file) {
+  if (!responseAt(response, key)) return false;
+  const type = (response.headers.get('Content-Type') || '').split(';')[0].trim().toLowerCase();
+  if (type === 'text/html' && !/\.html?$/i.test(new URL(key).pathname)) return false;
+  const bytes = await response.clone().arrayBuffer();
+  return bytes.byteLength === file.size &&
+    hex(await crypto.subtle.digest('SHA-256', bytes)) === file.sha256;
+}
+async function loadManifest() {
+  if (!manifestPromise) {
+    manifestPromise = (async () => {
+      try {
+        const response = await (await caches.open(CACHE)).match(META);
+        if (!response) return null;
+        const saved = await response.json();
+        return validateManifest(saved.manifest);
+      } catch (_) {
+        return null;
+      }
+    })();
+  }
+  return manifestPromise;
+}
+async function cachedFile(key, file) {
+  try {
+    const cache = await caches.open(CACHE);
+    const response = await cache.match(key);
+    if (!response) return null;
+    if (await validBody(response, key, file)) return response;
+    await cache.delete(key);
+  } catch (_) {
+    // Cache access, corrupt entries and quota errors must not stop networking.
+  }
+  return null;
+}
+async function storeFile(key, response) {
+  try {
+    await (await caches.open(CACHE)).put(key, response.clone());
+  } catch (_) {
+    // The validated network response remains usable even without cache space.
+  }
+}
+function fetchStable(key) {
+  return fetch(key, {cache: 'no-cache', credentials: 'same-origin', redirect: 'error'});
+}
+async function asset(key, file) {
+  const cached = await cachedFile(key, file);
+  if (cached) return cached;
+  let work = pending.get(key);
+  if (!work) {
+    work = (async () => {
+      const response = await fetchStable(key);
+      if (!response.ok) return response;
+      if (!await validBody(response, key, file)) {
+        return new Response('Resource integrity check failed', {status: 502});
+      }
+      await storeFile(key, response);
+      return response;
+    })();
+    pending.set(key, work);
+    const clear = () => { if (pending.get(key) === work) pending.delete(key); };
+    work.then(clear, clear);
+  }
+  return (await work).clone();
+}
+async function navigation(request, manifest) {
+  try {
+    const response = await fetch(request, {cache: 'no-cache', redirect: 'error'});
+    if (response.ok && response.type !== 'opaque' && !response.redirected) {
+      const u = new URL(request.url);
+      u.search = '';
+      u.hash = '';
+      const file = manifest && manifest.files.get(INDEX);
+      if (file && (u.href === BASE.href || u.href === INDEX)) {
+        try {
+          if (await validBody(response, INDEX, file)) await storeFile(INDEX, response);
+        } catch (_) {
+          // An online document is not blocked by cache or hashing failures.
+        }
+      }
+      return response;
+    }
+    const file = manifest && manifest.files.get(INDEX);
+    const fallback = file && await cachedFile(INDEX, file);
+    return fallback || response;
+  } catch (_) {
+    const file = manifest && manifest.files.get(INDEX);
+    const fallback = file && await cachedFile(INDEX, file);
+    return fallback || new Response('Offline', {
+      status: 503,
+      headers: {'Content-Type': 'text/plain; charset=utf-8'}
+    });
+  }
+}
+
+self.addEventListener('install', event => {
+  event.waitUntil((async () => {
+    const existed = (await caches.keys()).includes(CACHE);
+    try {
+      const response = await fetchStable(new URL('web-manifest.json', BASE).href);
+      if (!responseAt(response, new URL('web-manifest.json', BASE).href)) {
+        throw Error('Manifest unavailable');
+      }
+      const manifest = validateManifest(await response.json());
+      // Validate the entire shell before writing anything or calling skipWaiting.
+      const rows = await Promise.all(Array.from(manifest.shell, async key => {
+        const body = await fetchStable(key);
+        if (!await validBody(body, key, manifest.files.get(key))) {
+          throw Error('Shell integrity check failed');
+        }
+        return [key, body];
+      }));
+      const cache = await caches.open(CACHE);
+      for (const [key, body] of rows) await cache.put(key, body);
+      await cache.put(META, new Response(JSON.stringify({
+        manifest: manifest.raw,
+        upgrade: !!self.registration.active
+      }), {headers: {'Content-Type': 'application/json'}}));
+      manifestPromise = Promise.resolve(manifest);
+      await self.skipWaiting();
+    } catch (error) {
+      if (!existed) {
+        try { await caches.delete(CACHE); } catch (_) {}
+      }
+      throw error;
+    }
+  })());
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil((async () => {
+    let upgrade = false;
+    try {
+      const saved = await (await caches.open(CACHE)).match(META);
+      upgrade = !!(saved && (await saved.json()).upgrade);
+    } catch (_) {}
+    // Capture existing windows before claim; newly opened windows need no reload.
+    const existing = upgrade ? await self.clients.matchAll({
+      type: 'window', includeUncontrolled: true
+    }) : [];
+    await self.skipWaiting();
+    await self.clients.claim();
+    try {
+      const names = await caches.keys();
+      await Promise.all(names.filter(name =>
+        name.startsWith(OLD_NS) || (name.startsWith(NS) && name !== CACHE)
+      ).map(name => caches.delete(name).catch(() => false)));
+    } catch (_) {}
+    // Activation runs once, not on fetch/controllerchange. Replace old DOMs,
+    // including old loaders, without a storage flag or a bootstrap reload loop.
+    await Promise.all(existing.map(async client => {
+      try {
+        if (inBase(new URL(client.url))) await client.navigate(BASE.href);
+      } catch (_) {}
+    }));
+  })());
+});
+
+self.addEventListener('fetch', event => {
+  const request = event.request;
+  const u = new URL(request.url);
+  if (request.method !== 'GET' || !inBase(u)) return;
+  if (request.mode === 'navigate') {
+    event.respondWith(loadManifest().then(manifest => navigation(request, manifest)));
+    return;
+  }
+  u.search = '';
+  u.hash = '';
+  const key = u.href === BASE.href ? INDEX : u.href;
+  event.respondWith((async () => {
+    const manifest = await loadManifest();
+    const file = manifest && manifest.files.get(key);
+    // Unlisted files are never cached, including old releases and arbitrary URLs.
+    if (!file) return fetch(request);
+    try {
+      return await asset(key, file);
+    } catch (_) {
+      return new Response('Resource unavailable', {status: 503});
+    }
+  })());
+});
+
+self.addEventListener('message', event => {
+  if (!event.data || event.data.type !== 'SS2_SOURCE53_STATUS') return;
+  const port = event.ports && event.ports[0];
+  if (port) port.postMessage({
+    type: 'SS2_SOURCE53_STATUS', version: VERSION, scope: BASE.href
+  });
+});
