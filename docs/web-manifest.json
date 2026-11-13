@@ -1,5 +1,5 @@
 {
-  "version": "source53-r3-svn323591-20261113-r1",
+  "version": "source53-r3-svn323591-20261113-r2",
   "sourceSvnRevision": 323591,
   "sourceManifestSHA256": "48199826f70f64446c412987b1b90a019a612818746b5a4a5637495b23c1aa83",
   "shell": [
@@ -942,7 +942,7 @@
     {
       "path": "bootstrap.js",
       "size": 2781,
-      "sha256": "d187fae2bb6ad12e829f0ace9ed6da75fb734f8d38dd0efffee7eea98a3ab058"
+      "sha256": "890ffa39aac78caf43ebc77cef52d3ac8fd7e39b451d4f9415b85f7af01559c7"
     },
     {
       "path": "index.html",
@@ -971,8 +971,8 @@
     },
     {
       "path": "src/yanwu-source53-app-r3.js",
-      "size": 35421,
-      "sha256": "38a2bcbf20e5ad11caf4f9f99d3bf86ce7073141748fcb10fada7aa356bf1d8b"
+      "size": 35295,
+      "sha256": "b7650ea1b1d2f71083790541e56a0eb3d53c22ea416e5456081fa099f94fac77"
     },
     {
       "path": "src/yanwu-source53-core-r3.js",
@@ -996,8 +996,9 @@
     },
     {
       "path": "yanwu-source53-r3.css",
-      "size": 5951,
-      "sha256": "b40db93fe770ec0d1b183f330893062d99072516fe702475b121bf95e9055e8b"
+      "size": 6687,
+      "sha256": "9154718a5f9a0f036b35aea1212ca28baa9b57db80826e8bf2087594aea12e1e"
     }
-  ]
+  ],
+  "uiRevision": "owned-skills-and-recruit-freeze-only"
 }

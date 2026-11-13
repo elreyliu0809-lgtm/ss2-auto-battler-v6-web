@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const VERSION = 'source53-r3-svn323591-20261113-r1';
+  const VERSION = 'source53-r3-svn323591-20261113-r2';
   const script = document.currentScript;
   const base = new URL('./', script ? script.src : document.baseURI);
   const status = window.SS2Source53Web = {

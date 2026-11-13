@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = 'source53-r3-svn323591-20261113-r1';
+const VERSION = 'source53-r3-svn323591-20261113-r2';
 self.SS2Source53Web = {version: VERSION};
 const BASE = new URL('./', self.location.href);
 const NS = 'ss2-source53-web:' + BASE.pathname + ':';
